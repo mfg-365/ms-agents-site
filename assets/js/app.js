@@ -244,8 +244,8 @@ function renderStats() {
 
   if (DATA.sourceUpdated) {
     $('#sourceNote').innerHTML =
-      `Source: <a href="${esc(DATA.source.url)}" target="_blank" rel="noopener noreferrer">${esc(DATA.source.title)}</a>
-       &middot; deck last updated ${esc(DATA.sourceUpdated)} &middot; site data refreshed
+      `Source: ${esc(DATA.source.title)} &middot; deck last updated ${esc(DATA.sourceUpdated)}
+       &middot; site data refreshed
        ${esc(new Date(DATA.generated).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }))}.`;
   }
 }

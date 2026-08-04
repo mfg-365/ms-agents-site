@@ -1,7 +1,7 @@
 """deck.json -> data/agents.json
 
 Normalizes the ABS Out-of-Box Agents deck into a stable, site-ready catalog.
-Re-runnable: safe to invoke every time the Seismic deck changes.
+Re-runnable: safe to invoke every time the source deck changes.
 """
 import json, os, re, sys, datetime
 
@@ -23,11 +23,11 @@ GROUPS = [
     (r"Microsoft 365 Copilot license.*Public Preview",
      "Microsoft 365 Copilot — Preview", "m365-preview", "Public Preview", "Microsoft 365 Copilot license"),
     (r"Dynamics 365 Customer Service.*Contact Center",
-     "Dynamics 365 Customer Service & Contact Center", "d365-service", "GA", "Dynamics 365 Customer Service / Contact Center"),
+     "Dynamics 365 Customer Service & Contact Center", "d365-service", "GA", "Dynamics 365 Customer Service / Contact Center license"),
     (r"Microsoft Agents in Dynamics 365 Sales",
-     "Dynamics 365 Sales", "d365-sales", "GA", "Dynamics 365 Sales"),
+     "Dynamics 365 Sales", "d365-sales", "GA", "Dynamics 365 Sales license"),
     (r"D365 Supply Chain.*Finance.*Project Operations",
-     "Dynamics 365 Supply Chain, Finance & Operations", "d365-ops", "Public Preview", "Dynamics 365 Supply Chain / Finance & Ops / Project Operations"),
+     "Dynamics 365 Supply Chain, Finance & Operations", "d365-ops", "Public Preview", "Dynamics 365 Supply Chain / Finance & Ops / Project Operations license"),
 ]
 
 # Surface strings are jammed together in the deck cells; split on known products.
@@ -213,7 +213,6 @@ def main():
         "sourceUpdated": updated,
         "source": {
             "title": "ABS Out-of-Box Agents - Customer ready",
-            "url": "https://microsoft.seismic.com/Link/Content/DCVbJbD8mp3dD82CWXCfXWqTG2PP",
         },
         "statuses": ["GA", "Public Preview", "Frontier"],
         "groups": sorted(groups_seen.values(), key=lambda g: g["order"]),

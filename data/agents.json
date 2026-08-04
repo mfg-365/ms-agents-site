@@ -1,9 +1,8 @@
 {
- "generated": "2026-08-04T15:44:59+00:00",
+ "generated": "2026-08-04T16:00:43+00:00",
  "sourceUpdated": "July 15, 2026",
  "source": {
-  "title": "ABS Out-of-Box Agents - Customer ready",
-  "url": "https://microsoft.seismic.com/Link/Content/DCVbJbD8mp3dD82CWXCfXWqTG2PP"
+  "title": "ABS Out-of-Box Agents - Customer ready"
  },
  "statuses": [
   "GA",
@@ -49,21 +48,21 @@
   {
    "id": "d365-service",
    "label": "Dynamics 365 Customer Service & Contact Center",
-   "license": "Dynamics 365 Customer Service / Contact Center",
+   "license": "Dynamics 365 Customer Service / Contact Center license",
    "order": 6,
    "header": "Microsoft Agents in Dynamics 365 Customer Service & Dynamics 365 Contact Center - GA"
   },
   {
    "id": "d365-sales",
    "label": "Dynamics 365 Sales",
-   "license": "Dynamics 365 Sales",
+   "license": "Dynamics 365 Sales license",
    "order": 7,
    "header": "Microsoft Agents in Dynamics 365 Sales"
   },
   {
    "id": "d365-ops",
    "label": "Dynamics 365 Supply Chain, Finance & Operations",
-   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations",
+   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations license",
    "order": 8,
    "header": "Microsoft Agents in D365 Supply Chain, D365 Finance & Operations, D365 Project Operations – Public Preview"
   }
@@ -749,7 +748,7 @@
    "status": "GA",
    "group": "d365-service",
    "groupLabel": "Dynamics 365 Customer Service & Contact Center",
-   "license": "Dynamics 365 Customer Service / Contact Center",
+   "license": "Dynamics 365 Customer Service / Contact Center license",
    "description": "Keep knowledge articles perpetually current by uncovering insights from case notes and other artifacts.",
    "notes": [],
    "surfaces": [
@@ -775,7 +774,7 @@
    "status": "GA",
    "group": "d365-service",
    "groupLabel": "Dynamics 365 Customer Service & Contact Center",
-   "license": "Dynamics 365 Customer Service / Contact Center",
+   "license": "Dynamics 365 Customer Service / Contact Center license",
    "description": "Enable evergreen self-service by discovering customer intent from customer conversations across channels.",
    "notes": [],
    "surfaces": [
@@ -801,7 +800,7 @@
    "status": "GA",
    "group": "d365-service",
    "groupLabel": "Dynamics 365 Customer Service & Contact Center",
-   "license": "Dynamics 365 Customer Service / Contact Center",
+   "license": "Dynamics 365 Customer Service / Contact Center license",
    "description": "Monitor service quality across customer interactions—from service reps to self-service agents.",
    "notes": [],
    "surfaces": [
@@ -827,7 +826,7 @@
    "status": "GA",
    "group": "d365-service",
    "groupLabel": "Dynamics 365 Customer Service & Contact Center",
-   "license": "Dynamics 365 Customer Service / Contact Center",
+   "license": "Dynamics 365 Customer Service / Contact Center license",
    "description": "Automate the case lifecycle to reduce handle time and alleviate the burden of manual tasks on service reps.",
    "notes": [],
    "surfaces": [
@@ -852,7 +851,7 @@
    "status": "GA",
    "group": "d365-sales",
    "groupLabel": "Dynamics 365 Sales",
-   "license": "Dynamics 365 Sales",
+   "license": "Dynamics 365 Sales license",
    "description": "Researches, prioritizes, and engages inbound leads, then hands off only high‑intent, qualified leads to sellers.",
    "notes": [],
    "surfaces": [
@@ -877,7 +876,7 @@
    "status": "GA",
    "group": "d365-sales",
    "groupLabel": "Dynamics 365 Sales",
-   "license": "Dynamics 365 Sales",
+   "license": "Dynamics 365 Sales license",
    "description": "Get answers to strategic, multi-faceted questions that sales leaders have about their business and operational performance.",
    "notes": [],
    "surfaces": [
@@ -898,7 +897,7 @@
    "status": "GA",
    "group": "d365-sales",
    "groupLabel": "Dynamics 365 Sales",
-   "license": "Dynamics 365 Sales",
+   "license": "Dynamics 365 Sales license",
    "description": "Researches opportunities, identifies emerging risks, and highlights the highest-priority deals so sellers can close faster.",
    "notes": [],
    "surfaces": [
@@ -919,7 +918,7 @@
    "status": "Frontier",
    "group": "d365-sales",
    "groupLabel": "Dynamics 365 Sales",
-   "license": "Dynamics 365 Sales",
+   "license": "Dynamics 365 Sales license",
    "description": "The Sales Development agent continuously researches sales leads, crafts personalized outreach emails, and automatically follows up to ensure no lead is left behind. It scales your sales team’s capacity and acts like a teammate. Integrates with D365 Sales, Salesforce CRM, and CSV files.",
    "notes": [],
    "surfaces": [
@@ -949,7 +948,7 @@
    "status": "Public Preview",
    "group": "d365-sales",
    "groupLabel": "Dynamics 365 Sales",
-   "license": "Dynamics 365 Sales",
+   "license": "Dynamics 365 Sales license",
    "description": "Autonomously analyze deals to equip your sellers with insights they need to win.",
    "notes": [],
    "surfaces": [
@@ -974,7 +973,7 @@
    "status": "Public Preview",
    "group": "d365-ops",
    "groupLabel": "Dynamics 365 Supply Chain, Finance & Operations",
-   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations",
+   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations license",
    "description": "Copilot in Dynamics 365 Supply Chain Management reads and categorizes incoming supplier emails (confirmations, change requests, etc.), links them to the correct purchase orders, sends follow-up emails, and flags supply risks.",
    "notes": [],
    "surfaces": [
@@ -995,7 +994,7 @@
    "status": "Public Preview",
    "group": "d365-ops",
    "groupLabel": "Dynamics 365 Supply Chain, Finance & Operations",
-   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations",
+   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations license",
    "description": "Copilot in Dynamics 365 Finance assists finance teams during period-end close by identifying ledger discrepancies and suggesting remediation actions to reconcile accounts.",
    "notes": [],
    "surfaces": [
@@ -1020,7 +1019,7 @@
    "status": "Public Preview",
    "group": "d365-ops",
    "groupLabel": "Dynamics 365 Supply Chain, Finance & Operations",
-   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations",
+   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations license",
    "description": "The Time Entry Agent automates the time entry by generating weekly time entries based on project assignments and bookings and sends reminders for any missing entries.",
    "notes": [],
    "surfaces": [
@@ -1041,7 +1040,7 @@
    "status": "Public Preview",
    "group": "d365-ops",
    "groupLabel": "Dynamics 365 Supply Chain, Finance & Operations",
-   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations",
+   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations license",
    "description": "The Expense Agent reduces manual effort and errors in expense management by automating workflows for receipt processing, expense line creation, and expense report generation.",
    "notes": [],
    "surfaces": [
@@ -1062,7 +1061,7 @@
    "status": "Public Preview",
    "group": "d365-ops",
    "groupLabel": "Dynamics 365 Supply Chain, Finance & Operations",
-   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations",
+   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations license",
    "description": "The Approvals Agent streamlines the approval process for time, expense, and material transactions.",
    "notes": [],
    "surfaces": [
@@ -1083,7 +1082,7 @@
    "status": "Public Preview",
    "group": "d365-ops",
    "groupLabel": "Dynamics 365 Supply Chain, Finance & Operations",
-   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations",
+   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations license",
    "description": "Allows dispatchers to improve the schedule of a single technician quickly and efficiently. Dispatchers often spend considerable time on the schedule board adjusting technician schedules manually throughout their day.",
    "notes": [],
    "surfaces": [
