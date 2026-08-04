@@ -50,6 +50,16 @@ a.count-badge:hover{text-decoration:none;border-color:#C9D2F0}
 .count-badge i{width:9px;height:9px;border-radius:50%;display:inline-block;flex:0 0 auto}
 .dot-dev{background:var(--blue)}.dot-roll{background:var(--amber)}.dot-launch{background:var(--teal)}
 
+/* Clickable roadmap status filters */
+button.chip-toggle{appearance:none;cursor:pointer;font-family:inherit;
+  transition:background .15s,color .15s,border-color .15s}
+button.chip-toggle:hover{border-color:#C9D2F0;background:var(--light)}
+button.chip-toggle.is-active{background:var(--navy);color:#fff;border-color:var(--navy)}
+button.chip-toggle:focus-visible{outline:2px solid var(--purple);outline-offset:2px}
+.chip-toggle .chip-n{font-size:.72rem;font-weight:700;opacity:.65}
+.chip-toggle.is-active .chip-n{opacity:.8}
+.rm-empty{text-align:center;color:var(--muted);padding:2rem 1rem;font-size:.9rem}
+
 .roadmap-list{display:grid;gap:.8rem}
 .rm-card{background:#fff;border:1px solid var(--hair);border-radius:12px;padding:1.1rem 1.2rem;
   box-shadow:var(--shadow);border-left:5px solid var(--blue)}

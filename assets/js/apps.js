@@ -31,6 +31,8 @@ const fmtDate = (d) => {
 
 function appCard(a) {
   const total = a.roadmapTotal || a.roadmap.length;
+  const t = a.totals || a.counts;
+  const inFlight = (t.inDevelopment || 0) + (t.rollingOut || 0);
   const bits = [];
   if (a.links.length) bits.push(`${a.links.length} guide${a.links.length === 1 ? '' : 's'}`);
   if (total) bits.push(`${total} roadmap item${total === 1 ? '' : 's'}`);
@@ -40,8 +42,7 @@ function appCard(a) {
     <a class="agent-card" href="#/${esc(a.id)}" style="${accVars(a)}">
       <div class="agent-card-top">
         <span class="agent-ico">${icon(a.icon)}</span>
-        ${a.counts.rollingOut || a.counts.inDevelopment
-          ? `<span class="badge badge-preview">${a.counts.inDevelopment + a.counts.rollingOut} in flight</span>` : ''}
+        ${inFlight ? `<span class="badge badge-preview">${inFlight} in flight</span>` : ''}
       </div>
       <h3>${esc(a.name)}</h3>
       <p>${esc(a.blurb)}</p>
@@ -70,19 +71,20 @@ function renderList() {
 }
 
 function renderStats() {
-  const rm = DATA.apps.reduce((n, a) => n + (a.roadmapTotal || 0), 0);
+  const t = DATA.totals;
   $('#statRow').innerHTML = [
     [DATA.apps.length, 'Apps covered'],
-    [DATA.totals.roadmapItems, 'Copilot features in flight'],
-    [rm, 'Mapped to these apps'],
-    [DATA.totals.blogPosts, 'Recent blog posts'],
+    [t.roadmapItems, 'Copilot features in flight'],
+    [t.mappedItems ?? t.roadmapItems, 'Mapped to these apps'],
+    [t.blogPosts, 'Recent blog posts'],
   ].map(([v, l]) => `<div class="stat"><span class="stat-num">${v}</span><span class="stat-lbl">${l}</span></div>`).join('');
 
   $('#sourceNote').innerHTML =
     `Roadmap data from the public
      <a href="${ROADMAP_HOME}" target="_blank" rel="noopener noreferrer">Microsoft 365 Roadmap</a>,
-     filtered to features in development or rolling out; blog posts from official Microsoft RSS
-     feeds; guides from Microsoft Support and Learn.
+     filtered to features in development or rolling out. A feature that ships to several apps at
+     once is counted once. Blog posts come from official Microsoft RSS feeds; guides from Microsoft
+     Support and Learn.
      Refreshed ${esc(new Date(DATA.generated).toLocaleDateString(undefined,
        { year: 'numeric', month: 'long', day: 'numeric' }))}.`;
 }
@@ -127,16 +129,23 @@ function renderDetail(a) {
         </span>
       </a>`).join('')}</div>` : '';
 
+  // Chip counts describe the cards actually on the page, so a filter never
+  // resolves to an empty list; the "showing X of Y" link covers the full set.
   const roadmap = a.roadmap.length ? `
     <h2 class="section-title">Coming next</h2>
-    <div class="rm-meta-row">
-      ${a.counts.inDevelopment ? `<span class="count-badge"><i class="dot-dev"></i>${a.counts.inDevelopment} in development</span>` : ''}
-      ${a.counts.rollingOut ? `<span class="count-badge"><i class="dot-roll"></i>${a.counts.rollingOut} rolling out</span>` : ''}
+    <div class="rm-meta-row" id="rmFilter" role="group" aria-label="Filter roadmap by status">
+      <button class="count-badge chip-toggle is-active" data-rm="all">All
+        <span class="chip-n">${a.roadmap.length}</span></button>
+      ${a.counts.inDevelopment ? `<button class="count-badge chip-toggle" data-rm="In development">
+        <i class="dot-dev"></i>In development <span class="chip-n">${a.counts.inDevelopment}</span></button>` : ''}
+      ${a.counts.rollingOut ? `<button class="count-badge chip-toggle" data-rm="Rolling out">
+        <i class="dot-roll"></i>Rolling out <span class="chip-n">${a.counts.rollingOut}</span></button>` : ''}
       ${a.roadmapTotal > a.roadmap.length
         ? `<a class="count-badge" href="${ROADMAP_HOME}" target="_blank" rel="noopener noreferrer">
             showing ${a.roadmap.length} of ${a.roadmapTotal} &rarr;</a>` : ''}
     </div>
-    <div class="roadmap-list">${a.roadmap.map(roadmapCard).join('')}</div>` : '';
+    <div class="roadmap-list" id="roadmapList">${a.roadmap.map(roadmapCard).join('')}</div>
+    <p class="rm-empty" id="rmEmpty" hidden>No items with that status in this view.</p>` : '';
 
   const blogs = a.blogs.length ? `
     <h2 class="section-title">Related Microsoft blog posts</h2>
@@ -180,6 +189,31 @@ function renderDetail(a) {
       rolling out; plans can change. Always confirm availability for your tenant in the
       Microsoft 365 admin center.</p>
   `;
+
+  bindRoadmapFilter();
+}
+
+/** Status chips filter the visible roadmap cards in place. */
+function bindRoadmapFilter() {
+  const bar = $('#rmFilter');
+  const list = $('#roadmapList');
+  if (!bar || !list) return;
+
+  bar.addEventListener('click', (e) => {
+    const btn = e.target.closest('.chip-toggle');
+    if (!btn) return;
+    const want = btn.dataset.rm;
+    bar.querySelectorAll('.chip-toggle').forEach((b) => b.classList.toggle('is-active', b === btn));
+
+    let shown = 0;
+    list.querySelectorAll('.rm-card').forEach((card) => {
+      const match = want === 'all' || card.dataset.s === want;
+      card.hidden = !match;
+      if (match) shown++;
+    });
+    const empty = $('#rmEmpty');
+    if (empty) empty.hidden = shown > 0;
+  });
 }
 
 /* ------------------------------------------------------------------ routing */

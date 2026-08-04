@@ -351,6 +351,32 @@ async function fetchMeta(url) {
 
 /* ------------------------------------------------------------------- main */
 
+/** In development first, then Rolling out; newest first within each group. */
+const STATUS_ORDER = { 'In development': 0, 'Rolling out': 1 };
+function sortRoadmap(items) {
+  return items.sort((a, b) => {
+    const s = (STATUS_ORDER[a.status] ?? 9) - (STATUS_ORDER[b.status] ?? 9);
+    if (s !== 0) return s;
+    return new Date(b.modified) - new Date(a.modified);
+  });
+}
+
+/**
+ * Take a page-sized slice that still represents both statuses. Sorting alone
+ * would fill the slice with "In development" items and leave the "Rolling out"
+ * filter showing nothing.
+ */
+function sliceRoadmap(items, max) {
+  const sorted = sortRoadmap(items);
+  const dev = sorted.filter((i) => i.status === 'In development');
+  const roll = sorted.filter((i) => i.status === 'Rolling out');
+  if (!dev.length || !roll.length) return sorted.slice(0, max);
+
+  const rollQuota = Math.min(roll.length, Math.max(2, Math.round(max / 3)));
+  const devQuota = Math.min(dev.length, max - rollQuota);
+  return [...dev.slice(0, devQuota), ...roll.slice(0, rollQuota)];
+}
+
 async function main() {
   console.log('Fetching Microsoft 365 Roadmap...');
   const roadmap = await getRoadmap();
@@ -362,6 +388,10 @@ async function main() {
 
   const cache = loadCache();
   const apps = [];
+  // A single roadmap item is often tagged with several products (an Office
+  // feature lands in Word, Excel and PowerPoint at once). Summing per-app
+  // counts would report it three times, so track unique IDs for the headline.
+  const mappedIds = new Set();
 
   for (const app of APPS) {
     // Roadmap: prefer exact product-tag matches, which are far more precise
@@ -369,9 +399,8 @@ async function main() {
     const tagged = roadmap.filter((r) =>
       r.products.some((p) => (app.roadmapProducts || []).includes(p)));
     const pool = tagged.length ? tagged : roadmap.filter((r) => app.match.test(r.title));
-    const items = dedupeByTitle(pool)
-      .sort((a, b) => new Date(b.modified) - new Date(a.modified))
-      .slice(0, MAX_ROADMAP_PER_APP);
+    const items = sliceRoadmap(dedupeByTitle(pool), MAX_ROADMAP_PER_APP);
+    (tagged.length ? tagged : pool).forEach((r) => mappedIds.add(r.id));
 
     // Blogs: require the app name in the title so posts are genuinely about it.
     const posts = dedupeByTitle(blogs.filter((b) => app.match.test(b.title)))
@@ -395,12 +424,17 @@ async function main() {
       inDevelopment: items.filter((i) => i.status === 'In development').length,
       rollingOut: items.filter((i) => i.status === 'Rolling out').length,
     };
+    // Totals across everything tagged for this app, not just the page slice.
+    const totals = {
+      inDevelopment: (tagged.length ? tagged : pool).filter((i) => i.status === 'In development').length,
+      rollingOut: (tagged.length ? tagged : pool).filter((i) => i.status === 'Rolling out').length,
+    };
 
     apps.push({
       id: app.id, name: app.name, icon: app.icon, accent: app.accent,
       blurb: app.blurb, detail: app.detail, scenarios: app.scenarios || [],
-      links, roadmap: items, blogs: posts, counts,
-      roadmapTotal: tagged.length,
+      links, roadmap: items, blogs: posts, counts, totals,
+      roadmapTotal: tagged.length ? tagged.length : pool.length,
     });
     console.log(`  ${app.name.padEnd(28)} links ${links.length}  roadmap ${items.length}/${tagged.length}  blogs ${posts.length}`);
   }
@@ -416,14 +450,22 @@ async function main() {
     },
     totals: {
       apps: apps.length,
+      // All active Copilot features, whether or not they map to an app here.
       roadmapItems: roadmap.length,
+      inDevelopment: roadmap.filter((r) => r.status === 'In development').length,
+      rollingOut: roadmap.filter((r) => r.status === 'Rolling out').length,
+      // Unique features mapped to the apps on this page (no double counting).
+      mappedItems: mappedIds.size,
       blogPosts: blogs.length,
     },
     apps,
   };
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, JSON.stringify(payload, null, 1));
-  console.log(`\nWrote ${apps.length} apps to ${OUT}`);
+  const naiveSum = apps.reduce((n, a) => n + a.roadmapTotal, 0);
+  console.log(`\nActive Copilot features: ${roadmap.length}`);
+  console.log(`  mapped to these apps:  ${mappedIds.size} unique (${naiveSum} before de-duplicating multi-product items)`);
+  console.log(`Wrote ${apps.length} apps to ${OUT}`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
