@@ -48,7 +48,8 @@ function agentCard(a) {
       <p>${esc(a.description)}</p>
       <div class="surface-row">${surfaces}${more}</div>
       <div class="agent-card-foot">
-        <span>${a.links.length} resource${a.links.length === 1 ? '' : 's'}</span>
+        <span>${a.links.length} resource${a.links.length === 1 ? '' : 's'}${
+          a.highlights && a.highlights.length ? ` &middot; ${a.highlights.length} capabilities` : ''}</span>
         <span class="go">View details &rarr;</span>
       </div>
     </a>`;
@@ -117,11 +118,39 @@ function renderDetail(a) {
     ? `<div class="res-grid">${a.links.map((l) => `
         <a class="res-card" href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">
           <span class="res-ico">${resourceIcon(l.label)}</span>
-          <span class="res-body"><strong>${esc(l.label)}</strong><span>${esc(host(l.url))}</span></span>
+          <span class="res-body">
+            <strong>${esc(l.label)}</strong>
+            ${l.summary ? `<em>${esc(l.summary)}</em>` : ''}
+            <span>${esc(host(l.url))}</span>
+          </span>
         </a>`).join('')}</div>`
     : `<div class="empty"><strong>No published links yet.</strong>
         <p class="muted" style="margin-top:.4rem">Microsoft hasn't shared public documentation for this
         agent in the source deck. Check back after the next refresh.</p></div>`;
+
+  const overview = (a.overview && a.overview.length) ? `
+    <section class="detail-section">
+      <h2 class="section-title">About this agent</h2>
+      <div class="prose">${a.overview.map((p) => `<p>${esc(p)}</p>`).join('')}</div>
+    </section>` : '';
+
+  const highlights = (a.highlights && a.highlights.length) ? `
+    <section class="detail-section">
+      <h2 class="section-title">What you can do</h2>
+      <ul class="hl-list" style="${accVars(a)}">
+        ${a.highlights.map((h) => `<li>${esc(h)}</li>`).join('')}
+      </ul>
+    </section>` : '';
+
+  const limitations = (a.limitations && a.limitations.length) ? `
+    <section class="detail-section">
+      <h2 class="section-title">Good to know</h2>
+      <ul class="lim-list">${a.limitations.map((l) => `<li>${esc(l)}</li>`).join('')}</ul>
+    </section>` : '';
+
+  const sourced = (a.overview && a.overview.length) ? `
+    <p class="source-note">Details on this page are drawn from the Microsoft support, Learn and blog
+    articles linked above. Always confirm current behavior against that documentation.</p>` : '';
 
   const notes = a.notes.length ? `
     <div class="callout">
@@ -165,9 +194,13 @@ function renderDetail(a) {
       </div>
     </div>
     ${notes}
+    ${overview}
+    ${highlights}
+    ${limitations}
 
     <h2 class="section-title">Resources</h2>
     ${resources}
+    ${sourced}
     ${frontierNote}
 
     ${related.length ? `<h2 class="section-title">More in ${esc(group ? group.label : a.groupLabel)}</h2>
