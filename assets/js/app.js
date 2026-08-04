@@ -142,6 +142,14 @@ function renderDetail(a) {
       </ul>
     </section>` : '';
 
+  const scenarios = (a.scenarios && a.scenarios.length) ? `
+    <section class="detail-section">
+      <h2 class="section-title">Example scenarios</h2>
+      <ul class="hl-list" style="${accVars(a)}">
+        ${a.scenarios.map((s) => `<li>${esc(s)}</li>`).join('')}
+      </ul>
+    </section>` : '';
+
   const limitations = (a.limitations && a.limitations.length) ? `
     <section class="detail-section">
       <h2 class="section-title">Good to know</h2>
@@ -196,6 +204,7 @@ function renderDetail(a) {
     ${notes}
     ${overview}
     ${highlights}
+    ${scenarios}
     ${limitations}
 
     <h2 class="section-title">Resources</h2>

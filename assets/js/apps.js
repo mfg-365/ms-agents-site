@@ -73,15 +73,16 @@ function renderStats() {
   const rm = DATA.apps.reduce((n, a) => n + (a.roadmapTotal || 0), 0);
   $('#statRow').innerHTML = [
     [DATA.apps.length, 'Apps covered'],
-    [DATA.totals.roadmapItems, 'Copilot roadmap items'],
+    [DATA.totals.roadmapItems, 'Copilot features in flight'],
     [rm, 'Mapped to these apps'],
     [DATA.totals.blogPosts, 'Recent blog posts'],
   ].map(([v, l]) => `<div class="stat"><span class="stat-num">${v}</span><span class="stat-lbl">${l}</span></div>`).join('');
 
   $('#sourceNote').innerHTML =
     `Roadmap data from the public
-     <a href="${ROADMAP_HOME}" target="_blank" rel="noopener noreferrer">Microsoft 365 Roadmap</a>;
-     blog posts from official Microsoft RSS feeds; guides from Microsoft Support and Learn.
+     <a href="${ROADMAP_HOME}" target="_blank" rel="noopener noreferrer">Microsoft 365 Roadmap</a>,
+     filtered to features in development or rolling out; blog posts from official Microsoft RSS
+     feeds; guides from Microsoft Support and Learn.
      Refreshed ${esc(new Date(DATA.generated).toLocaleDateString(undefined,
        { year: 'numeric', month: 'long', day: 'numeric' }))}.`;
 }
@@ -104,6 +105,16 @@ function roadmapCard(r) {
 }
 
 function renderDetail(a) {
+  const about = a.detail ? `
+    <h2 class="section-title">What Copilot does in ${esc(a.name)}</h2>
+    <div class="prose"><p>${esc(a.detail)}</p></div>` : '';
+
+  const scenarios = (a.scenarios && a.scenarios.length) ? `
+    <h2 class="section-title">Example scenarios</h2>
+    <ul class="hl-list" style="${accVars(a)}">
+      ${a.scenarios.map((s) => `<li>${esc(s)}</li>`).join('')}
+    </ul>` : '';
+
   const guides = a.links.length ? `
     <h2 class="section-title">Guides &amp; documentation</h2>
     <div class="res-grid">${a.links.map((l) => `
@@ -117,11 +128,10 @@ function renderDetail(a) {
       </a>`).join('')}</div>` : '';
 
   const roadmap = a.roadmap.length ? `
-    <h2 class="section-title">On the roadmap</h2>
+    <h2 class="section-title">Coming next</h2>
     <div class="rm-meta-row">
       ${a.counts.inDevelopment ? `<span class="count-badge"><i class="dot-dev"></i>${a.counts.inDevelopment} in development</span>` : ''}
       ${a.counts.rollingOut ? `<span class="count-badge"><i class="dot-roll"></i>${a.counts.rollingOut} rolling out</span>` : ''}
-      ${a.counts.launched ? `<span class="count-badge"><i class="dot-launch"></i>${a.counts.launched} launched</span>` : ''}
       ${a.roadmapTotal > a.roadmap.length
         ? `<a class="count-badge" href="${ROADMAP_HOME}" target="_blank" rel="noopener noreferrer">
             showing ${a.roadmap.length} of ${a.roadmapTotal} &rarr;</a>` : ''}
@@ -161,11 +171,14 @@ function renderDetail(a) {
       <p class="detail-desc">${esc(a.blurb)}</p>
     </div>
     ${nothing}
+    ${about}
+    ${scenarios}
     ${guides}
     ${roadmap}
     ${blogs}
-    <p class="source-note">Roadmap items reflect Microsoft's published plans and can change.
-      Always confirm availability for your tenant in the Microsoft 365 admin center.</p>
+    <p class="source-note">Roadmap items show work Microsoft has published as in development or
+      rolling out; plans can change. Always confirm availability for your tenant in the
+      Microsoft 365 admin center.</p>
   `;
 }
 

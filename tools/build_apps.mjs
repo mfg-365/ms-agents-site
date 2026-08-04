@@ -23,8 +23,10 @@ const CACHE = path.join(__dirname, 'out', 'article-cache.json');
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ms-agents-site/1.0';
 
 const ROADMAP_API = 'https://www.microsoft.com/releasecommunications/api/v1/m365';
-const MAX_ROADMAP_PER_APP = 8;
+const MAX_ROADMAP_PER_APP = 10;
 const MAX_BLOGS_PER_APP = 5;
+/** Only surface work that is still coming — shipped items belong in the docs. */
+const ACTIVE_STATUSES = ['In development', 'Rolling out'];
 
 const FEEDS = [
   { url: 'https://www.microsoft.com/en-us/microsoft-365/blog/feed/', source: 'Microsoft 365 Blog' },
@@ -40,7 +42,13 @@ const FEEDS = [
  */
 const APPS = [
   { id: 'word', name: 'Word', icon: 'doc', accent: 'blue',
-    blurb: 'Draft, rewrite and summarize long-form documents from a prompt, grounded in your existing files.',
+    blurb: 'Draft, rewrite and summarize long-form documents from a prompt, grounded in files you already have.',
+    detail: 'Copilot in Word turns a blank page into a working draft. Point it at existing documents, meeting notes or a short brief and it produces structured prose you can edit, then helps you tighten tone, shorten sections, or rewrite passages for a different audience. It can also summarize a long document into the key points and open questions.',
+    scenarios: [
+      'Draft a project proposal from a meeting recap and last quarter\u2019s status report.',
+      'Summarize a 40-page contract into a one-page brief with the obligations called out.',
+      'Rewrite a technical section in plain language for an executive audience.',
+    ],
     match: /\bword\b/i, roadmapProducts: ['Word'],
     links: [
       { label: 'Draft and add content with Copilot in Word', url: 'https://support.microsoft.com/en-us/copilot-word', kind: 'support' },
@@ -48,78 +56,156 @@ const APPS = [
     ] },
   { id: 'excel', name: 'Excel', icon: 'grid', accent: 'teal',
     blurb: 'Analyze data, generate formulas and build charts in natural language, with multi-step reasoning over your workbook.',
+    detail: 'Copilot in Excel works with your data the way an analyst would. Ask a question in plain language and it will suggest formulas, add calculated columns, highlight trends and outliers, and build the chart or PivotTable that answers it. Agent Mode can carry out multi-step tasks, showing its reasoning so you can check the work before applying it.',
+    scenarios: [
+      'Identify the key drivers behind this quarter\u2019s forecast variance.',
+      'Add a column that flags every order shipped more than five days late.',
+      'Summarize this survey export into themes and chart the top responses.',
+    ],
     match: /\bexcel\b/i, roadmapProducts: ['Excel'],
     links: [
       { label: 'Get started with Copilot in Excel', url: 'https://support.microsoft.com/en-us/copilot-excel', kind: 'support' },
     ] },
   { id: 'powerpoint', name: 'PowerPoint', icon: 'slides', accent: 'pink',
     blurb: 'Turn prompts and existing documents into complete presentations, then refine layout, visuals and speaker notes.',
+    detail: 'Copilot in PowerPoint builds a first-draft deck from a prompt, a Word document or a set of notes \u2014 choosing a structure, laying out slides and adding relevant imagery. From there you can ask it to reorganize sections, tighten wording, add speaker notes, or restyle the deck to match your template.',
+    scenarios: [
+      'Turn this project charter document into a 10-slide kickoff deck.',
+      'Add speaker notes to every slide aimed at a non-technical audience.',
+      'Condense this 30-slide deck into a five-minute executive summary.',
+    ],
     match: /\bpowerpoint\b/i, roadmapProducts: ['PowerPoint'],
     links: [
       { label: 'Create a presentation with Copilot in PowerPoint', url: 'https://support.microsoft.com/en-us/copilot-powerpoint', kind: 'support' },
     ] },
   { id: 'outlook', name: 'Outlook', icon: 'pen', accent: 'blue',
     blurb: 'Summarize long mail threads, draft replies in your voice, and catch up on what changed while you were away.',
+    detail: 'Copilot in Outlook cuts down inbox time. It summarizes long threads into the decisions and open items, drafts replies you can tune for length and tone, and surfaces the messages that actually need you. Coaching by Copilot reviews a draft before you send it and flags unclear or blunt phrasing.',
+    scenarios: [
+      'Summarize this 30-message thread and list what still needs a decision.',
+      'Draft a reply declining the request but proposing two alternative dates.',
+      'Show me what I missed in my inbox while I was out last week.',
+    ],
     match: /\boutlook\b/i, roadmapProducts: ['Outlook'],
     links: [
       { label: 'Chat with Copilot in Outlook', url: 'https://support.microsoft.com/en-us/copilot-outlook', kind: 'support' },
     ] },
   { id: 'teams', name: 'Teams', icon: 'meeting', accent: 'purple',
     blurb: 'Recap meetings, surface decisions and action items, and catch up on channel and chat activity you missed.',
+    detail: 'Copilot in Teams turns conversations into something you can act on. During or after a meeting it recaps what was discussed, who said what, which decisions were made and which follow-ups were assigned \u2014 whether or not you attended. In chats and channels it summarizes long back-and-forth threads so you can rejoin quickly.',
+    scenarios: [
+      'Recap the meeting I missed and list the action items assigned to my team.',
+      'What questions were raised about the budget, and were they answered?',
+      'Summarize the last two weeks of activity in this channel.',
+    ],
     match: /\bteams\b/i, roadmapProducts: ['Microsoft Teams'],
     links: [
       { label: 'Catch up on meetings with Copilot in Teams', url: 'https://support.microsoft.com/en-us/copilot-teams', kind: 'support' },
     ] },
   { id: 'onenote', name: 'OneNote', icon: 'book', accent: 'purple',
     blurb: 'Summarize notebooks, pull out action items and turn rough notes into structured plans.',
+    detail: 'Copilot in OneNote reads across your pages and sections to make sense of accumulated notes. It can summarize a sprawling notebook, extract the to-dos buried in it, and reshape raw meeting scribbles into an organized plan or checklist.',
+    scenarios: [
+      'Summarize this notebook section and pull out every action item.',
+      'Turn these rough interview notes into a structured candidate summary.',
+      'Create a checklist from the decisions captured across these pages.',
+    ],
     match: /\bonenote\b/i, roadmapProducts: ['OneNote'],
     links: [
       { label: 'Summarize your OneNote notes with Copilot', url: 'https://support.microsoft.com/en-us/copilot-onenote', kind: 'support' },
     ] },
   { id: 'loop', name: 'Loop', icon: 'flow', accent: 'teal',
     blurb: 'Co-create and refine shared Loop pages and components with Copilot alongside your team.',
+    detail: 'Copilot in Loop works inside the shared page rather than off to the side, so drafting is a group activity. It can generate a starting page from a prompt, restructure content as thinking evolves, and summarize where a collaborative document has landed \u2014 with everyone seeing the same changes in real time.',
+    scenarios: [
+      'Draft a project brief page the team can edit together.',
+      'Summarize where this planning page has landed so far.',
+      'Reorganize these scattered notes into a clear set of workstreams.',
+    ],
     match: /\bloop\b/i, roadmapProducts: ['Microsoft Loop'],
     links: [
       { label: 'Copilot in Loop FAQ', url: 'https://support.microsoft.com/en-us/copilot-loop', kind: 'support' },
     ] },
   { id: 'onedrive', name: 'OneDrive', icon: 'search', accent: 'blue',
     blurb: 'Ask questions across your stored files, compare documents and summarize them without opening each one.',
+    detail: 'Copilot in OneDrive answers questions about your files without making you open them. Select one or several documents and ask for a summary, a comparison, or a specific detail \u2014 useful when the answer is spread across versions, contracts or reports you only half remember.',
+    scenarios: [
+      'Summarize these five documents and tell me how they differ.',
+      'Which version of this proposal has the updated pricing?',
+      'Find the file where we documented the escalation process.',
+    ],
     match: /\bonedrive\b/i, roadmapProducts: ['OneDrive'],
     links: [
       { label: 'Get started with Copilot in OneDrive', url: 'https://support.microsoft.com/en-us/onedrive/get-started-with-copilot-in-onedrive', kind: 'support' },
     ] },
   { id: 'sharepoint', name: 'SharePoint', icon: 'globe', accent: 'teal',
     blurb: 'Build sites and pages faster and ground Copilot answers in your organization\u2019s published content.',
+    detail: 'SharePoint is both a place Copilot helps you build and a source it draws on. Copilot can draft pages and assemble sites from a description, while the content you publish there becomes grounding for answers across Microsoft 365 \u2014 so well-maintained sites make every other Copilot surface better.',
+    scenarios: [
+      'Create a project site with a home page, news section and document library.',
+      'Draft a policy page summarizing our updated travel guidelines.',
+      'What does our published documentation say about data retention?',
+    ],
     match: /\bsharepoint\b/i, roadmapProducts: ['SharePoint'],
     links: [
       { label: 'Copilot in SharePoint help & learning', url: 'https://support.microsoft.com/en-us/SharePoint/ai-copilot/microsoft-365-copilot-in-sharepoint-help-learning', kind: 'support' },
     ] },
   { id: 'planner', name: 'Planner', icon: 'checklist', accent: 'purple',
     blurb: 'Create plans, generate tasks and track progress conversationally instead of building boards by hand.',
+    detail: 'Copilot in Planner builds the plan for you. Describe a project and it generates a task breakdown with sensible buckets and sequencing, then keeps it current \u2014 adding tasks, adjusting assignments and answering questions about status without you clicking through the board.',
+    scenarios: [
+      'Create a plan for a product launch with phases and owners.',
+      'What tasks are overdue and who owns them?',
+      'Add follow-up tasks from this meeting recap to the existing plan.',
+    ],
     match: /\bplanner\b/i, roadmapProducts: ['Planner'],
     links: [
       { label: 'Create a new plan with Copilot in Planner', url: 'https://support.microsoft.com/en-us/Planner/copilot/create-a-new-plan-with-copilot-in-planner-preview', kind: 'support' },
     ] },
   { id: 'forms', name: 'Forms', icon: 'poll', accent: 'teal',
     blurb: 'Draft surveys, quizzes and polls from a description, then summarize the responses that come back.',
+    detail: 'Copilot in Forms handles both ends of a survey. Describe what you want to learn and it drafts the questions \u2014 with sensible response types and scales \u2014 then, once responses arrive, summarizes the themes and sentiment instead of leaving you to read every free-text answer.',
+    scenarios: [
+      'Create an employee engagement survey covering workload and recognition.',
+      'Draft a post-event feedback form with a mix of ratings and open questions.',
+      'Summarize the themes in the free-text responses to this survey.',
+    ],
     match: /\bforms\b/i, roadmapProducts: ['Forms'],
     links: [
       { label: 'Welcome to Copilot in Forms', url: 'https://support.microsoft.com/en-us/Forms/welcome-to-copilot-in-forms', kind: 'support' },
     ] },
   { id: 'viva', name: 'Viva', icon: 'people', accent: 'pink',
     blurb: 'Bring Copilot into employee experience workflows across Viva Engage, Insights, Learning and Glint.',
+    detail: 'Across the Viva suite, Copilot supports the people side of work: drafting and summarizing community conversations in Engage, interpreting collaboration patterns in Insights, recommending learning paths, and helping admins make sense of survey feedback in Glint.',
+    scenarios: [
+      'Summarize what my Engage communities discussed this week.',
+      'Draft an announcement post for a company-wide policy change.',
+      'What are the main themes in our latest engagement survey?',
+    ],
     match: /\bviva\b|\bengage\b/i, roadmapProducts: ['Microsoft Viva'],
     links: [
       { label: 'Copilot in Viva help & learning', url: 'https://support.microsoft.com/en-us/viva/copilot-in-viva-help-learning', kind: 'support' },
     ] },
   { id: 'clipchamp', name: 'Clipchamp', icon: 'slides', accent: 'amber',
     blurb: 'Summarize and ask questions about video content directly in the Clipchamp player.',
+    detail: 'Copilot in the Clipchamp player makes video searchable. Rather than scrubbing through a recording, you can ask what was covered, get a summary of the main points, and jump to the moment a specific topic came up.',
+    scenarios: [
+      'Summarize the main points covered in this recording.',
+      'Where in this video does the speaker discuss pricing?',
+      'List the questions asked during this recorded session.',
+    ],
     match: /\bclipchamp\b/i, roadmapProducts: ['Microsoft Clipchamp'],
     links: [
       { label: 'Ask questions & summarize video with Copilot', url: 'https://support.microsoft.com/en-us/clipchamp/stream-pages/ask-questions-get-summaries-of-any-video-with-microsoft-copilot-in-the-clipchamp-player', kind: 'support' },
     ] },
   { id: 'copilot-chat', name: 'Microsoft 365 Copilot Chat', icon: 'spark', accent: 'purple',
-    blurb: 'The central Copilot surface — chat grounded in your work data, with agents, Pages and file creation.',
+    blurb: 'The central Copilot surface \u2014 chat grounded in your work data, with agents, Pages and file creation.',
+    detail: 'Copilot Chat is the hub the rest of the experience hangs off. It answers questions grounded in your emails, files, meetings and chats, hosts the first-party agents, creates Word, Excel and PowerPoint files on request, and turns any answer into a shareable Copilot Page your team can build on.',
+    scenarios: [
+      'What did my team decide about the migration timeline?',
+      'Create a status report from this week\u2019s meetings and email threads.',
+      'Find everything related to this customer across my files and chats.',
+    ],
     match: /\bcopilot chat\b|\bmicrosoft 365 copilot\b/i,
     roadmapProducts: ['Microsoft Copilot (Microsoft 365)', 'Microsoft 365 app'],
     links: [
@@ -179,7 +265,9 @@ async function getRoadmap() {
     return hay.includes('copilot');
   };
 
-  return all.filter(isCopilot).map((f) => ({
+  return all.filter(isCopilot)
+    .filter((f) => ACTIVE_STATUSES.includes(f.status))
+    .map((f) => ({
     id: f.id,
     title: stripProductPrefix(f.title),
     description: clean(f.description),
@@ -306,12 +394,12 @@ async function main() {
     const counts = {
       inDevelopment: items.filter((i) => i.status === 'In development').length,
       rollingOut: items.filter((i) => i.status === 'Rolling out').length,
-      launched: items.filter((i) => i.status === 'Launched').length,
     };
 
     apps.push({
       id: app.id, name: app.name, icon: app.icon, accent: app.accent,
-      blurb: app.blurb, links, roadmap: items, blogs: posts, counts,
+      blurb: app.blurb, detail: app.detail, scenarios: app.scenarios || [],
+      links, roadmap: items, blogs: posts, counts,
       roadmapTotal: tagged.length,
     });
     console.log(`  ${app.name.padEnd(28)} links ${links.length}  roadmap ${items.length}/${tagged.length}  blogs ${posts.length}`);

@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-04T17:00:20+00:00",
+ "generated": "2026-08-04T17:36:14+00:00",
  "sourceUpdated": "July 15, 2026",
  "source": {
   "title": "ABS Out-of-Box Agents - Customer ready"
@@ -94,16 +94,37 @@
     {
      "label": "Guide",
      "url": "https://adoption.microsoft.com/files/copilot/analystresearcheroverviewdeck.pptx"
+    },
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/researcher-agent",
+     "summary": "Researcher is an intelligent AI assistant in Microsoft 365 Copilot that gathers enterprise and web data to deliver comprehensive, source-backed answers."
+    },
+    {
+     "label": "Get started with Researcher",
+     "url": "https://support.microsoft.com/en-us/Microsoft-365-Copilot/get-started-with-researcher-in-microsoft-365-copilot",
+     "summary": "Researcher is built into Microsoft 365 Copilot to help you gather, analyze, and summarize information from the web, your work documents, or both. It delivers an easy-to-read report."
     }
    ],
    "icon": "search",
    "accent": "blue",
    "overview": [
-    "Microsoft is excited to introduce two, first-of-their-kind reasoning agents in Microsoft 365 Copilot: Researcher and Analyst.",
-    "Today, we're excited to introduce two first-of-their-kind reasoning agents for work: Researcher and Analyst . They analyze vast amounts of information with secure, compliant access to your work data—your emails, meetings, files, chats, and more—and the web to deliver highly-skilled expertise on demand.",
-    "Researcher and Analyst will start rolling out to customers with a Microsoft 365 Copilot license in April as part of a new \" Frontier \" program that gives customers early access to new Copilot innovations while they're still in development."
+    "Researcher is built into Microsoft 365 Copilot to help you gather, analyze, and summarize information from the web, your work documents, or both. It delivers an easy-to-read report.",
+    "Researcher is an intelligent AI assistant in Microsoft 365 Copilot that gathers enterprise and web data to deliver comprehensive, source-backed answers.",
+    "The Researcher agent is your intelligent assistant in Microsoft 365 Copilot—built to tackle complex, multistep research and deliver a structured, source-cited report. Think of it as a supercharged research partner that helps you gather, analyze, and summarize information from the web and, at work, from files, emails, meetings, and chats you have access to. Researcher makes it easier to get thorough answers and make decisions faster.",
+    "Researcher is designed for deeper reasoning of your tasks. It excels at tackling complex, layered tasks that require thoughtful analysis. By taking longer processing time, Researcher delivers more comprehensive output, making it ideal for detailed research projects."
    ],
-   "highlights": [],
+   "scenarios": [
+    "Engage with clarifying questions - Researcher agent may ask clarifying questions to guide the output and keep you involved. This phase is important to help you steer the research and ensure the final report meets your needs"
+   ],
+   "highlights": [
+    "Ask a question : Start by typing a topic or question—like \"What are the benefits of AI in education?\"—into the Researcher prompt. Or use one of the built-in prompt examples",
+    "Clarify (Optional): Researcher might ask follow-up questions to better understand what you're looking for. You can answer the questions or just say \"Go ahead.\"",
+    "Saves you hours : It pulls from your work content and the web and composes a structured, reasoned response",
+    "Builds trust : It shows sources and organizes findings so you can verify and share with confidence",
+    "Fits how you work : It's right inside Microsoft 365 Copilot. At work, it respects the same permissions, policies, and compliance you already rely on",
+    "Visuals, charts, and graphs to make data easier to understand"
+   ],
    "limitations": []
   },
   {
@@ -127,16 +148,25 @@
     {
      "label": "Guide",
      "url": "https://adoption.microsoft.com/files/copilot/analystresearcheroverviewdeck.pptx"
+    },
+    {
+     "label": "Get started with Analyst",
+     "url": "https://support.microsoft.com/en-us/Microsoft-365-Copilot/get-started-with-analyst-in-microsoft-365-copilot",
+     "summary": "The Microsoft 365 Copilot Analyst agent is an AI-powered assistant for data analysis. The Analyst agent is like having a skilled data analyst on hand to help you make sense of data from multiple sources without requiring"
     }
    ],
    "icon": "chart",
    "accent": "teal",
    "overview": [
-    "Microsoft is excited to introduce two, first-of-their-kind reasoning agents in Microsoft 365 Copilot: Researcher and Analyst.",
-    "Today, we're excited to introduce two first-of-their-kind reasoning agents for work: Researcher and Analyst . They analyze vast amounts of information with secure, compliant access to your work data—your emails, meetings, files, chats, and more—and the web to deliver highly-skilled expertise on demand.",
-    "Researcher and Analyst will start rolling out to customers with a Microsoft 365 Copilot license in April as part of a new \" Frontier \" program that gives customers early access to new Copilot innovations while they're still in development."
+    "The Microsoft 365 Copilot Analyst agent is an AI-powered assistant for data analysis. The Analyst agent is like having a skilled data analyst on hand to help you make sense of data from multiple sources without requiring advanced expertise."
    ],
-   "highlights": [],
+   "scenarios": [
+    "Save time: You don't have to look through thousands of rows of data or multiple files like Excel spreadsheets, CSV files, databases, or others and then try to consolidate that data for analysis. Analyst does it for you!"
+   ],
+   "highlights": [
+    "You don't have to be a data analyst: Just ask a simple question about your data and Analyst will do things like calculate statistics, identify trends, and show outliers",
+    "Get easy-to-read reports: You'll get a report based on your question in easy-to-read language and formatting that surfaces insights and can include visuals like charts and tables"
+   ],
    "limitations": []
   },
   {
@@ -172,22 +202,27 @@
    "accent": "purple",
    "overview": [
     "AI-generated notes automate note-taking during Teams meetings to capture the discussion in real-time with action items and follow-up tasks.",
-    "A Microsoft 365 Copilot license is required to add Facilitator to a meeting or turn it on during a meeting. However, any meeting participant (excluding external participants) can see all real-time updates in Chat and Notes .",
-    "The following Facilitator agent features are available as part of the public preview program and might undergo further changes before being released publicly."
+    "Facilitator can only be added to scheduled meetings, and can't be added to channel meetings, instant meetings, or Teams calls.",
+    "When you turn on Facilitator, you'll be asked to select a language if a language for the meeting hasn't already been selected. Once Facilitator is on, it can provide insights throughout the duration of the meeting.",
+    "Mobile meeting participants can see live notes being generated. Only meeting participants who are organizers or presenters and are using Teams for web or desktop can turn Facilitator on or off during a meeting."
+   ],
+   "scenarios": [
+    "@Facilitator, here's the agenda: introductions (5 minutes), product discussion (25 minutes).⁠",
+    "@Facilitator, add 'Strategy review' to the agenda for 15 minutes.⁠"
    ],
    "highlights": [
     "Licensed users can interact with the agent by mentioning it in the chat, for example \"@Facilitator add these topics to the agenda…\"",
     "Unlicensed users can see Facilitator's notes in meetings",
     "Facilitator only supports the languages listed at Supported languages for Microsoft Copilot",
+    "Frequently asked questions about Facilitator in Microsoft Teams",
     "Ask Facilitator to create a loop or word document based on the conversation",
-    "Ask Facilitator to help manage your tasks by @mentioning Facilitator to create, update, or query for tasks related to that meeting",
-    "Tasks created by Facilitator will automatically sync to a meeting plan associated with that meeting instance"
+    "Ask Facilitator to help manage your tasks by @mentioning Facilitator to create, update, or query for tasks related to that meeting"
    ],
    "limitations": [
     "Only licensed users can initiate Facilitator. Unlicensed users can't prompt Facilitator, but they can see others' prompts to Facilitator and Facilitator's responses",
     "Currently, Facilitator isn't supported in 1:1 chats, group chats, or external chats and meetings",
     "Facilitator's AI-generated notes for meetings aren't automatically collected as cloud attachments in Microsoft Purview eDiscovery because it isn't currently supported",
-    "Retention labels aren't supported for cloud attachments in AI-generated notes"
+    "Meeting settings like Prevent copy and paste and Watermarks aren't applied to Facilitator's responses or AI-generated notes in meetings"
    ]
   },
   {
@@ -223,9 +258,11 @@
    "accent": "pink",
    "overview": [
     "Use Interpreter, an AI-powered translator, during multilingual Microsoft Teams meetings for more clear, effective communication between participants.",
-    "20 hours of interpretation are included per person per month with a Microsoft 365 Copilot license. Access beyond the hours included is subject to available capacity.",
-    "Remove language barriers in multilingual Microsoft Teams meetings and calls with the Interpreter agent. The interpreter agent helps participants speak and listen in their preferred languages through real-time speech-to-speech interpretation."
+    "Remove language barriers in multilingual Microsoft Teams meetings and calls with the Interpreter agent. The interpreter agent helps participants speak and listen in their preferred languages through real-time speech-to-speech interpretation.",
+    "Make Teams meetings and calls more inclusive with the Interpreter agent when participants don't share a common language. Interpreter is ideal for meetings and calls where participants speak different languages and you'd traditionally rely on a human interpreter.",
+    "Interpreter helps bridge communication gaps by translating speech into each participant's preferred language—allowing everyone to speak and listen in the language they're most comfortable with and fully engage in the conversation."
    ],
+   "scenarios": [],
    "highlights": [
     "Interpreter settings will persist across future meetings",
     "An eligible Microsoft 365 base license. For the list of eligible base licenses, see Understand licensing requirements for Microsoft 365 Copilot",
@@ -265,9 +302,11 @@
    "accent": "blue",
    "overview": [
     "Empowering sellers with a smarter way to prepare,  chat naturally, uncover insights, and walk into customer  meetings ready to win.",
+    "Today, we are excited to announce that the public preview of Sales agent in Microsoft 365 Copilot is now available. Sales agent brings insights from Customer Relationship Management (CRM) systems, emails, meetings, enterprise content stores and other sales applications, into the flow of work. It brings together customer context from across your organization while helping ensure everything aligns with existing CRM security permissions. Whether you use Salesforce or Dynamics 365 Sales, you can access and act on sales data directly in your productivity tools, eliminating the need for constant context switching.",
     "By integrating with enterprise and personal work data, Sales agent becomes a sales-savvy assistant, built to understand sales teams' workflows and speak their language. Whether sellers are ramping up on a new account, preparing for a customer meeting, or reviewing pipeline health, Sales agent brings together CRM insights, work data, and customer context—so decisions can be backed by context.",
     "Getting up to speed on an account often means searching multiple systems and waiting on experts - Sales agent changes that. Using natural language prompts, sellers have on-demand access to account summaries, customer relationship insights, and personalized email drafts—tailored with sales context."
    ],
+   "scenarios": [],
    "highlights": [],
    "limitations": []
   },
@@ -299,9 +338,14 @@
    "icon": "coin",
    "accent": "teal",
    "overview": [
+    "Built with Microsoft 365 Copilot, this role-based AI solution brings ERP-connected data and workflows directly into the flow of work",
     "Finance Agent accelerates time-to-impact for finance professionals by surfacing insights that support strategic decision-making and reduce the time that's spent on manual, repetitive work. Finance Agent empowers finance professionals to stay in the flow of work by seamlessly connecting productivity tools such as Excel with existing financial systems to support critical business processes and generate insights and actions in real time.",
     "The Finance Agent delivers a set of purpose-built AI capabilities designed for Finance teams. It accelerates financial operations by delivering accurate, analysis-ready data, insights, and automates key steps in core financial processes. The agent surfaces capabilities in familiar surfaces for Finance Professionals: Excel, Outlook, and Microsoft 365 Copilot. (Available capabilities may vary and depend on the particular surface.",
-    "Built with Microsoft 365 Copilot, this role-based AI solution brings ERP-connected data and workflows directly into the flow of work"
+    "Finance agent-created content (for example, email summarization, suggested email responses, and analysis summaries) is currently provided only in United States–based English (En-US). Additional languages and regions will be supported in future releases."
+   ],
+   "scenarios": [
+    "The Finance solution in Microsoft 365 Copilot delivers a suite of capabilities designed to simplify financial operations, improve accuracy, and enhance productivity across the finance organization",
+    "Reconciliation has always been one of finance's most time-consuming tasks: matching transactions, detecting exceptions, and validating balances. Copilot transforms this process into an interactive experience"
    ],
    "highlights": [],
    "limitations": []
@@ -340,9 +384,16 @@
    "icon": "doc",
    "accent": "blue",
    "overview": [
-    "Learn about getting started and creating files with Word, Excel, and PowerPoint agents in Microsoft 365 Copilot.",
     "The Word, Excel, and PowerPoint Agents in Microsoft 365 Copilot are AI-powered tools that help you create files simply by describing what you need. Whether you're working on a work project or personal task, these agents help you generate drafts, organize information, and build files. Use them whenever you want to quickly create new documents, spreadsheets, and presentations from Copilot Chat.",
-    "Create files easily : Generate Word, Excel, or PowerPoint files from a simple prompt."
+    "Create files easily : Generate Word, Excel, or PowerPoint files from a simple prompt.",
+    "Privacy and control : Your data is securely processed. Reasoning models do not retain content beyond your request, customer data is never used to train the models, and Copilot respects sensitivity labels along with your organization's enterprise access policies.",
+    "You can access the agents in the Microsoft 365 Copilot app, including the desktop and web apps. Look for the Word Agent, Excel Agent, or PowerPoint Agent under the Agents or Tools menu."
+   ],
+   "scenarios": [
+    "Run a full analysis on this sales data set. I want to understand some important insights to help me make decisions about my business. Make it visual",
+    "Work with data : Use connected content to produce richer results. With a Copilot license, automatically pull in information from your files, emails, chats, meetings and more while always respecting your company's access policies",
+    "Without a Copilot license, pull in information from the web and reference specific files while respecting your company's policies",
+    "For personal accounts, use your own files, notes, or personal data stored in OneDrive"
    ],
    "highlights": [
     "Office Agent creates polished PowerPoint presentations and ready-to-use Word documents from chat in Copilot, and coming soon to Excel",
@@ -388,9 +439,16 @@
    "icon": "grid",
    "accent": "teal",
    "overview": [
-    "Learn about getting started and creating files with Word, Excel, and PowerPoint agents in Microsoft 365 Copilot.",
     "The Word, Excel, and PowerPoint Agents in Microsoft 365 Copilot are AI-powered tools that help you create files simply by describing what you need. Whether you're working on a work project or personal task, these agents help you generate drafts, organize information, and build files. Use them whenever you want to quickly create new documents, spreadsheets, and presentations from Copilot Chat.",
-    "Create files easily : Generate Word, Excel, or PowerPoint files from a simple prompt."
+    "Create files easily : Generate Word, Excel, or PowerPoint files from a simple prompt.",
+    "Privacy and control : Your data is securely processed. Reasoning models do not retain content beyond your request, customer data is never used to train the models, and Copilot respects sensitivity labels along with your organization's enterprise access policies.",
+    "You can access the agents in the Microsoft 365 Copilot app, including the desktop and web apps. Look for the Word Agent, Excel Agent, or PowerPoint Agent under the Agents or Tools menu."
+   ],
+   "scenarios": [
+    "Run a full analysis on this sales data set. I want to understand some important insights to help me make decisions about my business. Make it visual",
+    "Work with data : Use connected content to produce richer results. With a Copilot license, automatically pull in information from your files, emails, chats, meetings and more while always respecting your company's access policies",
+    "Without a Copilot license, pull in information from the web and reference specific files while respecting your company's policies",
+    "For personal accounts, use your own files, notes, or personal data stored in OneDrive"
    ],
    "highlights": [
     "Office Agent creates polished PowerPoint presentations and ready-to-use Word documents from chat in Copilot, and coming soon to Excel",
@@ -436,9 +494,16 @@
    "icon": "slides",
    "accent": "pink",
    "overview": [
-    "Learn about getting started and creating files with Word, Excel, and PowerPoint agents in Microsoft 365 Copilot.",
     "The Word, Excel, and PowerPoint Agents in Microsoft 365 Copilot are AI-powered tools that help you create files simply by describing what you need. Whether you're working on a work project or personal task, these agents help you generate drafts, organize information, and build files. Use them whenever you want to quickly create new documents, spreadsheets, and presentations from Copilot Chat.",
-    "Create files easily : Generate Word, Excel, or PowerPoint files from a simple prompt."
+    "Create files easily : Generate Word, Excel, or PowerPoint files from a simple prompt.",
+    "Privacy and control : Your data is securely processed. Reasoning models do not retain content beyond your request, customer data is never used to train the models, and Copilot respects sensitivity labels along with your organization's enterprise access policies.",
+    "You can access the agents in the Microsoft 365 Copilot app, including the desktop and web apps. Look for the Word Agent, Excel Agent, or PowerPoint Agent under the Agents or Tools menu."
+   ],
+   "scenarios": [
+    "Run a full analysis on this sales data set. I want to understand some important insights to help me make decisions about my business. Make it visual",
+    "Work with data : Use connected content to produce richer results. With a Copilot license, automatically pull in information from your files, emails, chats, meetings and more while always respecting your company's access policies",
+    "Without a Copilot license, pull in information from the web and reference specific files while respecting your company's policies",
+    "For personal accounts, use your own files, notes, or personal data stored in OneDrive"
    ],
    "highlights": [
     "Office Agent creates polished PowerPoint presentations and ready-to-use Word documents from chat in Copilot, and coming soon to Excel",
@@ -479,6 +544,7 @@
     "Planner Agent in Microsoft 365 Copilot is a specialized agent for intelligent work and task management.",
     "Planner Agent is designed to help you stay focused and productive by managing work directly from Copilot chat."
    ],
+   "scenarios": [],
    "highlights": [
     "Create, update, and manage your tasks and plans",
     "Take action on tasks without switching apps or losing context"
@@ -512,9 +578,15 @@
    "icon": "poll",
    "accent": "teal",
    "overview": [
-    "In July and August 2026, Surveys agent will be formally retired, and users are instead encouraged to use the new integrated Copilot experience in Microsoft Forms. Learn more .",
     "Save time : Instead of manually adding questions one by one, simply enter a prompt to express your intent—Surveys Agent then generates a well-structured, thoughtfully designed survey automatically.",
     "Comprehensive insights and analysis : Once enough responses are collected, Surveys Agent provides users with actionable insights and deeper analysis. You can export the results to an Excel workbook, that includes both raw data and summarized insights. You can also invite peers to explore and collaborate on the data directly in Excel."
+   ],
+   "scenarios": [
+    "Save time : Instead of manually adding questions one by one, simply enter a prompt to express your intent—Surveys Agent then generates a well-structured, thoughtfully designed survey automatically",
+    "Edit preview survey (Optional): Surveys Agent generates a preview of your survey, including a brief overview of the questions it contains. You can choose to make adjustments in a side-by-side view or proceed directly to the next step",
+    "Send out the survey: Surveys Agent generates a tailored distribution plan—including recommended channels, a response strategy, and a monitoring timeline. You can then select your preferred channels and send out the survey with ease",
+    "Automated response tracking : Surveys Agent monitors your survey's progress and sends reminders via Outlook. You can quickly follow up if responses are low, or dive into insights once the response threshold is met",
+    "Help me create a employee satisfaction survey"
    ],
    "highlights": [
     "Surveys Agent will appear under Agents in the left pane of the Microsoft 365 Copilot app",
@@ -540,6 +612,7 @@
    "icon": "cap",
    "accent": "purple",
    "overview": [],
+   "scenarios": [],
    "highlights": [],
    "limitations": []
   },
@@ -568,9 +641,14 @@
    "icon": "shield",
    "accent": "blue",
    "overview": [
-    "Learn how to use Microsoft 365 Admin agent in Microsoft 365 Copilot and in Microsoft 365 admin center to automate tasks, navigate features, and gain actionable insights with natural language queries.",
     "The Microsoft 365 Admin agent is an assistive, agentic experience that helps IT administrators operate Microsoft 365, Microsoft 365 Copilot, and agents at AI scale. Built on the Agent 365 Platform SDK and connected to multiple Model Context Protocol (MCP) servers, the Microsoft 365 Admin agent shifts administrative work from manual configuration to intent-driven, observable, and governed operations.",
-    "The Microsoft 365 Admin agent helps admins perform tasks across different Microsoft 365 services via a single unified surface in Microsoft 365 Copilot Chat, using natural language interactions, contextual guidance, and proactive suggestions to discover, configure, troubleshoot, and manage Microsoft 365 services."
+    "The Microsoft 365 Admin agent helps admins perform tasks across different Microsoft 365 services via a single unified surface in Microsoft 365 Copilot Chat, using natural language interactions, contextual guidance, and proactive suggestions to discover, configure, troubleshoot, and manage Microsoft 365 services.",
+    "All Microsoft 365 admins can use the Microsoft 365 Admin agent. No action is required to use the Microsoft 365 Admin agent. The agent is pre-installed in Microosft 365 Copilot Chat for all Microsoft 365 administrators.",
+    "Because the agent honors your existing Microsoft Entra role assignments, the actions you can perform reflect the permissions associated with your admin role. If a capability appears unavailable, verify that your role grants the required permission for that workload."
+   ],
+   "scenarios": [
+    "The following sections describe common admin scenarios and provide example prompts for the Microsoft 365 Admin agent",
+    "This article lists only generally available capabilities for Microsoft 365 Admin agent. New scenarios appear in this article as they become available"
    ],
    "highlights": [
     "Applies to: ✅ Microsoft 365 Copilot, ✅ Microsoft 365 admin center",
@@ -604,9 +682,11 @@
    "icon": "pen",
    "accent": "pink",
    "overview": [
-    "Learn how to use the Writing Coach template in Microsoft 365 Copilot to create a declarative agent.",
     "Writing Coach agents can provide helpful guidance for the following types of tasks.",
     "Adding connections typically requires collaboration with the service owners and IT admins. Some functionality might be available only for users in tenants with metered usage or users with Microsoft 365 Copilot licenses."
+   ],
+   "scenarios": [
+    "Writing Coach agents can provide helpful guidance for the following types of tasks"
    ],
    "highlights": [
     "Application integration: Customize and configure your Word and PowerPoint implementations to let users access your Writing Coach from within those applications",
@@ -640,10 +720,12 @@
    "icon": "compass",
    "accent": "purple",
    "overview": [
-    "Learn how to use the Career Coach template in Microsoft 365 Copilot to create a declarative agent.",
     "You can use the Career Coach template in Microsoft 365 Copilot to build an agent that provides personalized suggestions and action plans to help users advance in their careers. The career coach offers tailored advice on skill development, learning opportunities, and career transitions based on the user's current role, experience, and available learning opportunities.",
-    "The Career Coach uses a professional and supportive tone to make interactions contextually relevant and encouraging."
+    "The Career Coach uses a professional and supportive tone to make interactions contextually relevant and encouraging.",
+    "You can enhance the functionality of your Career Coach agents by connecting to additional resources via Microsoft 365 Copilot connectors, Power Platform connectors, or API plugins, depending on the source system in use.",
+    "Adding connections typically requires collaboration with the service owners and IT admins. Some functionality might be available only for users in tenants with metered usage or users with Microsoft 365 Copilot licenses."
    ],
+   "scenarios": [],
    "highlights": [
     "Personalized career roadmapping that includes detailed career development plans and actionable advice based on the user's role, skills, and career aspirations",
     "Holistic career support, including guidance on career transitions, performance improvement, and strategic networking",
@@ -670,6 +752,7 @@
    "icon": "sun",
    "accent": "amber",
    "overview": [],
+   "scenarios": [],
    "highlights": [],
    "limitations": []
   },
@@ -689,6 +772,7 @@
    "icon": "people",
    "accent": "teal",
    "overview": [],
+   "scenarios": [],
    "highlights": [],
    "limitations": []
   },
@@ -716,9 +800,9 @@
    "icon": "spark",
    "accent": "purple",
    "overview": [
-    "Learn how to use the Prompt Coach template in Microsoft 365 Copilot to create a declarative agent.",
     "Adding connections typically requires collaboration with the service owners and IT admins. Some functionality might be available only for users in tenants with metered usage or users with Microsoft 365 Copilot licenses."
    ],
+   "scenarios": [],
    "highlights": [
     "Detailed prompt analysis that evaluates and helps refine user prompts to ensure clarity, optimal phrasing, and compliance with Responsible AI guidelines",
     "Concrete prompt examples, with step-by-step explanations, to help users understand and apply AI prompt engineering best practices",
@@ -753,9 +837,9 @@
    "icon": "bulb",
    "accent": "amber",
    "overview": [
-    "Learn how to use the Idea Coach template in Microsoft 365 Copilot to create a declarative agent.",
     "Adding connections typically requires collaboration with the service owners and IT admins. Some functionality might be available only for users in tenants with metered usage or users with Microsoft 365 Copilot licenses."
    ],
+   "scenarios": [],
    "highlights": [
     "Provide AI-driven brainstorming through a guided dialogue and creative exercises to help users effectively develop and refine their ideas",
     "A working knowledge of how to build agents with Microsoft 365 Copilot",
@@ -784,6 +868,7 @@
    "icon": "cap",
    "accent": "blue",
    "overview": [],
+   "scenarios": [],
    "highlights": [],
    "limitations": []
   },
@@ -809,24 +894,33 @@
      "label": "Support article",
      "url": "https://support.microsoft.com/en-us/topic/get-started-with-workflows-in-microsoft-365-copilot-frontier-8c6aba25-db31-443d-8319-bc79747b280a?preview=true",
      "summary": "Learn how you can automate tasks with Workflows--building, testing, monitoring, and managing your flows with Microsoft 365 Copilot."
+    },
+    {
+     "label": "Get started with Workflows",
+     "url": "https://support.microsoft.com/en-us/Microsoft-365-Copilot/get-started-with-workflows-in-microsoft-365-copilot",
+     "summary": "Learn how you can automate tasks with Workflows--building, testing, monitoring, and managing your flows with Microsoft 365 Copilot."
     }
    ],
    "icon": "flow",
    "accent": "purple",
    "overview": [
-    "Learn how you can automate tasks with Workflows--building, testing, monitoring, and managing your flows with Microsoft 365 Copilot.",
     "Workflows is an agent in Microsoft 365 Copilot that helps you automate work across Microsoft 365 using natural language. Instead of manually configuring steps or connectors, you simply describe what you want and Workflows generates a working workflow using supported Microsoft 365 services.",
-    "Workflows agent identifies and connects to services based on the names you include in your prompt."
+    "Workflows agent identifies and connects to services based on the names you include in your prompt.",
+    "Workflows agent uses your Microsoft 365 account to connect to these services. If it can't find a match, it may ask you to confirm or provide the Teams channel or SharePoint site.",
+    "Once your workflow is created, you can test, monitor, and manage it directly in the Workflow or Activity tab and the Workflows home page."
    ],
+   "scenarios": [],
    "highlights": [
     "Test and manage workflows in a visual designer",
     "Find and add Workflows Agent (Frontier) . You should see Workflows in the left navigation pane under Agents",
     "To use Workflows, your DLP policy in Power Platform admin center must include the following: Connectors: SharePoint, Approvals, Teams, Planner, M365Copilot and Outlook. More information: Data policies",
-    "Apps: Create an app for a product launch process where teams can track launch milestones, assign tasks, and view campaign progress in a dashboard",
-    "Flows: Send a Teams update every Monday with upcoming launch deadlines and key tasks from Planner. Post reminders for approval deadlines in Teams channels",
-    "Automate tasks in apps like Outlook, SharePoint, Teams, and Planner"
+    "Turn workflows on or off using the ellipses ( ). Turning off a workflow pauses its automation",
+    "Automate tasks in apps like Outlook, SharePoint, Teams, and Planner",
+    "Trigger actions on a schedule, or in response to events"
    ],
-   "limitations": []
+   "limitations": [
+    "Delete workflows permanently—deleting a workflow removes it entirely and can't be undone"
+   ]
   },
   {
    "id": "workforce-insights-agent",
@@ -852,6 +946,11 @@
      "label": "Learn article",
      "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/workforce-insights-agent?wt.mc_id=agentshub_Learn_webpage_cnl",
      "summary": "This article details how to use the Workforce Insights agent"
+    },
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/workforce-insights-agent",
+     "summary": "This article details how to use the Workforce Insights agent"
     }
    ],
    "icon": "pulse",
@@ -859,7 +958,15 @@
    "overview": [
     "This article details how to use the Workforce Insights agent",
     "The Workforce Insights agent is in the Microsoft Frontier program and subject to change. For more information, see Get started with the Microsoft Frontier program .",
-    "You can only search for information that's available to you about your team. Responses are based on your role, and policies set by your admin and organization."
+    "Once you have the appropriate licenses, you can start using the Workforce Insights agent.",
+    "By default, the Workforce Insights agent identifies managers based on organizational hierarchy: any employee with one or more direct reports is considered as a manager. Some organizations, however, use a different definition based on internal HR policies."
+   ],
+   "scenarios": [
+    "Organization-specific prompts are optional. You don't have to create organizational-specific prompts to use the Workforce Insights agent",
+    "Before you add custom prompts, test the prompts to ensure that each prompt works, and the Workforce Insights agent returns the expected results",
+    "How can I get the most from this Workforce Insights agent?",
+    "Show me how my organization is staffed by role, location, and level. Suggest steps to improve based on industry benchmarks,",
+    "Organization-specific prompts appear alongside Microsoft-provided suggested prompts and are visible tenant-wide"
    ],
    "highlights": [
     "Custom attributes sent to Workforce Insights",
@@ -900,8 +1007,10 @@
    "overview": [
     "You need to be part of the Frontier program to get early access to Legal Agent for Word. Frontier connects you directly with Microsoft's latest AI innovations. Frontier previews are subject to the existing preview terms of your customer agreements. As these features are still in development, their availability and capabilities may change over time.",
     "If the Legal Agent isn't available in Copilot for Word, ensure that the admin account is also enrolled in Frontier (Copilot -> Settings -> Frontier).",
-    "Legal Agent is available in Microsoft 365 Copilot for Word desktop. Legal professionals can use the agent to summarize, understand, redline and review legal documents."
+    "Legal Agent is available in Microsoft 365 Copilot for Word desktop. Legal professionals can use the agent to summarize, understand, redline and review legal documents.",
+    "The legal agent currently works on desktop versions of Word for M365 Copilot Frontier customers."
    ],
+   "scenarios": [],
    "highlights": [
     "Legal Agent will open in a new task pane in Word. You're now ready to use the Legal Agent!",
     "Within the chat input, click the ⁠+⁠ button",
@@ -953,9 +1062,11 @@
    "accent": "teal",
    "overview": [
     "Jumpstart HR and IT support to streamline employee experiences",
+    "The Employee Self-service Agent is your centralized experience for employees to get HR and IT tasks done faster, such as leave management to device replacement requests. Jumpstart your employee service delivery with prebuilt connectors to existing systems and starter workflows for HR and IT scenarios, while also being fully extensible and customizable to tailor to your organization needs.",
     "Today, we're excited to announce that the Employee Self-Service Agent (ESS Agent) in Microsoft 365 Copilot is general available and starting to roll out today, transforming AI-powered employee service delivery for enterprise organizations. This week, during Microsoft Ignite - whether you'll be onsite in San Francisco or catching the programming online - we hope you join us to learn more about the agent, the value proposition, and a look at the future roadmap.",
     "Employees today often navigate a complex web of knowledge bases, apps, and systems for routine employee service delivery tasks, commonly for HR or IT support. This fragmentation can create unnecessary friction, slow down service delivery, and lead to an increase in support tickets, ultimately impacting productivity and employee satisfaction across the organization."
    ],
+   "scenarios": [],
    "highlights": [
     "400,000 and 600,000 HR support ticket deflections when employees use Employee Self-Service",
     "50,000 hours of employee time saved per year using Employee Self-Service for visitor registration at Microsoft buildings",
@@ -995,9 +1106,11 @@
    "accent": "amber",
    "overview": [
     "This article shows how to configure and deploy the Frontline Agent.",
+    "As frontline teams face increasing demands and rapid change, the ability to access the right information at the right moment is more critical than ever. For...",
     "Frontline Agent is an AI-powered assistant in Microsoft 365 Copilot and Microsoft Teams designed to support frontline workers and managers in their day-to-day operations. It helps frontline teams stay informed, get answers from standard operating procedures, complete voice-driven site walkthroughs, and also helps managers gather information from their teams.",
     "Frontline Agent works alongside Teams chats, channels, and existing Microsoft 365 services such as SharePoint, enabling organizations to scale frontline communication and operations without introducing new tools or workflows."
    ],
+   "scenarios": [],
    "highlights": [
     "Store associates can quickly pull up product details, pricing policies, inventory lookup steps, and return procedures to keep lines moving",
     "Department leads can plan priorities for floor recovery, promos, and price changes before shift start",
@@ -1035,10 +1148,12 @@
    "icon": "channel",
    "accent": "purple",
    "overview": [
-    "Learn how to get started using Channel Agent for your Teams channels",
+    "With the latest wave of Copilot innovation, we are giving every channel, meeting, and community an agent that can collaborate with you and your team, acting...",
     "Channel Agent for Teams channels is currently in public preview, and features are likely to change. To learn more about Microsoft's public preview program, see Get early access to new features in Microsoft Teams .",
-    "Channel Agent is a unique agent created in a Teams channel and is designed to enhance collaboration and productivity for your projects. Now, each channel can have a dedicated agent that draws on its conversations and meetings to act as a domain expert for the team."
+    "Let's explore how the addition of these agents and new Copilot skills help individuals and groups streamline their work in Teams.",
+    "The Copilot experience in Teams is being unified across chats, channels, and meetings for users with a Microsoft 365 Copilot license, matching the experience in the Microsoft 365 Copilot app. Beyond the updated interface, Copilot in Teams can analyze chat history, meeting transcripts, and calendar content to generate smart recaps, rewrite messages, and surface relevant insights. Whether reviewing a thread or following up after a call, Copilot delivers context-aware summaries and suggestions based on your activity and goals."
    ],
+   "scenarios": [],
    "highlights": [
     "Taking real-time, collaborative notes : Real-time notes are automatically captured throughout the meeting and are editable by everyone, ensuring nothing is lost and follow-ups are clear",
     "AI-generated status reports: Automatically drafts and shares status reports, allowing for team review, collaboration, and report customization",
@@ -1082,9 +1197,11 @@
    "accent": "pink",
    "overview": [
     "The agents in communities feature acts as a community member to answer questions, engage members, and refer to resources from your community.",
+    "Launching in Public Preview today, Microsoft 365 Copilot can give every Engage community its own agent, grounded in the conversations and content that matter...",
     "The agents in communities feature is in public preview. Features in preview may change before general availability release .",
     "Agents in Engage communities are AI-powered assistants designed to help answer questions from community members. In a community, the agent refers to past conversations and community SharePoint resources to generate responses to unanswered questions. The agent helps community members get timely, accurate information and helps reduce duplicate questions. Agents save valuable time for community admins and experts by finding past threads and information sources, and drafting responses."
    ],
+   "scenarios": [],
    "highlights": [
     "Set the Community agent preview toggle to On",
     "Every 15–20 minutes, the agent scans its assigned community for up to three unanswered questions",
@@ -1128,10 +1245,12 @@
    "icon": "book",
    "accent": "blue",
    "overview": [
-    "Learn how to manage the Customer Knowledge Management Agent to autonomously create knowledge articles from cases and related communications.",
     "Customer Knowledge Management Agent lets you autonomously turn cases and case-related conversations, emails, and notes into knowledge articles that can support your contact center operations.",
-    "You're using the out-of-the-box case or conversation entities, or a custom Dynamics entity for your cases."
+    "You enabled Copilot to access Dynamics 365 knowledge base. You can utilize the internal knowledge base resources only for generating responses. Learn more in Configure knowledge sources .",
+    "If you have issues configuring connection references from the Customer Knowledge Management Agent page, you can do a manual setup. Follow the steps provided in Connection references for Customer Knowledge Management Agent flow .",
+    "You can harvest knowledge articles from cases, conversation summaries associated to the cases, emails, notes, and conversations. For cases and conversations, select from the options in the following sections as required for Customer Knowledge Management Agent."
    ],
+   "scenarios": [],
    "highlights": [
     "Find coaching opportunities Detect emerging trends and identify improvements across support topics, service representative/customer interactions, and knowledge management",
     "Dynamics 365 knowledge management is configured",
@@ -1170,10 +1289,12 @@
    "icon": "target",
    "accent": "purple",
    "overview": [
-    "Empower service representatives with Microsoft Dynamics 365 Customer Service, using generative AI and automation to enhance customer service and experiences.",
-    "Discover what's new in agentic business applications with Copilot, agents, and Work IQ and more.",
-    "Learn how to use intent-based suggestions to help customer service representatives handle customer conversations with ease in Dynamics 365 Contact Center."
+    "Intent-based suggestions help you handle cases and customer conversations with ease. The intent agent analyzes your organization's historical support interactions to provide real-time context and intelligent guidance throughout the conversation. You can quickly understand customer needs, ask the right questions, and deliver accurate solutions - all while reducing manual typing and handling time.",
+    "If the customer answers a question before the agent suggests a question, the agent recognizes that the question is answered and moves on to the next question.",
+    "The agent also provides next best actions in the case experience, so you can take recommended actions - such as reviewing a response or resolving a case - directly from the Copilot pane.",
+    "When active conversations aren't there, the agent displays the \"Suggestions unavailable\" message on the card."
    ],
+   "scenarios": [],
    "highlights": [
     "Analyze sentiment Deliver personalized responses with AI that registers customer engagement and understands customer intent in real time",
     "Provide AI-powered chatbots Resolve customer issues in real time with intelligent, conversational, generative AI-powered bots. Learn more about Dynamics 365 Contact Center",
@@ -1214,10 +1335,12 @@
    "icon": "gauge",
    "accent": "teal",
    "overview": [
-    "Empower service representatives with Microsoft Dynamics 365 Customer Service, using generative AI and automation to enhance customer service and experiences.",
-    "Discover what's new in agentic business applications with Copilot, agents, and Work IQ and more.",
-    "Learn how to use, edit, and extend evaluation criteria to assess cases and conversations effectively in Dynamics 365 Customer Service and Dynamics 365 Contact Center."
+    "This article explains how to use, edit, and extend evaluation criteria, including best practices to create clear and actionable instructions. Learn how to use built-in criteria, customize evaluation plans, and optimize quality assessments for your organization.",
+    "As a Quality Evaluator, you can use or copy the out-of-the-box evaluation criteria, create a new evaluation criteria, and edit published evaluation criteria.",
+    "Refer to the [limitations] and Best practices for evaluation criteria when you create evaluation criteria.",
+    "Section weight (%) : Assign a weight to the evaluation criteria. The total weight across sections must equal 100%."
    ],
+   "scenarios": [],
    "highlights": [
     "Section weight (%) : Assign a weight to the evaluation criteria. The total weight across sections must equal 100%",
     "Add question-level instructions : Enter instructions for the question, if any. Instructions help generate evaluation answers and improve accuracy",
@@ -1228,7 +1351,8 @@
    ],
    "limitations": [
     "AI agent mode : All questions must be AI-enabled. Manual editing isn't allowed",
-    "The combined weight of all questions in a section can't exceed the section's assigned weight"
+    "The combined weight of all questions in a section can't exceed the section's assigned weight",
+    "Selecting an incorrect option doesn't reduce the score. There are no penalties"
    ]
   },
   {
@@ -1258,10 +1382,12 @@
    "icon": "ticket",
    "accent": "blue",
    "overview": [
-    "Empower service representatives with Microsoft Dynamics 365 Customer Service, using generative AI and automation to enhance customer service and experiences.",
-    "Discover what's new in agentic business applications with Copilot, agents, and Work IQ and more.",
-    "Learn how to use autonomous Case Management Agent to efficiently handle case management tasks in Dynamics 365 Customer Service."
+    "For a case created from an email : The agent populates the fields with context from incoming emails linked to the case.",
+    "Based on your administrator configuration , if case fields configured for AI agent updates are updated manually, the AI agent either overwrites the manual updates or leaves them intact.",
+    "If your administrator configured autonomous case updates, the AI agent then autonomously updates the case fields with information from a conversation that's in wrap-up state or incoming emails.",
+    "Supervisors can monitor AI agent activity and case progress by using the Agent Feed and Agent Supervisor views. These views provide visibility into agent actions, communications, escalations, and cases that the Case Management Agent handles. For more information, see Configure autonomous agent monitoring ."
    ],
+   "scenarios": [],
    "highlights": [
     "Your administrator has Set up Case Management Agent to create and update cases",
     "Collaborate live in Teams Bring together experts who resolved similar cases to collaborate in Microsoft Teams for quicker issue resolution. Learn more about Teams",
@@ -1303,8 +1429,10 @@
    "overview": [
     "Find out how the Sales Qualification Agent helps ensure that sellers spend their time meeting prospects who are ready to take the next step.",
     "Microsoft is building the future of agentic Sales technology with prebuilt AI agents, such as Sales Qualification Agent, the Sales Research Agent, and the Sales Close Agent available in Dynamics 365.",
-    "At Microsoft, we're committed to delivering quality, trust, and transparency with our agents, and that requires rigorous evaluation. As we continue to build new agents and improve existing ones for critical sales workflows, evaluation benchmarks provide a structured and transparent way for our customers to measure quality for the jobs the agent does."
+    "At Microsoft, we're committed to delivering quality, trust, and transparency with our agents, and that requires rigorous evaluation. As we continue to build new agents and improve existing ones for critical sales workflows, evaluation benchmarks provide a structured and transparent way for our customers to measure quality for the jobs the agent does.",
+    "Today, we're announcing the Microsoft Sales Bench —a new collection of evaluation benchmarks designed to assess the performance of AI-powered sales agents across real-world scenarios. This framework brings together purpose-built metrics, hundreds of sales-specific scenarios, and composite scoring validated by both human and AI judges."
    ],
+   "scenarios": [],
    "highlights": [
     "Dynamics 365 sets the bar for agentic sales qualification on new benchmark",
     "Helping boost revenue beyond current sales capacity Responding to inbound leads within minutes instead of days, increasing response rates and in turn, qualified opportunities",
@@ -1339,8 +1467,10 @@
    "overview": [
     "Sales Research Bench sets the standard for evaluating AI-driven sales insights, ensuring accuracy, relevance, and trust for sales leaders.",
     "Today, I'm excited to share an update on the Sales Research Agent, in public preview as of October 1, as well as a new evaluation benchmark, the Microsoft Sales Research Bench, created to assess how AI solutions respond to the strategic, multi-faceted questions that sales leaders have about their business and operational performance. We intend to publish the full evaluation package behind the Sales Research Bench in the coming months so that others can run these evals on different AI solutions themselves.",
-    "Sales Research Agent in Dynamics 365 Sales empowers business leaders to explore complex business questions through natural language conversations with their data. It leverages a multi-modal, multi-model, and multi-agent architecture to reason over intricate, customized schemas with deep sales domain expertise. The agent delivers novel, decision-ready insights through narrative explanations and rich visualizations tailored to the specific business context."
+    "Sales Research Agent in Dynamics 365 Sales empowers business leaders to explore complex business questions through natural language conversations with their data. It leverages a multi-modal, multi-model, and multi-agent architecture to reason over intricate, customized schemas with deep sales domain expertise. The agent delivers novel, decision-ready insights through narrative explanations and rich visualizations tailored to the specific business context.",
+    "For sales leaders, this means the ability to self-serve on real-time trustworthy analysis, spanning CRM and other domains, which previously took many people days or weeks to compile, with access to deeper insights enabled by the power of AI on pipeline, revenue attainment, and other critical topics."
    ],
+   "scenarios": [],
    "highlights": [
     "Looking at closed opportunities, which sellers have the largest gap between Total Actual Sales and Est Value First Year in the 'Corporate Offices' Business Segment?",
     "Are our sales efforts concentrated on specific industries or spread evenly across industries?",
@@ -1375,10 +1505,11 @@
    "icon": "trend",
    "accent": "blue",
    "overview": [
-    "Discover how Sales Opportunity Agent in Dynamics 365 Sales helps sales professionals manage deals effectively with AI-powered insights, risk detection, and deal prioritization.",
     "Sales Opportunity Agent (previously known as Opportunity Research Agent) in Dynamics 365 Sales is an AI-powered assistant designed to help sales professionals manage their deals more effectively. By consolidating CRM updates, email threads, meeting intelligence, and real-time web research, the agent provides actionable insights in one place. It helps you prioritize opportunities, identify risks, and take the right action at the right time. This approach results in faster deal closures and improved sales performance.",
-    "Managing deals effectively requires timely insights and a clear understanding of where each opportunity stands. The Sales Opportunity Agent simplifies this process by bringing together data from multiple sources and surfacing what matters most."
+    "Managing deals effectively requires timely insights and a clear understanding of where each opportunity stands. The Sales Opportunity Agent simplifies this process by bringing together data from multiple sources and surfacing what matters most.",
+    "Sales Opportunity Agent is built with responsible AI principles in mind. The agent meets quality standards and is designed to be used as a productivity tool. For more information about the agent's responsible AI practices, see FAQs about Sales Opportunity Agent ."
    ],
+   "scenarios": [],
    "highlights": [
     "Detect risks early : Whether it's a disengaged stakeholder, slowing momentum, or competitive pressure, the agent flags risks and recommends targeted actions to keep your deal moving forward",
     "Prioritize with confidence : Based on real-time signals, see which deals are gaining traction, which are at risk, and where your effort will drive the most impact",
@@ -1421,17 +1552,19 @@
    "icon": "rocket",
    "accent": "pink",
    "overview": [
-    "Discover how Copilot and Dynamics 365 with agentic AI are transforming business operations and empowering Frontier firms to innovate faster.",
+    "Enterprise sales organizations face a persistent challenge: scaling outbound operations while maintaining message quality, brand consistency, and conversion...",
     "Earlier in 2025, we introduced our vision for how AI agents will transform critical sales processes like building pipeline and qualifying leads. Today marks the next milestone in that journey with the Microsoft Sales Development Agent , available through the Frontier Program in December 2025. Many sales organizations are under pressure to deliver more revenue with limited resources, and the Sales Development Agent helps sales teams scale their impact. This allows sellers to focus on nurturing customer relationships and closing deals.",
-    "Sales Development Agent connects with leading CRM systems like Salesforce and Microsoft Dynamics 365, and the Microsoft 365 apps your teams already use like Microsoft Outlook and Microsoft Teams ."
+    "Sales Development Agent connects with leading CRM systems like Salesforce and Microsoft Dynamics 365, and the Microsoft 365 apps your teams already use like Microsoft Outlook and Microsoft Teams .",
+    "Sales leaders want to help sellers act on more leads, reach more customers, grow faster, and improve revenue per seller. Microsoft Sales Development Agent can make that possible by creating an infinitely scalable sales organization, so no lead is left behind. Accenture plans to pilot Sales Development Agent across our global inside sales-as-a-service business—which helps clients sell to customers around the world—to boost their reach and revenue while maintaining cost to serve. We'll use what we learn to help clients leverage Sales Development Agent, scale their teams, and unlock new growth."
    ],
+   "scenarios": [],
    "highlights": [
+    "Optimize how teams spend their time : Ensure sales professionals engage at moments requiring expertise, relationship building, and strategic judgment",
     "Microsoft Ignite 2025: Powering Frontier Firms with agentic business applications",
     "Join the movement to the Frontier with Copilot, agents, and agentic business applications",
     "Revenue and pipeline growth : The agent continuously researches prospects, crafts personalized outreach, and automatically follows up to ensure no lead is left behind",
     "Scalability : Fully independent, yet collaborative, the agent acts as a teammate, with the ability to hand off leads to human sellers when needed",
-    "Explore the Microsoft Ignite 2025 sessions to see agents and agentic business applications in action",
-    "Register for our year-end webinar to learn about more agents in Dynamics 365 (December 2, 2025)"
+    "Explore the Microsoft Ignite 2025 sessions to see agents and agentic business applications in action"
    ],
    "limitations": []
   },
@@ -1463,9 +1596,11 @@
    "accent": "amber",
    "overview": [
     "Explore how AI-powered agents in Microsoft Dynamics 365 drive smarter decisions, streamline workflows, and unlock scalable business transformation.",
-    "In this new model, the user experience becomes almost invisible. What matters most is the foundation: structured data, clear governance, and business logic that allows agents to operate effectively.",
-    "These are agentic business applications. They can help teams scale up capacity, lower operational costs, grow topline revenue, and surface key insights on an ongoing basis for smarter, faster decisions."
+    "Boost business with Dynamics 365 Sales, an agentic CRM that helps teams close deals faster using insights, sales automation, and collaboration tools.",
+    "Over the last year, we have launched more than a dozen business process agents in Dynamics 365, giving organizations a starting point to transform sales, service, finance, and supply chain. We're continuing to expand our agent portfolio to deliver proactive and growth-oriented outcomes.",
+    "Also in Dynamics 365 Sales, agents are moving to public preview and general availability, including Sales Research Agent (public preview began on October 1, 2025) and Sales Qualification Agent (with general availability beginning October 25, 2025)."
    ],
+   "scenarios": [],
    "highlights": [
     "Take the best action Identify leads that have the highest chances to close with AI-powered alerts that follow you no matter where you work in Dynamics 365 Sales",
     "Catch up on your pipeline Review open sales tasks, new assignments, and pipeline updates by querying Microsoft Copilot using natural language or prebuilt prompts. Catch up on your pipeline",
@@ -1500,8 +1635,10 @@
    "overview": [
     "This article provides an overview of the various types of Microsoft Copilot-generated summaries that are available in Dynamics 365 Supply Chain Management.",
     "AI summaries with Microsoft Copilot are available on many of the most-used pages in Dynamics 365 Supply Chain Management. These summaries provide a quick overview of the most important information that's related to the page, personalized for the current user. Summaries can include information such as the number of lines on a purchase order, the number of items in a warehouse, or the number of overdue invoices for a vendor.",
-    "The information that Copilot provides depends on the current page and user context. For example, the information can vary based on the other pages that the user works with the most, and it's limited based on the user's security roles and permissions."
+    "The information that Copilot provides depends on the current page and user context. For example, the information can vary based on the other pages that the user works with the most, and it's limited based on the user's security roles and permissions.",
+    "For a video overview of all of the features described in this topic, watch Copilot Capabilities in Dynamics 365 Finance and SCM | Dynamics 365 TechTalk ."
    ],
+   "scenarios": [],
    "highlights": [
     "You must be running one of the following versions of Supply Chain Management: Version 10.0.39 with proactive quality update 3 (PQU-3) or later",
     "To use Workload insights with Copilot in the Warehouse Management mobile app, you must be running Warehouse Management mobile app version 2.3.2.0 or later",
@@ -1511,7 +1648,9 @@
     "Purchase order summary – Purchase order summary"
    ],
    "limitations": [
-    "Not fully shipped – Lines where the quantity has been picked (or doesn't require picking) but not fully shipped"
+    "Not fully shipped – Lines where the quantity has been picked (or doesn't require picking) but not fully shipped",
+    "Lines without confirmed ship dates – The number of order lines that aren't fully shipped (packing slip posted) and don't have a confirmed ship date",
+    "Lines without confirmed ship dates – Show only order lines that aren't fully shipped (packing slip posted) and don't have a confirmed ship date"
    ]
   },
   {
@@ -1541,9 +1680,18 @@
    "icon": "ledger",
    "accent": "teal",
    "overview": [
-    "Learn how to use the Account reconciliation workspace and the Copilot agent that integrates with it.",
     "The Account reconciliation feature is available in Microsoft Dynamics 365 Finance. Use this feature to reconcile your general ledger with the accounts payable, accounts receivable, tax, and bank subledgers. It replaces the old reactive SQL Server Reporting Service (SSRS) reports.",
-    "Users can view reconciled data and automated data analysis on a defined schedule. Therefore, you can set up the processing so that it runs only in the background or during off-hours."
+    "The workspace shows any exceptions that occur. Users can then take direct action to address each exception. If the Microsoft Copilot–powered agent is enabled, it suggests the most likely action to take. Therefore, it helps save time during the account reconciliation process at the end of each period.",
+    "For more information about how to set up and configure the Account Reconciliation Agent, see Set up and configure the Account Reconciliation Agent .",
+    "Standard connectors (such as Microsoft 365 and SharePoint) use Microsoft 365 work account credentials. Premium connectors (such as Finance and Microsoft Fabric) require a new connection using external system credentials. Setup includes providing OAuth 2.0 credentials for specific actions like Get data from Dynamics 365 Finance or custom actions. Connections can default to either the end user's or the agent author's credentials; agent author's credentials are common for internal scenarios."
+   ],
+   "scenarios": [
+    "Import the downloaded file into your environment using Power Platform's solution import feature. After you import the solution, it appears as an unmanaged solution and allows you to edit any component",
+    "Authenticate each connector in the solution using your own credentials. Power Platform indicates which connections need attention",
+    "Adapt the agent's logic to fit your specific needs and business requirements",
+    "To ensure it works as expected, test the agent in a controlled setting",
+    "Following are two examples of such solution templates for Finance Agent with detailed instructions on how to get started",
+    "Data Sources: Retrieves data from two tables in Finance"
    ],
    "highlights": [
     "Voucher , Area , Main account , Difference , Ledger amount , and Subledger amount – Read-only details that identify the exception and the amount that must be resolved",
@@ -1577,10 +1725,12 @@
    "icon": "clock",
    "accent": "purple",
    "overview": [
-    "Learn how administrators can enable the Time Entry Agent in one or more environments in their organization.",
     "The Time Entry Agent is available as a production-ready preview in Microsoft Dynamics 365 Project Operations environments that have version 4.140.0.239 or later .",
-    "Before team members can use the feature to log their time entries, an administrator must complete the following steps to enable it in one or more Project Operations environments."
+    "Before team members can use the feature to log their time entries, an administrator must complete the following steps to enable it in one or more Project Operations environments.",
+    "If you decide to complete this step, it's required only once for your organization. The agent user can then be used to enable the Time Entry Agent in multiple environments.",
+    "The new Time and Approval agent role gives the agent user the rights that it needs to enable and publish the Time Entry Agent."
    ],
+   "scenarios": [],
    "highlights": [
     "This is a production-ready preview feature",
     "Production-ready previews are subject to supplemental terms of use",
@@ -1590,7 +1740,8 @@
     "Power Automate Free – This license is required so that the agent can view and enable the set of Power Automate flows that it requires"
    ],
    "limitations": [
-    "A list of organization units should appear. Double-tap (or double-click) the Organization Units row for the columns that aren't links"
+    "A list of organization units should appear. Double-tap (or double-click) the Organization Units row for the columns that aren't links",
+    "In the left pane, select Agents . (If Agents isn't visible in the left pane, select More , and then select Agents in the pop-up window.)"
    ]
   },
   {
@@ -1615,10 +1766,12 @@
    "icon": "receipt",
    "accent": "pink",
    "overview": [
-    "Learn how to install and set up the Expense Agent to automate expense processing workflows by using AI.",
     "The Expense Agent brings together capabilities from Microsoft Dynamics 365 Project Operations, finance and operations apps, Microsoft Copilot Studio, Power Automate, and Dataverse to automate expense processing workflows by using AI. This feature helps save time and reduce manual effort by enabling your system to process receipts and generate expense lines and expense reports for users. It uses Microsoft Power Platform connectors for integration with Outlook, Microsoft Teams, user calendars, and the finance and operations apps environment via Dataverse virtual entities.",
-    "Additionally, the agent integrates with Microsoft Teams, enabling the use of adaptive cards for expense report review and submission."
+    "Additionally, the agent integrates with Microsoft Teams, enabling the use of adaptive cards for expense report review and submission.",
+    "The Expense Agent is available as part of the Copilot for finance and operations apps package. When you install this package in your environment, you automatically get all required assets, including the agent, environment variables, and Power Automate flows.",
+    "After you install the Copilot for finance and operations apps package, activate the Expense Agent from within your Dataverse and finance and operations environment."
    ],
+   "scenarios": [],
    "highlights": [
     "Extract Receipt IDs – This flow picks up unattached receipts and triggers the agent to extract receipt details and create an unattached expense line",
     "Process Expense Report – This flow converts unattached expense lines and generates expense reports, based on the Group reports by configuration that you set in the application for each legal entity",
@@ -1627,7 +1780,9 @@
     "Enable the Expense Agent in Microsoft Teams (Optional - if you need Microsoft Teams integration)",
     "This is a production-ready preview feature"
    ],
-   "limitations": []
+   "limitations": [
+    "If the app isn't listed under Dynamics 365 apps, select Install app , select Copilot for finance and operations apps , and follow the prompts to complete the installation"
+   ]
   },
   {
    "id": "activity-approvals-agent",
@@ -1652,9 +1807,11 @@
    "accent": "teal",
    "overview": [
     "An admin must enable and set up the Approvals feature of the Time and Expense Agent by following the steps in Set up the Approvals Agent using the Dynamics 365 Agent Deployment Tool (preview) . After the feature is correctly set up, enable the agent by selecting Enable Time and Expense Agent in the Feature Control field on the Project Parameters page.",
-    "You can also use the menu to set the mode of the agent to either Classify or Classify and auto approve . In Classify mode, the project manager must manually approve records that are marked as Ready for approval . In Classify and auto approve mode, the agent automatically processes records that are marked as Ready for approval for approval.",
-    "You can also control which projects the agent reviews. On each project, the Use approvals agent to review entries flag determines whether the agent receives time, expense, and material entries linked to that project for classification. To set the default for newly created projects, use the Automatically use approvals agent for new projects option on the Project Parameters page. This option sets the project-level flag to Yes or No when a project is created. This option lets you scope agent review to specific projects rather than applying it across every project in the environment."
+    "You can also control which projects the agent reviews. On each project, the Use approvals agent to review entries flag determines whether the agent receives time, expense, and material entries linked to that project for classification. To set the default for newly created projects, use the Automatically use approvals agent for new projects option on the Project Parameters page. This option sets the project-level flag to Yes or No when a project is created. This option lets you scope agent review to specific projects rather than applying it across every project in the environment.",
+    "When a user submits a time, expense, or material record for approval in an environment where the agent is enabled and policy documents are uploaded, the record goes into a queue for classification by the agent. For each record that the agent classifies, it creates a new record that contains its classification decision. To view the list of records that the agent classified, select Approvals Agent in the left pane to open the Time entries reviewed by Agent page.",
+    "You can also use the menu to set the mode of the agent to either Classify or Classify and auto approve . In Classify mode, the project manager must manually approve records that are marked as Ready for approval . In Classify and auto approve mode, the agent automatically processes records that are marked as Ready for approval for approval."
    ],
+   "scenarios": [],
    "highlights": [
     "This is a production-ready preview feature",
     "Production-ready previews are subject to supplemental terms of use",
@@ -1688,9 +1845,10 @@
    "overview": [
     "The Scheduling Operations Agent for Dynamics 365 Field Service helps dispatchers optimize technician schedules in real time, adapting to changing conditions ..."
    ],
+   "scenarios": [],
    "highlights": [],
    "limitations": []
   }
  ],
- "enriched": "2026-08-04T17:01:21.570Z"
+ "enriched": "2026-08-04T18:00:05.801Z"
 }
