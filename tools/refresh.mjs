@@ -49,6 +49,31 @@ function git(...args) {
 
 const readJson = (p) => { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch { return null; } };
 
+const SEISMIC_PY = String.raw`C:\Users\cowi\AppData\Local\seismic-mcp\.venv\Scripts\python.exe`;
+
+/**
+ * Ask Seismic whether the source deck moved since the last build.
+ *
+ * Metadata (version / size / publish date) is fully automatable through the
+ * signed-in Edge session. Fetching the binary is not — Seismic serves content
+ * via an async request + push-notification + signed-URL flow that doesn't
+ * drive headless — so a change is reported with a link rather than guessed at.
+ */
+function checkDeck() {
+  if (!fs.existsSync(SEISMIC_PY)) {
+    return { ok: false, reason: 'seismic-mcp venv not found', skipped: true };
+  }
+  try {
+    const out = run(SEISMIC_PY, [path.join('tools', 'seismic_check.py'), '--json']);
+    return JSON.parse(out);
+  } catch (e) {
+    // Exit code 3 means "changed" — still valid JSON on stdout.
+    const stdout = (e.stdout || '').trim();
+    if (stdout) { try { return JSON.parse(stdout); } catch { /* fall through */ } }
+    return { ok: false, reason: (e.stderr || e.message || '').trim().split('\n')[0] };
+  }
+}
+
 /** Strip build timestamps so we can tell real content changes from noise. */
 function contentOnly(obj) {
   if (!obj) return '';
@@ -134,13 +159,33 @@ async function main() {
   const beforeApps = readJson(APPS);
 
   // 1. Optional: re-extract the agent catalog from a refreshed source deck.
+  let deck = null;
   if (DECK) {
     if (!fs.existsSync(DECK)) throw new Error(`Deck not found: ${DECK}`);
     log(`[1/4] Extracting agent catalog from deck…`);
     log(run('python', [path.join('tools', 'extract_pptx.py'), DECK]).trim());
     log(run('python', [path.join('tools', 'build_agents.py')]).trim());
+    // A rebuilt catalog means the deck we just read is the new baseline.
+    try {
+      run(SEISMIC_PY, [path.join('tools', 'seismic_check.py'), '--set-baseline']);
+      log('  Deck baseline updated.');
+    } catch { log('  (could not update deck baseline — check Seismic sign-in)'); }
   } else {
-    log('[1/4] No --deck supplied; keeping the existing agent catalog.');
+    log('[1/4] Checking the source deck on Seismic…');
+    deck = checkDeck();
+    if (deck.skipped) {
+      log('  Skipped: seismic-mcp is not installed here.');
+    } else if (!deck.ok) {
+      log(`  Could not check: ${deck.reason}`);
+      log('  (Edge CDP on port 9222 must be running and signed in to Seismic.)');
+    } else if (deck.changed) {
+      log('  DECK CHANGED — the agent list may be out of date:');
+      for (const c of deck.changes || []) log(`    ${c.field}: ${c.was} → ${c.now}`);
+      log(`    ${deck.link}`);
+      log('    Download it, then re-run with: --deck "<path to pptx>"');
+    } else {
+      log(`  Unchanged (v${deck.current?.version}, published ${deck.current?.publishedAt}).`);
+    }
   }
 
   // 2. Refresh the support/Learn article text behind agent detail pages.
@@ -171,14 +216,14 @@ async function main() {
 
   if (!touched.length) {
     log('\nNo changes — the site is already up to date.');
-    return { changed: false, changes: [], started };
+    return { changed: false, changes: [], deck, started };
   }
 
   if (!materiallyChanged) {
     log('\nOnly build timestamps changed; no new roadmap items, blogs or article text.');
     log('Reverting so the repository stays clean.');
     git('checkout', '--', 'data');
-    return { changed: false, changes: [], started };
+    return { changed: false, changes: [], deck, started };
   }
 
   log(`\nFiles changed (${touched.length}):`);
@@ -194,7 +239,7 @@ async function main() {
 
   if (DRY) {
     log('\nDry run — stopping before commit.');
-    return { changed: true, changes, started };
+    return { changed: true, changes, deck, started };
   }
 
   // Bump the asset version so browsers pick up any JS/CSS change immediately.
@@ -222,11 +267,15 @@ async function main() {
     log(`Could not queue a Pages build: ${(e.stderr || e.message || '').trim()}`);
   }
 
-  return { changed: true, changes, started };
+  return { changed: true, changes, deck, started };
 }
 
 main()
   .then((r) => {
+    if (r.deck && r.deck.ok && r.deck.changed) {
+      log('\nACTION NEEDED: a newer version of the source deck is published.');
+      log(`  ${r.deck.link}`);
+    }
     log(`\nDone in ${((Date.now() - r.started) / 1000).toFixed(0)}s.`);
     process.exit(0);
   })
