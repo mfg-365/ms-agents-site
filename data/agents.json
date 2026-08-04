@@ -1,0 +1,1102 @@
+{
+ "generated": "2026-08-04T15:44:59+00:00",
+ "sourceUpdated": "July 15, 2026",
+ "source": {
+  "title": "ABS Out-of-Box Agents - Customer ready",
+  "url": "https://microsoft.seismic.com/Link/Content/DCVbJbD8mp3dD82CWXCfXWqTG2PP"
+ },
+ "statuses": [
+  "GA",
+  "Public Preview",
+  "Frontier"
+ ],
+ "groups": [
+  {
+   "id": "m365-copilot",
+   "label": "Microsoft 365 Copilot",
+   "license": "Microsoft 365 Copilot license",
+   "order": 1,
+   "header": "Microsoft Agents available with Microsoft 365 Copilot license – Generally Available"
+  },
+  {
+   "id": "copilot-eligible",
+   "label": "All Copilot Eligible Users",
+   "license": "No additional license — included for Copilot Chat users",
+   "order": 2,
+   "header": "Agents available for all Copilot eligible users – Generally Available"
+  },
+  {
+   "id": "m365-frontier",
+   "label": "Microsoft 365 Copilot — Frontier",
+   "license": "Microsoft 365 Copilot license + Frontier program",
+   "order": 3,
+   "header": "Microsoft Agents available with Microsoft 365 Copilot license – Frontier Customers*"
+  },
+  {
+   "id": "copilot-studio",
+   "label": "Copilot Studio Templates",
+   "license": "Copilot Studio license",
+   "order": 4,
+   "header": "Custom Template available with Copilot Studio license – Generally Available"
+  },
+  {
+   "id": "m365-preview",
+   "label": "Microsoft 365 Copilot — Preview",
+   "license": "Microsoft 365 Copilot license",
+   "order": 5,
+   "header": "Microsoft Agents available with Microsoft 365 Copilot license – Public Preview"
+  },
+  {
+   "id": "d365-service",
+   "label": "Dynamics 365 Customer Service & Contact Center",
+   "license": "Dynamics 365 Customer Service / Contact Center",
+   "order": 6,
+   "header": "Microsoft Agents in Dynamics 365 Customer Service & Dynamics 365 Contact Center - GA"
+  },
+  {
+   "id": "d365-sales",
+   "label": "Dynamics 365 Sales",
+   "license": "Dynamics 365 Sales",
+   "order": 7,
+   "header": "Microsoft Agents in Dynamics 365 Sales"
+  },
+  {
+   "id": "d365-ops",
+   "label": "Dynamics 365 Supply Chain, Finance & Operations",
+   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations",
+   "order": 8,
+   "header": "Microsoft Agents in D365 Supply Chain, D365 Finance & Operations, D365 Project Operations – Public Preview"
+  }
+ ],
+ "agents": [
+  {
+   "id": "researcher",
+   "name": "Researcher",
+   "status": "GA",
+   "group": "m365-copilot",
+   "groupLabel": "Microsoft 365 Copilot",
+   "license": "Microsoft 365 Copilot license",
+   "description": "The Researcher agent works within Microsoft 365 Copilot Chat to synthesize information, brainstorm ideas, and create quality in-depth content quickly and easily, enabling you and your team to tackle complex research tasks efficiently.",
+   "notes": [],
+   "surfaces": [
+    "Copilot Chat"
+   ],
+   "links": [
+    {
+     "label": "Blog",
+     "url": "https://www.microsoft.com/microsoft-365/blog/2025/03/25/introducing-researcher-and-analyst-in-microsoft-365-copilot/"
+    },
+    {
+     "label": "Video",
+     "url": "https://www.youtube.com/watch?v=lfruwkpqvk4"
+    },
+    {
+     "label": "Guide",
+     "url": "https://adoption.microsoft.com/files/copilot/analystresearcheroverviewdeck.pptx"
+    }
+   ],
+   "icon": "search",
+   "accent": "blue"
+  },
+  {
+   "id": "analyst",
+   "name": "Analyst",
+   "status": "GA",
+   "group": "m365-copilot",
+   "groupLabel": "Microsoft 365 Copilot",
+   "license": "Microsoft 365 Copilot license",
+   "description": "The Analyst agent works within Microsoft 365 Copilot Chat to transform complex data into clear insights and visualizations, enabling you and your team to make informed decisions quickly and efficiently.",
+   "notes": [],
+   "surfaces": [
+    "Copilot Chat"
+   ],
+   "links": [
+    {
+     "label": "Blog",
+     "url": "https://www.microsoft.com/microsoft-365/blog/2025/03/25/introducing-researcher-and-analyst-in-microsoft-365-copilot/"
+    },
+    {
+     "label": "Guide",
+     "url": "https://adoption.microsoft.com/files/copilot/analystresearcheroverviewdeck.pptx"
+    }
+   ],
+   "icon": "chart",
+   "accent": "teal"
+  },
+  {
+   "id": "facilitator",
+   "name": "Facilitator",
+   "status": "GA",
+   "group": "m365-copilot",
+   "groupLabel": "Microsoft 365 Copilot",
+   "license": "Microsoft 365 Copilot license",
+   "description": "The Facilitator agent works alongside you and your team to help you manage Teams meetings effortlessly by taking notes, getting quick answers, and moderating the conversation.",
+   "notes": [],
+   "surfaces": [
+    "Teams meetings"
+   ],
+   "links": [
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/MicrosoftTeams/facilitator-teams"
+    },
+    {
+     "label": "Support article",
+     "url": "https://support.microsoft.com/en-us/office/facilitator-in-microsoft-teams-meetings-37657f91-39b5-40eb-9421-45141e3ce9f6"
+    },
+    {
+     "label": "Adoption site",
+     "url": "https://adoption.microsoft.com/en-us/ai-agents/agents-in-microsoft-365/"
+    }
+   ],
+   "icon": "meeting",
+   "accent": "purple"
+  },
+  {
+   "id": "interpreter",
+   "name": "Interpreter",
+   "status": "GA",
+   "group": "m365-copilot",
+   "groupLabel": "Microsoft 365 Copilot",
+   "license": "Microsoft 365 Copilot license",
+   "description": "The Interpreter agent enables real-time speech-to-speech interpretation in Teams meetings so each participant can speak and listen in the language of their choice in up to nine languages.",
+   "notes": [],
+   "surfaces": [
+    "Teams meetings"
+   ],
+   "links": [
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/microsoftteams/interpreter-agent-teams?wt.mc_id=agentshub_Learn_webpage_cnl"
+    },
+    {
+     "label": "Support article",
+     "url": "https://support.microsoft.com/en-us/office/interpreter-in-microsoft-teams-meetings-and-calls-c7efe2bb-535d-42ab-a5c4-d2d91619b46d"
+    },
+    {
+     "label": "Adoption site",
+     "url": "https://adoption.microsoft.com/en-us/ai-agents/agents-in-microsoft-365/"
+    }
+   ],
+   "icon": "globe",
+   "accent": "pink"
+  },
+  {
+   "id": "sales-agent",
+   "name": "Sales Agent",
+   "status": "GA",
+   "group": "m365-copilot",
+   "groupLabel": "Microsoft 365 Copilot",
+   "license": "Microsoft 365 Copilot license",
+   "description": "Sales Agent in Microsoft 365 Copilot enables sellers with a smarter way to prepare, uncover insights, and walk into customer meetings ready to win. It brings insights from CRM systems, emails, meetings, enterprise content stores and other sales applications into the flow of work. Integrates with both Dynamics 365 Sales or Salesforce CRM.",
+   "notes": [],
+   "surfaces": [
+    "Copilot Chat",
+    "Outlook",
+    "Teams",
+    "M365 Copilot"
+   ],
+   "links": [
+    {
+     "label": "Blog",
+     "url": "https://techcommunity.microsoft.com/blog/Microsoft365CopilotBlog/sales-agent---the-copilot-agent-that-speaks-sales/4476894"
+    }
+   ],
+   "icon": "handshake",
+   "accent": "blue"
+  },
+  {
+   "id": "finance-agent",
+   "name": "Finance Agent",
+   "status": "GA",
+   "group": "m365-copilot",
+   "groupLabel": "Microsoft 365 Copilot",
+   "license": "Microsoft 365 Copilot license",
+   "description": "Finance agents accelerate time-to-impact for finance professionals by surfacing insights that support strategic decision-making and reduce the time that's spent on manual, repetitive work.",
+   "notes": [],
+   "surfaces": [
+    "Excel",
+    "Outlook"
+   ],
+   "links": [
+    {
+     "label": "Blog",
+     "url": "https://www.microsoft.com/en-us/dynamics-365/blog/it-professional/2025/10/20/empowering-finance-with-an-ai-assistant-in-microsoft-365-copilot/?msockid=2f5a288c78c468cd26653e0a79aa69cf"
+    },
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/copilot/finance/welcome"
+    }
+   ],
+   "icon": "coin",
+   "accent": "teal"
+  },
+  {
+   "id": "word-agent",
+   "name": "Word Agent",
+   "status": "GA",
+   "group": "m365-copilot",
+   "groupLabel": "Microsoft 365 Copilot",
+   "license": "Microsoft 365 Copilot license",
+   "description": "Word Agent creates and refines long‑form documents from a prompt — handling structure, research, and formatting so you can focus on ideas.",
+   "notes": [
+    "Requires Anthropic to be enabled for the tenant."
+   ],
+   "surfaces": [
+    "Copilot Chat"
+   ],
+   "links": [
+    {
+     "label": "Blog",
+     "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2025/09/29/vibe-working-introducing-agent-mode-and-office-agent-in-microsoft-365-copilot/?msockid=2d82bc8df86b6a1a012faa2cf9fc6b12"
+    },
+    {
+     "label": "Support article",
+     "url": "https://support.microsoft.com/en-us/topic/get-started-with-word-excel-and-powerpoint-agents-in-microsoft-365-copilot-76691f5e-bb19-4029-a34d-33a00e0a0c4f"
+    },
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/wordexcelppt-agents"
+    }
+   ],
+   "icon": "doc",
+   "accent": "blue"
+  },
+  {
+   "id": "excel-agent",
+   "name": "Excel Agent",
+   "status": "GA",
+   "group": "m365-copilot",
+   "groupLabel": "Microsoft 365 Copilot",
+   "license": "Microsoft 365 Copilot license",
+   "description": "Excel Agent builds and analyzes spreadsheets using natural language — generating formulas, charts, summaries, and performing multi‑step data tasks with iterative reasoning.",
+   "notes": [
+    "Requires Anthropic to be enabled for the tenant."
+   ],
+   "surfaces": [
+    "Copilot Chat"
+   ],
+   "links": [
+    {
+     "label": "Blog",
+     "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2025/09/29/vibe-working-introducing-agent-mode-and-office-agent-in-microsoft-365-copilot/?msockid=2d82bc8df86b6a1a012faa2cf9fc6b12"
+    },
+    {
+     "label": "Support article",
+     "url": "https://support.microsoft.com/en-us/topic/get-started-with-word-excel-and-powerpoint-agents-in-microsoft-365-copilot-76691f5e-bb19-4029-a34d-33a00e0a0c4f"
+    },
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/wordexcelppt-agents"
+    }
+   ],
+   "icon": "grid",
+   "accent": "teal"
+  },
+  {
+   "id": "powerpoint-agent",
+   "name": "PowerPoint Agent",
+   "status": "GA",
+   "group": "m365-copilot",
+   "groupLabel": "Microsoft 365 Copilot",
+   "license": "Microsoft 365 Copilot license",
+   "description": "PowerPoint Agent turns prompts into complete presentations — generating slides, layouts, visuals, and helping refine content.",
+   "notes": [
+    "Requires Anthropic to be enabled for the tenant."
+   ],
+   "surfaces": [
+    "Copilot Chat"
+   ],
+   "links": [
+    {
+     "label": "Blog",
+     "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2025/09/29/vibe-working-introducing-agent-mode-and-office-agent-in-microsoft-365-copilot/?msockid=2d82bc8df86b6a1a012faa2cf9fc6b12"
+    },
+    {
+     "label": "Support article",
+     "url": "https://support.microsoft.com/en-us/topic/get-started-with-word-excel-and-powerpoint-agents-in-microsoft-365-copilot-76691f5e-bb19-4029-a34d-33a00e0a0c4f"
+    },
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/wordexcelppt-agents"
+    }
+   ],
+   "icon": "slides",
+   "accent": "pink"
+  },
+  {
+   "id": "planner-agent",
+   "name": "Planner Agent",
+   "status": "GA",
+   "group": "m365-copilot",
+   "groupLabel": "Microsoft 365 Copilot",
+   "license": "Microsoft 365 Copilot license",
+   "description": "The Planner Agent brings Planner's intelligent task and plan management capabilities directly into Copilot Chat. Create, update, and manage your tasks, ask questions about your tasks, and create structured plans without switching apps.",
+   "notes": [],
+   "surfaces": [
+    "Copilot Chat"
+   ],
+   "links": [
+    {
+     "label": "Blog",
+     "url": "https://techcommunity.microsoft.com/blog/plannerblog/planner-agent-brings-work-management-directly-into-microsoft-365-copilot/4511720?previewMessage=true"
+    },
+    {
+     "label": "Support article",
+     "url": "https://support.microsoft.com/en-us/topic/what-is-planner-agent-in-copilot-afdd030e-3f76-47ea-9178-29e57730fd5b"
+    }
+   ],
+   "icon": "checklist",
+   "accent": "purple"
+  },
+  {
+   "id": "surveys-agent",
+   "name": "Surveys Agent",
+   "status": "GA",
+   "group": "m365-copilot",
+   "groupLabel": "Microsoft 365 Copilot",
+   "license": "Microsoft 365 Copilot license",
+   "description": "Surveys Agent helps you create, send, and analyze surveys—turning feedback into actionable insights with minimal effort.",
+   "notes": [],
+   "surfaces": [
+    "Copilot Chat",
+    "Forms"
+   ],
+   "links": [
+    {
+     "label": "Support article",
+     "url": "https://support.microsoft.com/en-us/topic/get-started-with-surveys-agent-in-microsoft-365-copilot-ddad28f2-386b-4f81-8a07-8ac4ee8f6bd8"
+    },
+    {
+     "label": "Adoption site",
+     "url": "https://adoption.microsoft.com/en-us/ai-agents/agents-in-microsoft-365/"
+    }
+   ],
+   "icon": "poll",
+   "accent": "teal"
+  },
+  {
+   "id": "learning-agent",
+   "name": "Learning Agent",
+   "status": "GA",
+   "group": "m365-copilot",
+   "groupLabel": "Microsoft 365 Copilot",
+   "license": "Microsoft 365 Copilot license",
+   "description": "Offers personalized Copilot usage tips based on current workstreams, curated learning paths, and AI-powered role-play exercises.",
+   "notes": [
+    "Integration needed to LinkedIn Learning."
+   ],
+   "surfaces": [
+    "Copilot Chat"
+   ],
+   "links": [],
+   "icon": "cap",
+   "accent": "purple"
+  },
+  {
+   "id": "microsoft-365-admin-agent",
+   "name": "Microsoft 365 Admin Agent",
+   "status": "GA",
+   "group": "m365-copilot",
+   "groupLabel": "Microsoft 365 Copilot",
+   "license": "Microsoft 365 Copilot license",
+   "description": "Copilot for admins helps simplify administration of Microsoft 365, Microsoft 365 Copilot and agents. It helps admins focus on more strategic priorities and helps you perform administrative tasks across different Microsoft 365 services.",
+   "notes": [
+    "Licensing: Available for all users with an admin role for tenants with at least one paid Copilot license or PayGo."
+   ],
+   "surfaces": [
+    "Copilot Chat",
+    "Microsoft Admin Center (MAC)"
+   ],
+   "links": [
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/copilot-for-microsoft-365-admin?view=o365-worldwide"
+    }
+   ],
+   "icon": "shield",
+   "accent": "blue"
+  },
+  {
+   "id": "writing-coach",
+   "name": "Writing Coach",
+   "status": "GA",
+   "group": "m365-copilot",
+   "groupLabel": "Microsoft 365 Copilot",
+   "license": "Microsoft 365 Copilot license",
+   "description": "Writing Coach helps users improve clarity, tone, and effectiveness of their writing by offering real-time suggestions, rewrites, and feedback.",
+   "notes": [],
+   "surfaces": [
+    "Copilot Chat"
+   ],
+   "links": [
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-template-writing-coach"
+    }
+   ],
+   "icon": "pen",
+   "accent": "pink"
+  },
+  {
+   "id": "career-coach",
+   "name": "Career Coach",
+   "status": "GA",
+   "group": "m365-copilot",
+   "groupLabel": "Microsoft 365 Copilot",
+   "license": "Microsoft 365 Copilot license",
+   "description": "Career Coach provides personalized suggestions and action plans to help users advance in their careers.",
+   "notes": [],
+   "surfaces": [
+    "Copilot Chat"
+   ],
+   "links": [
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-template-career-coach"
+    }
+   ],
+   "icon": "compass",
+   "accent": "purple"
+  },
+  {
+   "id": "plan-my-day",
+   "name": "Plan My Day",
+   "status": "GA",
+   "group": "m365-copilot",
+   "groupLabel": "Microsoft 365 Copilot",
+   "license": "Microsoft 365 Copilot license",
+   "description": "Plan My Day turns a user's calendar, emails, Teams messages, and files into a prioritized morning briefing - surfacing what to focus on first, what can wait, and what needs a decision now.",
+   "notes": [],
+   "surfaces": [
+    "Copilot Chat"
+   ],
+   "links": [],
+   "icon": "sun",
+   "accent": "amber"
+  },
+  {
+   "id": "sme-finder",
+   "name": "SME Finder",
+   "status": "GA",
+   "group": "m365-copilot",
+   "groupLabel": "Microsoft 365 Copilot",
+   "license": "Microsoft 365 Copilot license",
+   "description": "SME Finder surfaces the most credible subject-matter experts across the organization for any topic, product, process, or customer - returning ranked experts with cited evidence and a ready-to-send outreach message.",
+   "notes": [],
+   "surfaces": [
+    "Copilot Chat"
+   ],
+   "links": [],
+   "icon": "people",
+   "accent": "teal"
+  },
+  {
+   "id": "prompt-coach",
+   "name": "Prompt Coach",
+   "status": "GA",
+   "group": "copilot-eligible",
+   "groupLabel": "All Copilot Eligible Users",
+   "license": "No additional license — included for Copilot Chat users",
+   "description": "Prompt Coach helps users craft clearer, more effective prompts by suggesting improvements and refinements to get better results from Copilot.",
+   "notes": [
+    "Licensing: Available for all Copilot Chat users as a 1P agent. No cost incurred."
+   ],
+   "surfaces": [
+    "Copilot Chat"
+   ],
+   "links": [
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-template-prompt-coach"
+    }
+   ],
+   "icon": "spark",
+   "accent": "purple"
+  },
+  {
+   "id": "ideas-coach",
+   "name": "Ideas Coach",
+   "status": "GA",
+   "group": "copilot-eligible",
+   "groupLabel": "All Copilot Eligible Users",
+   "license": "No additional license — included for Copilot Chat users",
+   "description": "Ideas Coach helps users brainstorm, expand, and refine ideas by generating suggestions, outlines, and creative directions within Microsoft apps.",
+   "notes": [
+    "Licensing: Available for all Copilot Chat users as a 1P agent. No cost incurred."
+   ],
+   "surfaces": [
+    "Copilot Chat"
+   ],
+   "links": [
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-template-idea-coach"
+    }
+   ],
+   "icon": "bulb",
+   "accent": "amber"
+  },
+  {
+   "id": "ai-learning-advisor",
+   "name": "AI Learning Advisor",
+   "status": "GA",
+   "group": "copilot-eligible",
+   "groupLabel": "All Copilot Eligible Users",
+   "license": "No additional license — included for Copilot Chat users",
+   "description": "AI Learning Advisor helps users build skills across Microsoft's AI and low-code stack - Agent Builder, Copilot Studio, and Pro Code - with personalized learning plans, tool recommendations, and step-by-step troubleshooting, grounded in Microsoft Learn and Copilot Developer Camp.",
+   "notes": [
+    "Licensing: Available for all Copilot Chat users as a 1P agent. No cost incurred."
+   ],
+   "surfaces": [
+    "Copilot Chat"
+   ],
+   "links": [],
+   "icon": "cap",
+   "accent": "blue"
+  },
+  {
+   "id": "workflows-agent",
+   "name": "Workflows Agent",
+   "status": "Frontier",
+   "group": "m365-frontier",
+   "groupLabel": "Microsoft 365 Copilot — Frontier",
+   "license": "Microsoft 365 Copilot license + Frontier program",
+   "description": "Workflows can help you automate tasks like sending emails and reminders, managing calendars, and sharing team updates.",
+   "notes": [],
+   "surfaces": [
+    "Copilot Chat"
+   ],
+   "links": [
+    {
+     "label": "Blog",
+     "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2025/10/28/microsoft-365-copilot-now-enables-you-to-build-apps-and-workflows/"
+    },
+    {
+     "label": "Support article",
+     "url": "https://support.microsoft.com/en-us/topic/get-started-with-workflows-in-microsoft-365-copilot-frontier-8c6aba25-db31-443d-8319-bc79747b280a?preview=true"
+    }
+   ],
+   "icon": "flow",
+   "accent": "purple"
+  },
+  {
+   "id": "workforce-insights-agent",
+   "name": "Workforce Insights Agent",
+   "status": "Frontier",
+   "group": "m365-frontier",
+   "groupLabel": "Microsoft 365 Copilot — Frontier",
+   "license": "Microsoft 365 Copilot license + Frontier program",
+   "description": "The Workforce Insights Agent gives leaders and their delegates real-time, comprehensive views of their organization for faster, more informed workforce decisions.",
+   "notes": [
+    "Setup needed prior to use."
+   ],
+   "surfaces": [
+    "Copilot Chat"
+   ],
+   "links": [
+    {
+     "label": "Blog",
+     "url": "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/introducing-new-microsoft-365-copilot-agents-to-drive-workforce-transformation/4470689"
+    },
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/workforce-insights-agent?wt.mc_id=agentshub_Learn_webpage_cnl"
+    }
+   ],
+   "icon": "pulse",
+   "accent": "blue"
+  },
+  {
+   "id": "legal-agent",
+   "name": "Legal Agent",
+   "status": "Frontier",
+   "group": "m365-frontier",
+   "groupLabel": "Microsoft 365 Copilot — Frontier",
+   "license": "Microsoft 365 Copilot license + Frontier program",
+   "description": "The Legal Agent works within Copilot in Word to help legal professionals review and negotiate contracts. It flags risky or non-standard clauses, compares them to internal playbook guidelines, and generates negotiation-ready redlines (tracked changes).",
+   "notes": [
+    "Currently available only for users on US-based tenants who are physically present in the US."
+   ],
+   "surfaces": [
+    "Word"
+   ],
+   "links": [
+    {
+     "label": "Support article",
+     "url": "https://support.microsoft.com/en-us/office/get-started-with-the-legal-agent-frontier-c72cc686-552b-45d4-9e46-d731f9d57052"
+    }
+   ],
+   "icon": "scales",
+   "accent": "pink"
+  },
+  {
+   "id": "employee-self-service",
+   "name": "Employee Self-Service (ESS)",
+   "status": "GA",
+   "group": "copilot-studio",
+   "groupLabel": "Copilot Studio Templates",
+   "license": "Copilot Studio license",
+   "description": "ESS is a centralized agent for employee HR/IT self-service that helps employees complete HR and IT tasks (checking leave, updating info, device requests) all in one place, with prebuilt connectors.",
+   "notes": [
+    "Integration needed to backend systems."
+   ],
+   "surfaces": [
+    "Teams chat",
+    "Copilot Chat"
+   ],
+   "links": [
+    {
+     "label": "Blog",
+     "url": "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/announcing-general-availability-of-the-employee-self-service-agent-in-microsoft-/4469413"
+    },
+    {
+     "label": "Adoption site",
+     "url": "https://adoption.microsoft.com/en-us/ai-agents/employee-self-service-agent/"
+    },
+    {
+     "label": "Readiness guide",
+     "url": "https://adoption.microsoft.com/files/agents/Employee-Self-Service-agent_Readiness-guide.pdf"
+    },
+    {
+     "label": "Adoption guide",
+     "url": "https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fadoption.microsoft.com%2Ffiles%2Fagents%2FEmployee-Self-Service-agent_Adoption-guide.pptx&wdOrigin=BROWSELINK"
+    }
+   ],
+   "icon": "badge",
+   "accent": "teal"
+  },
+  {
+   "id": "frontline-agent",
+   "name": "Frontline Agent",
+   "status": "Public Preview",
+   "group": "m365-preview",
+   "groupLabel": "Microsoft 365 Copilot — Preview",
+   "license": "Microsoft 365 Copilot license",
+   "description": "An AI‑powered assistant designed to support frontline workers in their day‑to‑day operations and delivers concise, persona-tuned responses to help complete tasks and access the right information at the right time.",
+   "notes": [],
+   "surfaces": [
+    "Copilot Chat",
+    "Teams chat rail"
+   ],
+   "links": [
+    {
+     "label": "Blog",
+     "url": "https://techcommunity.microsoft.com/blog/microsoftteamsblog/frontline-agent-an-out-of-the-box-ai-assistant-for-every-frontline-teammate/4492837"
+    },
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/microsoft-365/frontline/setupfrontlineagent?view=o365-worldwide"
+    }
+   ],
+   "icon": "helmet",
+   "accent": "amber"
+  },
+  {
+   "id": "agents-in-channels",
+   "name": "Agents in Channels",
+   "status": "Public Preview",
+   "group": "m365-preview",
+   "groupLabel": "Microsoft 365 Copilot — Preview",
+   "license": "Microsoft 365 Copilot license",
+   "description": "Channel agents are experts grounded in conversations and meetings, helping your team stay on top of tasks, summarize info, and streamline productivity.",
+   "notes": [],
+   "surfaces": [
+    "Teams channels"
+   ],
+   "links": [
+    {
+     "label": "Blog",
+     "url": "https://techcommunity.microsoft.com/blog/microsoftteamsblog/ai-and-microsoft-teams-a-new-era-of-collaboration/4454152"
+    },
+    {
+     "label": "Support article",
+     "url": "https://support.microsoft.com/en-us/office/get-started-with-channel-agent-for-teams-channels-b85945cf-deef-4f1e-9db1-66e1a23b6a65?preview=true"
+    }
+   ],
+   "icon": "channel",
+   "accent": "purple"
+  },
+  {
+   "id": "agents-in-communities",
+   "name": "Agents in Communities",
+   "status": "Public Preview",
+   "group": "m365-preview",
+   "groupLabel": "Microsoft 365 Copilot — Preview",
+   "license": "Microsoft 365 Copilot license",
+   "description": "Accelerate community knowledge sharing and make expertise readily available across organizations with Viva Engage.",
+   "notes": [],
+   "surfaces": [
+    "Viva Engage (Yammer Communities)",
+    "Agent Menu Tools drop-down in Chat"
+   ],
+   "links": [
+    {
+     "label": "Blog",
+     "url": "https://techcommunity.microsoft.com/blog/viva_engage_blog/introducing-agents-in-viva-engage-communities-your-ai-powered-community-expert/4454146"
+    },
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/viva/engage/ai-technology-with-viva-engage/agents-community-network-deployment-config?wt.mc_id=agentshub_Learn_webpage_cnl"
+    }
+   ],
+   "icon": "people",
+   "accent": "pink"
+  },
+  {
+   "id": "knowledge-management-agent",
+   "name": "Knowledge Management Agent",
+   "status": "GA",
+   "group": "d365-service",
+   "groupLabel": "Dynamics 365 Customer Service & Contact Center",
+   "license": "Dynamics 365 Customer Service / Contact Center",
+   "description": "Keep knowledge articles perpetually current by uncovering insights from case notes and other artifacts.",
+   "notes": [],
+   "surfaces": [
+    "D365 Customer Service",
+    "D365 Contact Center"
+   ],
+   "links": [
+    {
+     "label": "Product page",
+     "url": "https://www.microsoft.com/en-us/dynamics-365/products/customer-service#agents"
+    },
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/dynamics365/customer-service/administer/admin-km-agent?tabs=case"
+    }
+   ],
+   "icon": "book",
+   "accent": "blue"
+  },
+  {
+   "id": "customer-intent-agent",
+   "name": "Customer Intent Agent",
+   "status": "GA",
+   "group": "d365-service",
+   "groupLabel": "Dynamics 365 Customer Service & Contact Center",
+   "license": "Dynamics 365 Customer Service / Contact Center",
+   "description": "Enable evergreen self-service by discovering customer intent from customer conversations across channels.",
+   "notes": [],
+   "surfaces": [
+    "D365 Customer Service",
+    "D365 Contact Center"
+   ],
+   "links": [
+    {
+     "label": "Product page",
+     "url": "https://www.microsoft.com/en-us/dynamics-365/products/customer-service#agents"
+    },
+    {
+     "label": "Learn article",
+     "url": "https://go.microsoft.com/fwlink/?linkid=2339312&clcid=0x409&culture=en-us&country=us"
+    }
+   ],
+   "icon": "target",
+   "accent": "purple"
+  },
+  {
+   "id": "quality-evaluation-agent",
+   "name": "Quality Evaluation Agent",
+   "status": "GA",
+   "group": "d365-service",
+   "groupLabel": "Dynamics 365 Customer Service & Contact Center",
+   "license": "Dynamics 365 Customer Service / Contact Center",
+   "description": "Monitor service quality across customer interactions—from service reps to self-service agents.",
+   "notes": [],
+   "surfaces": [
+    "D365 Customer Service",
+    "D365 Contact Center"
+   ],
+   "links": [
+    {
+     "label": "Product page",
+     "url": "https://www.microsoft.com/en-us/dynamics-365/products/customer-service#agents"
+    },
+    {
+     "label": "Learn article",
+     "url": "https://go.microsoft.com/fwlink/?linkid=2339716&clcid=0x409&culture=en-us&country=us"
+    }
+   ],
+   "icon": "gauge",
+   "accent": "teal"
+  },
+  {
+   "id": "case-management-agent",
+   "name": "Case Management Agent",
+   "status": "GA",
+   "group": "d365-service",
+   "groupLabel": "Dynamics 365 Customer Service & Contact Center",
+   "license": "Dynamics 365 Customer Service / Contact Center",
+   "description": "Automate the case lifecycle to reduce handle time and alleviate the burden of manual tasks on service reps.",
+   "notes": [],
+   "surfaces": [
+    "D365 Customer Service (Agent workspace)"
+   ],
+   "links": [
+    {
+     "label": "Product page",
+     "url": "https://www.microsoft.com/en-us/dynamics-365/products/customer-service#agents"
+    },
+    {
+     "label": "Learn article",
+     "url": "https://go.microsoft.com/fwlink/?linkid=2339310&clcid=0x409&culture=en-us&country=us"
+    }
+   ],
+   "icon": "ticket",
+   "accent": "blue"
+  },
+  {
+   "id": "sales-qualification-agent",
+   "name": "Sales Qualification Agent",
+   "status": "GA",
+   "group": "d365-sales",
+   "groupLabel": "Dynamics 365 Sales",
+   "license": "Dynamics 365 Sales",
+   "description": "Researches, prioritizes, and engages inbound leads, then hands off only high‑intent, qualified leads to sellers.",
+   "notes": [],
+   "surfaces": [
+    "D365 Sales"
+   ],
+   "links": [
+    {
+     "label": "Blog",
+     "url": "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2025/12/11/dynamics-365-sets-the-bar-for-agentic-sales-qualification-on-new-benchmark/"
+    },
+    {
+     "label": "Video",
+     "url": "https://www.youtube.com/watch?v=g-zpeJ_W65w&t=4s"
+    }
+   ],
+   "icon": "funnel",
+   "accent": "teal"
+  },
+  {
+   "id": "sales-research-agent",
+   "name": "Sales Research Agent",
+   "status": "GA",
+   "group": "d365-sales",
+   "groupLabel": "Dynamics 365 Sales",
+   "license": "Dynamics 365 Sales",
+   "description": "Get answers to strategic, multi-faceted questions that sales leaders have about their business and operational performance.",
+   "notes": [],
+   "surfaces": [
+    "D365 Sales"
+   ],
+   "links": [
+    {
+     "label": "Blog",
+     "url": "https://www.microsoft.com/en-us/dynamics-365/blog/it-professional/2025/10/21/sales-research-bench/"
+    }
+   ],
+   "icon": "search",
+   "accent": "purple"
+  },
+  {
+   "id": "sales-opportunity-agent",
+   "name": "Sales Opportunity Agent",
+   "status": "GA",
+   "group": "d365-sales",
+   "groupLabel": "Dynamics 365 Sales",
+   "license": "Dynamics 365 Sales",
+   "description": "Researches opportunities, identifies emerging risks, and highlights the highest-priority deals so sellers can close faster.",
+   "notes": [],
+   "surfaces": [
+    "D365 Sales"
+   ],
+   "links": [
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/dynamics365/sales/sales-opportunity-agent"
+    }
+   ],
+   "icon": "trend",
+   "accent": "blue"
+  },
+  {
+   "id": "sales-development-agent",
+   "name": "Sales Development Agent",
+   "status": "Frontier",
+   "group": "d365-sales",
+   "groupLabel": "Dynamics 365 Sales",
+   "license": "Dynamics 365 Sales",
+   "description": "The Sales Development agent continuously researches sales leads, crafts personalized outreach emails, and automatically follows up to ensure no lead is left behind. It scales your sales team’s capacity and acts like a teammate. Integrates with D365 Sales, Salesforce CRM, and CSV files.",
+   "notes": [],
+   "surfaces": [
+    "Teams chat",
+    "Email drafts in Outlook"
+   ],
+   "links": [
+    {
+     "label": "Ignite Blog",
+     "url": "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2025/11/18/microsoft-ignite-2025-powering-frontier-firms-with-agentic-business-applications/"
+    },
+    {
+     "label": "Blog",
+     "url": "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/how-sales-development-agent-helps-teams-scale-outbound-outreach-without-sacrific/4478932"
+    },
+    {
+     "label": "Learn article",
+     "url": "https://review.learn.microsoft.com/en-us/microsoft-agent-365/use?branch=main&branchFallbackFrom=sales-development-agent-kevinwoley-2025.11.18"
+    }
+   ],
+   "icon": "rocket",
+   "accent": "pink"
+  },
+  {
+   "id": "sales-close-agent",
+   "name": "Sales Close Agent",
+   "status": "Public Preview",
+   "group": "d365-sales",
+   "groupLabel": "Dynamics 365 Sales",
+   "license": "Dynamics 365 Sales",
+   "description": "Autonomously analyze deals to equip your sellers with insights they need to win.",
+   "notes": [],
+   "surfaces": [
+    "D365 Sales"
+   ],
+   "links": [
+    {
+     "label": "Blog",
+     "url": "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2025/10/21/from-systems-of-record-to-systems-of-action-dynamics-365-agentic-business-applications-for-the-frontier/"
+    },
+    {
+     "label": "Product page",
+     "url": "https://www.microsoft.com/en-us/dynamics-365/products/sales#Sales-Close-Agent"
+    }
+   ],
+   "icon": "trophy",
+   "accent": "amber"
+  },
+  {
+   "id": "supplier-communications",
+   "name": "Supplier Communications (Supply Chain)",
+   "status": "Public Preview",
+   "group": "d365-ops",
+   "groupLabel": "Dynamics 365 Supply Chain, Finance & Operations",
+   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations",
+   "description": "Copilot in Dynamics 365 Supply Chain Management reads and categorizes incoming supplier emails (confirmations, change requests, etc.), links them to the correct purchase orders, sends follow-up emails, and flags supply risks.",
+   "notes": [],
+   "surfaces": [
+    "D365 Supply Chain (Procurement)"
+   ],
+   "links": [
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/dynamics365/supply-chain/get-started/copilot-summaries-overview"
+    }
+   ],
+   "icon": "truck",
+   "accent": "blue"
+  },
+  {
+   "id": "account-reconciliations",
+   "name": "Account Reconciliations (Finance)",
+   "status": "Public Preview",
+   "group": "d365-ops",
+   "groupLabel": "Dynamics 365 Supply Chain, Finance & Operations",
+   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations",
+   "description": "Copilot in Dynamics 365 Finance assists finance teams during period-end close by identifying ledger discrepancies and suggesting remediation actions to reconcile accounts.",
+   "notes": [],
+   "surfaces": [
+    "Within D365 Finance (Finance modules)"
+   ],
+   "links": [
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/dynamics365/finance/general-ledger/account-reconciliation#copilot-agent-for-account-reconciliation"
+    },
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/copilot/finance/reconcile/custom-reconciliation-agent"
+    }
+   ],
+   "icon": "ledger",
+   "accent": "teal"
+  },
+  {
+   "id": "time-entry-agent",
+   "name": "Time Entry Agent",
+   "status": "Public Preview",
+   "group": "d365-ops",
+   "groupLabel": "Dynamics 365 Supply Chain, Finance & Operations",
+   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations",
+   "description": "The Time Entry Agent automates the time entry by generating weekly time entries based on project assignments and bookings and sends reminders for any missing entries.",
+   "notes": [],
+   "surfaces": [
+    "D365 Project Operations"
+   ],
+   "links": [
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/dynamics365/project-operations/time/enable-time-entry-agent"
+    }
+   ],
+   "icon": "clock",
+   "accent": "purple"
+  },
+  {
+   "id": "expense-agent",
+   "name": "Expense Agent",
+   "status": "Public Preview",
+   "group": "d365-ops",
+   "groupLabel": "Dynamics 365 Supply Chain, Finance & Operations",
+   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations",
+   "description": "The Expense Agent reduces manual effort and errors in expense management by automating workflows for receipt processing, expense line creation, and expense report generation.",
+   "notes": [],
+   "surfaces": [
+    "D365 Project Operations"
+   ],
+   "links": [
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/dynamics365/project-operations/expense/expense-agent-setup"
+    }
+   ],
+   "icon": "receipt",
+   "accent": "pink"
+  },
+  {
+   "id": "activity-approvals-agent",
+   "name": "Activity Approvals Agent",
+   "status": "Public Preview",
+   "group": "d365-ops",
+   "groupLabel": "Dynamics 365 Supply Chain, Finance & Operations",
+   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations",
+   "description": "The Approvals Agent streamlines the approval process for time, expense, and material transactions.",
+   "notes": [],
+   "surfaces": [
+    "D365 Project Operations"
+   ],
+   "links": [
+    {
+     "label": "Learn article",
+     "url": "https://learn.microsoft.com/en-us/dynamics365/project-operations/approvals/approvals-agent-intro"
+    }
+   ],
+   "icon": "approve",
+   "accent": "teal"
+  },
+  {
+   "id": "scheduling-operations-agent",
+   "name": "Scheduling Operations Agent",
+   "status": "Public Preview",
+   "group": "d365-ops",
+   "groupLabel": "Dynamics 365 Supply Chain, Finance & Operations",
+   "license": "Dynamics 365 Supply Chain / Finance & Ops / Project Operations",
+   "description": "Allows dispatchers to improve the schedule of a single technician quickly and efficiently. Dispatchers often spend considerable time on the schedule board adjusting technician schedules manually throughout their day.",
+   "notes": [],
+   "surfaces": [
+    "D365 Field Service"
+   ],
+   "links": [
+    {
+     "label": "Learn article",
+     "url": "https://www.youtube.com/watch?v=FsYVCyW8J1M"
+    }
+   ],
+   "icon": "calendar",
+   "accent": "blue"
+  }
+ ]
+}

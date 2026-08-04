@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Microsoft 1st Party Agents</title>
+<meta name="description" content="Catalog of Microsoft's first-party AI agents across Microsoft 365 Copilot, Copilot Studio and Dynamics 365 — with availability status, surfaces and resource links.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div class="ribbon"></div>
+
+<header class="site-header">
+  <a class="brand" href="#/">
+    <svg class="brand-glyph" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#12B8A6"/><stop offset=".38" stop-color="#2F6BFF"/>
+        <stop offset=".7" stop-color="#7C5CFC"/><stop offset="1" stop-color="#E3458E"/>
+      </linearGradient></defs>
+      <rect x="2" y="2" width="44" height="44" rx="12" fill="url(#bg)"/>
+      <path d="M24 12l3.4 8.6L36 24l-8.6 3.4L24 36l-3.4-8.6L12 24l8.6-3.4z" fill="#fff"/>
+    </svg>
+    <span class="brand-text">
+      <strong>Microsoft 1st Party Agents</strong>
+      <span>Availability, surfaces &amp; resources</span>
+    </span>
+  </a>
+  <a class="header-cta" href="https://adoption.microsoft.com/en-us/ai-agents/agents-in-microsoft-365/"
+     target="_blank" rel="noopener noreferrer">Microsoft Adoption &rarr;</a>
+</header>
+
+<main class="container">
+
+  <!-- ------------------------------------------------------------- list -->
+  <div id="listView" class="view">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="kicker">Agents Overview</span>
+        <h1>Every Microsoft first-party agent, in one place</h1>
+        <p class="lead">Microsoft ships agents across Microsoft 365 Copilot, Copilot Studio and
+          Dynamics 365 — each on its own release track. Browse the full catalog, see exactly what's
+          generally available versus in preview or Frontier early access, and jump straight to the
+          blogs, Learn articles and adoption guides for each one.</p>
+      </div>
+      <div class="hero-art">
+        <div class="orb orb-a"></div><div class="orb orb-b"></div><div class="orb orb-c"></div>
+        <svg class="hero-glyph" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+          <defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#12B8A6"/><stop offset=".4" stop-color="#2F6BFF"/>
+            <stop offset=".72" stop-color="#7C5CFC"/><stop offset="1" stop-color="#E3458E"/>
+          </linearGradient></defs>
+          <path d="M60 14l10.5 26.5L97 51 70.5 61.5 60 88 49.5 61.5 23 51l26.5-10.5z" fill="url(#hg)"/>
+          <circle cx="94" cy="90" r="12" fill="#fff" opacity=".9"/>
+          <circle cx="27" cy="88" r="8" fill="#12B8A6" opacity=".85"/>
+        </svg>
+      </div>
+    </section>
+
+    <div id="statRow" class="stat-row"></div>
+
+    <div class="controls">
+      <div class="search-row">
+        <input id="agentSearch" type="search" placeholder="Search agents, surfaces or capabilities…"
+               aria-label="Search agents" autocomplete="off">
+        <span id="resultCount" class="result-count"></span>
+      </div>
+      <div class="filter-group" id="statusChips" role="group" aria-label="Filter by availability">
+        <span class="filter-label">Availability</span>
+      </div>
+      <div class="filter-group" id="groupChips" role="group" aria-label="Filter by product">
+        <span class="filter-label">Product</span>
+      </div>
+    </div>
+
+    <div id="agentGroups"></div>
+    <p id="sourceNote" class="source-note"></p>
+  </div>
+
+  <!-- ----------------------------------------------------------- detail -->
+  <div id="detailView" class="view" hidden></div>
+
+</main>
+
+<footer class="site-footer">
+  <p>Microsoft 1st Party Agents &middot; part of
+    <a href="https://www.mfg-365.com">Microsoft Manufacturing &amp; Mobility</a>.
+    Agent details are sourced from the Microsoft ABS Out-of-Box Agents deck and refreshed automatically.
+    Availability varies by tenant, licensing and region — always confirm against the linked Microsoft documentation.</p>
+</footer>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
