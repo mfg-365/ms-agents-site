@@ -23,6 +23,12 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ms-agents-site/1.0';
 
 const FORCE = process.argv.includes('--force');
 
+/** Refetch cached articles older than this many days (0 = keep all). */
+const MAX_AGE_DAYS = (() => {
+  const i = process.argv.indexOf('--max-age');
+  return i !== -1 ? Number(process.argv[i + 1]) || 0 : 0;
+})();
+
 /**
  * Extra agent-specific documentation, hand-verified to return HTTP 200.
  *
@@ -441,10 +447,14 @@ async function main() {
   ])];
   console.log(`Articles to resolve: ${urls.length} (cached: ${urls.filter((u) => cache[u]).length})`);
 
-  let ok = 0, failed = 0, skipped = 0, repaired = 0;
+  let ok = 0, failed = 0, skipped = 0, repaired = 0, refreshed = 0;
+  const staleBefore = MAX_AGE_DAYS > 0 ? Date.now() - MAX_AGE_DAYS * 864e5 : 0;
+
   for (const url of urls) {
     const prior = cache[url];
-    if (prior && !prior.error) { skipped++; continue; }
+    const isStale = staleBefore && prior && prior.fetched
+      && Date.parse(prior.fetched) < staleBefore;
+    if (prior && !prior.error && !isStale) { skipped++; continue; }
     // PPTX/PDF assets aren't scrapable prose.
     if (/\.(pptx|pdf|docx)(\?|$)/i.test(url) || /view\.officeapps\.live\.com/i.test(url)) {
       cache[url] = { url, skip: 'binary' };
@@ -452,19 +462,23 @@ async function main() {
       continue;
     }
     try {
-      cache[url] = await fetchArticle(url);
+      const fresh = await fetchArticle(url);
+      // Keep the old copy if a refresh fails to return usable prose.
+      cache[url] = fresh;
       if (prior && prior.error) repaired++;
+      else if (isStale) refreshed++;
       ok++;
       process.stdout.write('.');
     } catch (e) {
-      cache[url] = { url, error: e.message };
+      // A stale-but-good entry beats losing the content to a transient error.
+      cache[url] = prior && !prior.error ? prior : { url, error: e.message };
       failed++;
       process.stdout.write('x');
     }
     await new Promise((r) => setTimeout(r, 700)); // be polite; avoids throttling
   }
   process.stdout.write('\n');
-  console.log(`fetched ${ok}${repaired ? ` (${repaired} repaired)` : ''}, failed ${failed}, skipped ${skipped}`);
+  console.log(`fetched ${ok}${repaired ? ` (${repaired} repaired)` : ''}${refreshed ? ` (${refreshed} refreshed)` : ''}, failed ${failed}, skipped ${skipped}`);
 
   fs.mkdirSync(path.dirname(CACHE), { recursive: true });
   fs.writeFileSync(CACHE, JSON.stringify(cache, null, 1));
