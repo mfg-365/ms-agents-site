@@ -23,7 +23,7 @@ const CACHE = path.join(__dirname, 'out', 'article-cache.json');
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ms-agents-site/1.0';
 
 const ROADMAP_API = 'https://www.microsoft.com/releasecommunications/api/v1/m365';
-const MAX_ROADMAP_PER_APP = 10;
+const MAX_ROADMAP_PER_APP = 25;
 const MAX_BLOGS_PER_APP = 5;
 /** Only surface work that is still coming — shipped items belong in the docs. */
 const ACTIVE_STATUSES = ['In development', 'Rolling out'];
@@ -364,17 +364,25 @@ function sortRoadmap(items) {
 /**
  * Take a page-sized slice that still represents both statuses. Sorting alone
  * would fill the slice with "In development" items and leave the "Rolling out"
- * filter showing nothing.
+ * filter showing nothing, so each status gets a guaranteed share and any
+ * leftover capacity is topped up from whichever list still has items.
  */
 function sliceRoadmap(items, max) {
   const sorted = sortRoadmap(items);
+  if (sorted.length <= max) return sorted;
+
   const dev = sorted.filter((i) => i.status === 'In development');
   const roll = sorted.filter((i) => i.status === 'Rolling out');
   if (!dev.length || !roll.length) return sorted.slice(0, max);
 
   const rollQuota = Math.min(roll.length, Math.max(2, Math.round(max / 3)));
-  const devQuota = Math.min(dev.length, max - rollQuota);
-  return [...dev.slice(0, devQuota), ...roll.slice(0, rollQuota)];
+  let devTake = Math.min(dev.length, max - rollQuota);
+  let rollTake = Math.min(roll.length, max - devTake);
+  // Use any capacity the other status couldn't fill.
+  devTake = Math.min(dev.length, max - rollTake);
+  rollTake = Math.min(roll.length, max - devTake);
+
+  return [...dev.slice(0, devTake), ...roll.slice(0, rollTake)];
 }
 
 async function main() {
@@ -389,9 +397,9 @@ async function main() {
   const cache = loadCache();
   const apps = [];
   // A single roadmap item is often tagged with several products (an Office
-  // feature lands in Word, Excel and PowerPoint at once). Summing per-app
-  // counts would report it three times, so track unique IDs for the headline.
-  const mappedIds = new Set();
+  // feature lands in Word, Excel and PowerPoint at once). Keep one entry per
+  // feature so headline counts describe distinct work, not tag combinations.
+  const mappedById = new Map();
 
   for (const app of APPS) {
     // Roadmap: prefer exact product-tag matches, which are far more precise
@@ -399,8 +407,11 @@ async function main() {
     const tagged = roadmap.filter((r) =>
       r.products.some((p) => (app.roadmapProducts || []).includes(p)));
     const pool = tagged.length ? tagged : roadmap.filter((r) => app.match.test(r.title));
-    const items = sliceRoadmap(dedupeByTitle(pool), MAX_ROADMAP_PER_APP);
-    (tagged.length ? tagged : pool).forEach((r) => mappedIds.add(r.id));
+    // The roadmap republishes one feature under several product prefixes, so
+    // de-duplicate before counting or slicing.
+    const unique = dedupeByTitle(pool);
+    const items = sliceRoadmap(unique, MAX_ROADMAP_PER_APP);
+    unique.forEach((r) => mappedById.set(r.id, r));
 
     // Blogs: require the app name in the title so posts are genuinely about it.
     const posts = dedupeByTitle(blogs.filter((b) => app.match.test(b.title)))
@@ -424,24 +435,27 @@ async function main() {
       inDevelopment: items.filter((i) => i.status === 'In development').length,
       rollingOut: items.filter((i) => i.status === 'Rolling out').length,
     };
-    // Totals across everything tagged for this app, not just the page slice.
+    // Totals across everything mapped to this app, not just the page slice.
     const totals = {
-      inDevelopment: (tagged.length ? tagged : pool).filter((i) => i.status === 'In development').length,
-      rollingOut: (tagged.length ? tagged : pool).filter((i) => i.status === 'Rolling out').length,
+      inDevelopment: unique.filter((i) => i.status === 'In development').length,
+      rollingOut: unique.filter((i) => i.status === 'Rolling out').length,
     };
 
     apps.push({
       id: app.id, name: app.name, icon: app.icon, accent: app.accent,
       blurb: app.blurb, detail: app.detail, scenarios: app.scenarios || [],
       links, roadmap: items, blogs: posts, counts, totals,
-      roadmapTotal: tagged.length ? tagged.length : pool.length,
+      roadmapTotal: unique.length,
     });
-    console.log(`  ${app.name.padEnd(28)} links ${links.length}  roadmap ${items.length}/${tagged.length}  blogs ${posts.length}`);
+    console.log(`  ${app.name.padEnd(28)} links ${links.length}  roadmap ${items.length}/${unique.length}  blogs ${posts.length}`);
   }
 
   fs.mkdirSync(path.dirname(CACHE), { recursive: true });
   fs.writeFileSync(CACHE, JSON.stringify(cache, null, 1));
 
+  // Headline figures describe features specific to the apps on this page,
+  // counted once each even when a feature spans several of them.
+  const mapped = [...mappedById.values()];
   const payload = {
     generated: new Date().toISOString(),
     sources: {
@@ -450,21 +464,25 @@ async function main() {
     },
     totals: {
       apps: apps.length,
-      // All active Copilot features, whether or not they map to an app here.
-      roadmapItems: roadmap.length,
-      inDevelopment: roadmap.filter((r) => r.status === 'In development').length,
-      rollingOut: roadmap.filter((r) => r.status === 'Rolling out').length,
-      // Unique features mapped to the apps on this page (no double counting).
-      mappedItems: mappedIds.size,
+      // Unique, app-specific features in flight.
+      roadmapItems: mapped.length,
+      inDevelopment: mapped.filter((r) => r.status === 'In development').length,
+      rollingOut: mapped.filter((r) => r.status === 'Rolling out').length,
+      // Every active Copilot feature, including those outside these apps.
+      allActiveCopilot: roadmap.length,
       blogPosts: blogs.length,
     },
     apps,
   };
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, JSON.stringify(payload, null, 1));
+
   const naiveSum = apps.reduce((n, a) => n + a.roadmapTotal, 0);
-  console.log(`\nActive Copilot features: ${roadmap.length}`);
-  console.log(`  mapped to these apps:  ${mappedIds.size} unique (${naiveSum} before de-duplicating multi-product items)`);
+  console.log(`\nActive Copilot features (all):        ${roadmap.length}`);
+  console.log(`Specific to these apps, de-duplicated: ${mapped.length}`);
+  console.log(`  in development: ${payload.totals.inDevelopment}`);
+  console.log(`  rolling out:    ${payload.totals.rollingOut}`);
+  console.log(`  (${naiveSum} before removing features counted under several apps)`);
   console.log(`Wrote ${apps.length} apps to ${OUT}`);
 }
 

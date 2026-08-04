@@ -75,16 +75,16 @@ function renderStats() {
   $('#statRow').innerHTML = [
     [DATA.apps.length, 'Apps covered'],
     [t.roadmapItems, 'Copilot features in flight'],
-    [t.mappedItems ?? t.roadmapItems, 'Mapped to these apps'],
-    [t.blogPosts, 'Recent blog posts'],
+    [t.inDevelopment, 'In development'],
+    [t.rollingOut, 'Rolling out'],
   ].map(([v, l]) => `<div class="stat"><span class="stat-num">${v}</span><span class="stat-lbl">${l}</span></div>`).join('');
 
   $('#sourceNote').innerHTML =
     `Roadmap data from the public
      <a href="${ROADMAP_HOME}" target="_blank" rel="noopener noreferrer">Microsoft 365 Roadmap</a>,
-     filtered to features in development or rolling out. A feature that ships to several apps at
-     once is counted once. Blog posts come from official Microsoft RSS feeds; guides from Microsoft
-     Support and Learn.
+     limited to Copilot features for the apps above that are in development or rolling out. A
+     feature shipping to several of these apps at once is counted once.
+     Blog posts come from official Microsoft RSS feeds; guides from Microsoft Support and Learn.
      Refreshed ${esc(new Date(DATA.generated).toLocaleDateString(undefined,
        { year: 'numeric', month: 'long', day: 'numeric' }))}.`;
 }
