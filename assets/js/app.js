@@ -49,7 +49,7 @@ function agentCard(a) {
       <div class="surface-row">${surfaces}${more}</div>
       <div class="agent-card-foot">
         <span>${a.links.length} resource${a.links.length === 1 ? '' : 's'}${
-          a.highlights && a.highlights.length ? ` &middot; ${a.highlights.length} capabilities` : ''}</span>
+          a.highlights && a.highlights.length ? ` &middot; ${a.highlights.length} places to start` : ''}</span>
         <span class="go">View details &rarr;</span>
       </div>
     </a>`;
@@ -136,7 +136,7 @@ function renderDetail(a) {
 
   const highlights = (a.highlights && a.highlights.length) ? `
     <section class="detail-section">
-      <h2 class="section-title">What you can do</h2>
+      <h2 class="section-title">Things to try</h2>
       <ul class="hl-list" style="${accVars(a)}">
         ${a.highlights.map((h) => `<li>${esc(h)}</li>`).join('')}
       </ul>

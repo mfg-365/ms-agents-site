@@ -4,7 +4,7 @@
  *
  * For every agent we fetch its linked articles and extract:
  *   - a longer overview paragraph (article intro prose)
- *   - "What you can do" highlight bullets
+ *   - "Things to try" highlight bullets
  *   - per-link summaries so Resource tiles can describe themselves
  *
  * Everything written is quoted/derived from Microsoft's own published pages —
@@ -529,7 +529,7 @@ async function main() {
     agent.highlights = highlights;
     agent.limitations = limitations;
     // Scenarios and highlights draw from the same articles, so drop any
-    // scenario already shown under "What you can do".
+    // scenario already shown under "Things to try".
     const shown = new Set(highlights.map((h) => h.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 45)));
     agent.scenarios = buildScenarios(agent, articles)
       .filter((s) => !shown.has(s.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 45)));
