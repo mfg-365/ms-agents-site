@@ -33,13 +33,21 @@ a:hover{text-decoration:underline}
 .brand-text span{color:var(--muted);font-size:.78rem}
 .header-cta{font-size:.85rem;font-weight:600;color:var(--purple);white-space:nowrap}
 
-/* Section nav */
-.site-nav{display:flex;gap:.3rem;align-items:center;flex-wrap:wrap}
-.site-nav a{font-size:.88rem;font-weight:600;color:var(--muted);padding:.45rem .9rem;
-  border-radius:20px;border:1px solid transparent;white-space:nowrap;
-  transition:background .15s,color .15s,border-color .15s}
-.site-nav a:hover{color:var(--ink);background:var(--light);text-decoration:none}
-.site-nav a.is-current{color:var(--ink);background:var(--light);border-color:var(--hair)}
+/* Section tabs — matches the sibling mfg-365 sites. Sticky below the site
+   header on its own, and below the injected global bar inside the bundle
+   (mfg-global.css raises this to 112px). */
+.tabs{display:flex;gap:.2rem;overflow-x:auto;background:#fff;
+  padding:0 clamp(1rem,4vw,2.2rem);border-bottom:1px solid var(--hair);
+  position:sticky;top:60px;z-index:40;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{appearance:none;border:none;background:none;cursor:pointer;font-family:inherit;
+  font-size:.92rem;font-weight:600;color:var(--muted);padding:.95rem .9rem;
+  border-bottom:3px solid transparent;white-space:nowrap;transition:color .15s;
+  text-decoration:none;position:relative}
+.tab:hover{color:var(--ink);text-decoration:none}
+.tab.is-active{color:var(--ink)}
+.tab.is-active::after{content:"";position:absolute;left:.6rem;right:.6rem;bottom:-1px;
+  height:3px;border-radius:3px;background:var(--grad)}
 
 /* Roadmap + blog cards */
 .rm-meta-row{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
@@ -267,7 +275,7 @@ a.related-pill svg{width:15px;height:15px;color:var(--acc,var(--blue))}
   .agent-grid{grid-template-columns:1fr}
   .header-cta{display:none}
   .filter-label{width:100%;margin-bottom:.1rem}
-  .site-nav a{padding:.4rem .7rem;font-size:.82rem}
+  .tabs{top:58px}
   .brand-text span{display:none}
 }
 @media(prefers-reduced-motion:reduce){
