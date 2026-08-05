@@ -1,9 +1,16 @@
-﻿# Microsoft 1st Party Agents
+# Microsoft 1st Party Agents
 
 Catalog site for Microsoft's first-party AI agents — availability status (GA, Public Preview,
 Frontier), surfaces, and resource links. Part of the mfg-365.com global nav.
 
-Live preview: https://mfg-365.github.io/ms-agents-site/
+Live: https://www.mfg-365.com/agents/
+Preview: https://mfg-365.github.io/ms-agents-site/
+
+Published as a subsite of www.mfg-365.com. The combined bundle is built by
+C:\Users\cowi\Downloads\mfg365-swa-deploy\scripts\deploy-all.ps1, which pulls this
+repo and injects the shared mfg-365 top bar. A GitHub push alone does not update
+www.mfg-365.com - the deploy script has to run (daily at 10am, or immediately
+after the weekly content refresh).
 
 ## Data pipeline
 
