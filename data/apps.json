@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-04T18:31:40.862Z",
+ "generated": "2026-08-15T00:03:42.499Z",
  "sources": {
   "roadmap": "https://www.microsoft.com/en-us/microsoft-365/roadmap?searchterms=Copilot",
   "feeds": [
@@ -23,11 +23,11 @@
  },
  "totals": {
   "apps": 14,
-  "roadmapItems": 297,
-  "inDevelopment": 234,
-  "rollingOut": 63,
-  "allActiveCopilot": 348,
-  "blogPosts": 42
+  "roadmapItems": 295,
+  "inDevelopment": 237,
+  "rollingOut": 58,
+  "allActiveCopilot": 344,
+  "blogPosts": 43
  },
  "apps": [
   {
@@ -294,6 +294,19 @@
      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=485722"
     },
     {
+     "id": 405753,
+     "title": "Copilot takes emails and meetings into account while drafting content in Word",
+     "description": "You will no longer need to reference certain types of organizational data for Copilot to generate contextually relevant content. People and chats will still need to be referenced explicitly.",
+     "status": "In development",
+     "products": [
+      "Microsoft Copilot (Microsoft 365)",
+      "Word"
+     ],
+     "availability": "March CY2025",
+     "modified": "2025-03-04T00:30:04",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=405753"
+    },
+    {
      "id": 543420,
      "title": "Word Agent",
      "description": "Word Agent helps you handle research, structure, and formatting so you can stay focused on your ideas. Use multi-turn chat to refine your draft or open it in Word for full editing and collaboration. It’s designed for long-form, information-dense work—like strategic plans, policy documents, and technical papers—making it easier to turn complex material into clear, well-written content. Available to Microsoft 365 users with or without a Microsoft 365 Copilot license.",
@@ -305,19 +318,6 @@
      "availability": "February CY2026",
      "modified": "2026-02-20T00:00:24",
      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=543420"
-    },
-    {
-     "id": 523205,
-     "title": "Use voice for Q&A during Read Aloud in Word",
-     "description": "Interact in real time with read aloud in Word with Copilot. While your document is being read aloud, you can ask questions with your voice—such as “What does this mean?” or “Summarize this section”—and get answers instantly. No need to pause and search manually. This keeps you in context, reduces interruptions, and helps you understand and act faster.",
-     "status": "Rolling out",
-     "products": [
-      "Word",
-      "Microsoft Copilot (Microsoft 365)"
-     ],
-     "availability": "February CY2026",
-     "modified": "2026-02-10T00:15:36",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=523205"
     },
     {
      "id": 533043,
@@ -390,14 +390,14 @@
    ],
    "blogs": [],
    "counts": {
-    "inDevelopment": 18,
-    "rollingOut": 7
+    "inDevelopment": 19,
+    "rollingOut": 6
    },
    "totals": {
     "inDevelopment": 20,
-    "rollingOut": 7
+    "rollingOut": 6
    },
-   "roadmapTotal": 27
+   "roadmapTotal": 26
   },
   {
    "id": "excel",
@@ -432,19 +432,6 @@
      "availability": "September CY2026",
      "modified": "2026-07-23T23:27:16",
      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=542181"
-    },
-    {
-     "id": 566872,
-     "title": "Complex web search with Copilot in Excel",
-     "description": "Copilot in Excel improves complex web search quality with a multi-agent search system that coordinates parallel research, verifies findings, and re-checks gaps when needed, delivering faster and more complete answers across multiple sources.",
-     "status": "In development",
-     "products": [
-      "Excel",
-      "Microsoft Copilot (Microsoft 365)"
-     ],
-     "availability": "July CY2026",
-     "modified": "2026-07-01T23:03:18",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=566872"
     },
     {
      "id": 560531,
@@ -484,19 +471,6 @@
      "availability": "June CY2026",
      "modified": "2026-04-13T23:15:13",
      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=489826"
-    },
-    {
-     "id": 499659,
-     "title": "=COPILOT Function",
-     "description": "Use the new =COPILOT function directly in Excel formulas to generate, classify, and summarize text and data.",
-     "status": "In development",
-     "products": [
-      "Excel",
-      "Microsoft Copilot (Microsoft 365)"
-     ],
-     "availability": "December CY2026",
-     "modified": "2026-02-27T23:15:13",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=499659"
     },
     {
      "id": 557564,
@@ -554,6 +528,13 @@
    ],
    "blogs": [
     {
+     "title": "Bring your organization’s data into Excel with new Copilot synced connectors",
+     "link": "https://techcommunity.microsoft.com/t5/excel-blog/bring-your-organization-s-data-into-excel-with-new-copilot/ba-p/4544682",
+     "date": "2026-08-06T17:30:08.000Z",
+     "description": "Excel is where people turn data into decisions. But the data you need often lives in other systems, like your engineering backlog, ticketing system, or CRM. Getting that data into Excel usually means exporting files, copying and pasting, or working from CSVs t",
+     "source": "Excel Blog"
+    },
+    {
      "title": "What's New in Excel (July 2026)",
      "link": "https://techcommunity.microsoft.com/t5/excel-blog/what-s-new-in-excel-july-2026/ba-p/4523403",
      "date": "2026-07-28T17:50:50.000Z",
@@ -580,24 +561,17 @@
      "date": "2026-05-28T15:53:53.000Z",
      "description": "Earlier this month, we announced Microsoft 365 Copilot federated connectors were coming to Copilot in Excel. Built on the emerging industry standard Model Context Protocol (MCP), federated connectors pull data into Microsoft 365 Copilot live at query time, hel",
      "source": "Excel Blog"
-    },
-    {
-     "title": "What's New in Excel (May 2026)",
-     "link": "https://techcommunity.microsoft.com/t5/excel-blog/what-s-new-in-excel-may-2026/ba-p/4502700",
-     "date": "2026-05-26T16:00:00.000Z",
-     "description": "Welcome to the May 2026 update. This month brings new Copilot entry points, smart suggestions, and a keyboard-first design to help you work more efficiently. We're also introducing Show Changes, a new experience that offers greater transparency into the update",
-     "source": "Excel Blog"
     }
    ],
    "counts": {
-    "inDevelopment": 7,
+    "inDevelopment": 5,
     "rollingOut": 3
    },
    "totals": {
-    "inDevelopment": 7,
+    "inDevelopment": 5,
     "rollingOut": 3
    },
-   "roadmapTotal": 10
+   "roadmapTotal": 8
   },
   {
    "id": "powerpoint",
@@ -645,19 +619,6 @@
      "availability": "September CY2026",
      "modified": "2026-06-26T22:01:51",
      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=561322"
-    },
-    {
-     "id": 555880,
-     "title": "Reference an attached PowerPoint deck’s style when creating a new presentation with Agent Mode in PowerPoint",
-     "description": "When creating a presentation with Copilot in PowerPoint using Agent Mode, you can reference an existing PowerPoint file, so Copilot applies its theme and styles to the new deck, keeping the design consistent. Updated June 5, 2026: This feature is still in development and will begin rolling out mid-June 2026. We apologize for the inconvenience.",
-     "status": "In development",
-     "products": [
-      "PowerPoint",
-      "Microsoft Copilot (Microsoft 365)"
-     ],
-     "availability": "June CY2026",
-     "modified": "2026-06-05T22:00:28",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=555880"
     },
     {
      "id": 555891,
@@ -771,14 +732,14 @@
    ],
    "blogs": [],
    "counts": {
-    "inDevelopment": 8,
+    "inDevelopment": 7,
     "rollingOut": 3
    },
    "totals": {
-    "inDevelopment": 8,
+    "inDevelopment": 7,
     "rollingOut": 3
    },
-   "roadmapTotal": 11
+   "roadmapTotal": 10
   },
   {
    "id": "outlook",
@@ -801,6 +762,56 @@
     }
    ],
    "roadmap": [
+    {
+     "id": 508524,
+     "title": "User-initiated Copilot insights in classic Outlook",
+     "description": "Users can manually select text and ask Copilot to help provide relevant information.",
+     "status": "In development",
+     "products": [
+      "Outlook"
+     ],
+     "availability": "September CY2026",
+     "modified": "2026-08-10T22:43:02",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=508524"
+    },
+    {
+     "id": 569023,
+     "title": "Language support for Summarize in Classic Outlook",
+     "description": "When the content language and the Outlook language do not match, you will be able to select a different language to view summarize Copilot responses.",
+     "status": "In development",
+     "products": [
+      "Outlook"
+     ],
+     "availability": "October CY2026",
+     "modified": "2026-08-07T21:45:15",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=569023"
+    },
+    {
+     "id": 554934,
+     "title": "Copilot Chat in Outlook expands to reason over inbox, calendar, and enterprise data",
+     "description": "Copilot Chat in Outlook expanding to support reasoning over a user's entire inbox, calendar and other enterprise data for Microsoft 365 Copilot Chat users (without a Microsoft 365 Copilot license) .",
+     "status": "In development",
+     "products": [
+      "Outlook",
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "September CY2026",
+     "modified": "2026-08-07T21:45:15",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=554934"
+    },
+    {
+     "id": 559989,
+     "title": "Copilot now provides concise summaries with Outlook search results",
+     "description": "Get answers to queries quickly with Copilot's concise AI summaries at the top of Outlook search results. Users can dig deeper by opening Copilot chat directly from the Copilot summary card.",
+     "status": "In development",
+     "products": [
+      "Outlook",
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "July CY2026",
+     "modified": "2026-08-04T22:45:42",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=559989"
+    },
     {
      "id": 568368,
      "title": "Copilot Chat pop-out for Outlook for Mac and iPad",
@@ -839,18 +850,6 @@
      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=564609"
     },
     {
-     "id": 559989,
-     "title": "Copilot now provides concise summaries with Outlook search results",
-     "description": "Get answers to queries quickly with Copilot's concise AI summaries at the top of Outlook search results. Users can dig deeper by opening Copilot chat directly from the Copilot summary card.",
-     "status": "In development",
-     "products": [
-      "Outlook"
-     ],
-     "availability": "July CY2026",
-     "modified": "2026-04-17T22:15:50",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=559989"
-    },
-    {
      "id": 559389,
      "title": "View, edit & share Copilot Pages with Outlook for Android",
      "description": "Users can now view, edit and share Copilot Pages with Outlook for Android, making it easier to continue working with Copilot and colleagues while on the go.",
@@ -861,19 +860,6 @@
      "availability": "July CY2026",
      "modified": "2026-03-26T23:15:28",
      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=559389"
-    },
-    {
-     "id": 554934,
-     "title": "Copilot Chat in Outlook expands to reason over inbox, calendar, and enterprise data",
-     "description": "Copilot Chat in Outlook expanding to support reasoning over a user's entire inbox, calendar and other enterprise data for Microsoft 365 Copilot Chat users (without a Microsoft 365 Copilot license) .",
-     "status": "In development",
-     "products": [
-      "Outlook",
-      "Microsoft Copilot (Microsoft 365)"
-     ],
-     "availability": "August CY2026",
-     "modified": "2026-03-26T23:15:28",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=554934"
     },
     {
      "id": 529850,
@@ -935,18 +921,6 @@
      "availability": "May CY2026",
      "modified": "2026-06-09T23:15:32",
      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=560340"
-    },
-    {
-     "id": 508524,
-     "title": "User-initiated Copilot insights in classic Outlook",
-     "description": "Users can manually select text and ask Copilot to help provide relevant information.",
-     "status": "Rolling out",
-     "products": [
-      "Outlook"
-     ],
-     "availability": "June CY2026",
-     "modified": "2026-06-01T23:15:29",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=508524"
     },
     {
      "id": 552595,
@@ -1054,14 +1028,14 @@
    ],
    "blogs": [],
    "counts": {
-    "inDevelopment": 8,
-    "rollingOut": 12
+    "inDevelopment": 10,
+    "rollingOut": 11
    },
    "totals": {
-    "inDevelopment": 8,
-    "rollingOut": 12
+    "inDevelopment": 10,
+    "rollingOut": 11
    },
-   "roadmapTotal": 20
+   "roadmapTotal": 21
   },
   {
    "id": "teams",
@@ -1084,6 +1058,32 @@
     }
    ],
    "roadmap": [
+    {
+     "id": 569017,
+     "title": "Intelligent call recaps in Queues app",
+     "description": "Spend less time catching up on call recordings to resolve customer issues faster. For recorded call queue calls, the Queues app now supports intelligent call recaps for recorded calls that includes AI-generated summary notes, key discussion points, and follow-up actions. Navigate to the call record in the Queues app and select the Recap tab to access.",
+     "status": "In development",
+     "products": [
+      "Microsoft Teams",
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "September CY2026",
+     "modified": "2026-08-10T22:43:02",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=569017"
+    },
+    {
+     "id": 568933,
+     "title": "Use Copilot Chat after a call in Queues app",
+     "description": "After a recorded call is completed, use Copilot in the Queues app to quickly catch up on key details, uncover insights, and resolve customer issues faster without having to manually search through a transcript or listen back to a recording. Navigate to the unified call history in the Queues app, select the recorded call record, and launch the Copilot Chat sidecar from within the Recap tab. You can then ask Copilot to generate a summary or answer questions about specific details related to the call.",
+     "status": "In development",
+     "products": [
+      "Microsoft Teams",
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "September CY2026",
+     "modified": "2026-08-07T21:45:15",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=568933"
+    },
     {
      "id": 558933,
      "title": "AI-generated meeting archive for knowledge retention",
@@ -1149,19 +1149,6 @@
      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=567883"
     },
     {
-     "id": 567458,
-     "title": "Multilingual recap available with translation button",
-     "description": "After meeting recap is automatically generated in the translation language chosen during the meeting, users can continue to change the language of the meeting recap after its generated.",
-     "status": "In development",
-     "products": [
-      "Microsoft Teams",
-      "Microsoft Copilot (Microsoft 365)"
-     ],
-     "availability": "August CY2026",
-     "modified": "2026-07-15T22:55:27",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=567458"
-    },
-    {
      "id": 515465,
      "title": "Adaptive card-based app & copilot agent link unfurling in Teams",
      "description": "Discover and add SharePoint agents in chats and channels from in-context store. Users can click on 'Add agents and bots' from the roster drop down. This will open the in-context store, where users can discover SharePoint agents and add them directly to the conversation and collaborate in the group. Updated January 29, 2026: Due to a blocker we have paused rollout until March for this feature. We apologize for any inconvenience.",
@@ -1197,6 +1184,19 @@
      "availability": "September CY2026",
      "modified": "2025-10-13T23:00:30",
      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=490564"
+    },
+    {
+     "id": 567458,
+     "title": "Multilingual recap available with translation button",
+     "description": "After meeting recap is automatically generated in the translation language chosen during the meeting, users can continue to change the language of the meeting recap after its generated.",
+     "status": "Rolling out",
+     "products": [
+      "Microsoft Teams",
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "August CY2026",
+     "modified": "2026-08-12T22:47:48",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=567458"
     },
     {
      "id": 567302,
@@ -1291,18 +1291,6 @@
      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=558543"
     },
     {
-     "id": 553223,
-     "title": "Voice tethering",
-     "description": "The voice tethering feature builds on the recent introduction of Sign Language Mode. It ensures that when an interpreter voices for a D/HH signer, captions and transcripts attribute the spoken content to the signer rather than the interpreter. This provides accurate representation in meetings and makes it clear who is contributing to the conversation. It also improves downstream meeting intelligence such as Copilot so that notes, summaries, action items, and insights are attributed to the correct participant.",
-     "status": "Rolling out",
-     "products": [
-      "Microsoft Teams"
-     ],
-     "availability": "March CY2026",
-     "modified": "2026-03-16T23:00:10",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=553223"
-    },
-    {
      "id": 503105,
      "title": "Unified Agent and App Availability Management Across Microsoft 365 and Teams Admin Center",
      "description": "Administrators using the Microsoft 365 admin center and Teams admin center who manage agents and apps that work across Teams, Outlook and the Microsoft 365 copilot will be able to apply their changes consistently across all these surfaces. Before this update, changes made through the Integrated Apps section in the Microsoft 365 admin center would only affect these apps on Outlook and the Microsoft 365 copilot; similarly, changes made in the Teams admin center would exclusively affect Teams. With this change, app and agent availability will be unified across Teams, Outlook and Microsoft 365 copilot.",
@@ -1391,18 +1379,6 @@
      "availability": "June CY2025",
      "modified": "2025-06-05T23:00:34",
      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=484123"
-    },
-    {
-     "id": 483356,
-     "title": "Users can view app ratings before installing apps or agents",
-     "description": "We have improved user options for sharing a link for a Teams app or a Microsoft 365 Copilot agent in a chat. Links to apps and agents will have a new preview card with user ratings for users to consider before installing apps or agents in Teams and clear actions like Add (which installs the app or agent) and View detail. A Microsoft 365 Copilot license is not required to share Copilot agent links but may be required to install and use the agent.",
-     "status": "Rolling out",
-     "products": [
-      "Microsoft Teams"
-     ],
-     "availability": "May CY2025",
-     "modified": "2025-05-28T23:15:12",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=483356"
     }
    ],
    "blogs": [
@@ -1422,14 +1398,14 @@
     }
    ],
    "counts": {
-    "inDevelopment": 9,
-    "rollingOut": 16
+    "inDevelopment": 10,
+    "rollingOut": 15
    },
    "totals": {
-    "inDevelopment": 9,
+    "inDevelopment": 10,
     "rollingOut": 18
    },
-   "roadmapTotal": 27
+   "roadmapTotal": 28
   },
   {
    "id": "onenote",
@@ -1452,6 +1428,44 @@
     }
    ],
    "roadmap": [
+    {
+     "id": 569211,
+     "title": "JPG and PNG references in Copilot Notebooks",
+     "description": "Copilot Notebooks now supports JPG and PNG files as knowledge sources, allowing users to bring images directly into their projects alongside traditional documents. Copilot can use the content within these images, including text, charts, diagrams, and other visuals, as grounding context to help generate more relevant presentations, reports, and briefs.",
+     "status": "In development",
+     "products": [
+      "OneNote",
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "October CY2026",
+     "modified": "2026-08-11T22:53:53",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=569211"
+    },
+    {
+     "id": 569210,
+     "title": "CSV and TSV references in Copilot Notebooks",
+     "description": "Copilot Notebooks now supports CSV and TSV files as knowledge sources, allowing users to bring structured lists and tables directly into their projects alongside traditional documents. This additional context helps Copilot generate more relevant presentations, reports, and briefs.",
+     "status": "In development",
+     "products": [
+      "OneNote",
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "October CY2026",
+     "modified": "2026-08-11T22:53:53",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=569210"
+    },
+    {
+     "id": 569203,
+     "title": "New Copilot Notebooks design in the Microsoft 365 Copilot app (DoD, GCC, GCC High)",
+     "description": "The new Copilot Notebooks design in the Microsoft 365 Copilot app for DoD, GCC, and GCC High clouds now lets users organize related chats, output creations, and references into a persistent AI workspace. Copilot uses the Notebook's accumulated context to ground responses, so work continues across sessions instead of starting over each time. While this is the quicker, light-weight Notebooks experience, you can still find the workspace-forward experience in OneNote.",
+     "status": "In development",
+     "products": [
+      "OneNote"
+     ],
+     "availability": "September CY2026",
+     "modified": "2026-08-11T22:53:53",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=569203"
+    },
     {
      "id": 566322,
      "title": "Multimodal capture in Copilot Notebooks (Windows)",
@@ -1540,31 +1554,18 @@
      "availability": "March CY2026",
      "modified": "2026-02-12T00:15:53",
      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=511797"
-    },
-    {
-     "id": 560706,
-     "title": "Teams Meetings in Copilot Notebooks",
-     "description": "Meetings as References in Copilot Notebooks bring Teams meeting content into the notebook experience, enabling users to ground Copilot on the discussions, decisions, and context that drive their work. By adding meetings as knowledge sources, users can connect transcripts, notes, chats, and shared content directly to their projects, enriching notebooks beyond files alone and improving downstream outputs like presentations and briefs. Available in Copilot Notebooks across Microsoft 365.",
-     "status": "Rolling out",
-     "products": [
-      "OneNote",
-      "Microsoft Copilot (Microsoft 365)"
-     ],
-     "availability": "June CY2026",
-     "modified": "2026-06-01T23:15:29",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=560706"
     }
    ],
    "blogs": [],
    "counts": {
-    "inDevelopment": 7,
-    "rollingOut": 1
+    "inDevelopment": 10,
+    "rollingOut": 0
    },
    "totals": {
-    "inDevelopment": 7,
-    "rollingOut": 1
+    "inDevelopment": 10,
+    "rollingOut": 0
    },
-   "roadmapTotal": 8
+   "roadmapTotal": 10
   },
   {
    "id": "loop",
@@ -1620,6 +1621,20 @@
    ],
    "roadmap": [
     {
+     "id": 568790,
+     "title": "Review PDFs using the Copilot context menu on OneDrive iOS",
+     "description": "Microsoft 365 Copilot makes PDF reviews faster and easier on mobile. Select text in any PDF in OneDrive iOS and tap Ask Copilot to explain, summarize, translate, or ask a custom question about the selection — the same in-context Copilot experience already generally available on desktop, now on OneDrive iOS.",
+     "status": "In development",
+     "products": [
+      "OneDrive",
+      "SharePoint",
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "October CY2026",
+     "modified": "2026-08-10T22:43:02",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=568790"
+    },
+    {
      "id": 564909,
      "title": "Copilot suggested rename",
      "description": "Copilot Suggested Rename is an AI-powered OneDrive feature that automatically recommends clear, descriptive file names based on a file’s content—helping users organize and find their files more easily with minimal effort. What the feature does: - Analyzes the content of a file to generate context-aware filename suggestions - Presents 3 recommended names directly within the rename dialog - Allows users to pick a suggestion with a single click Where it shows up: - Within the rename dialog for supported files - Within the post-upload toast notification when a single supported file is uploaded Supported file types: - Microsoft Office documents Word (DOCX) PowerPoint (PPTX) Excel (XLSX) - Other document formats PDF Markdown (MD) - Images",
@@ -1674,14 +1689,14 @@
    ],
    "blogs": [],
    "counts": {
-    "inDevelopment": 4,
+    "inDevelopment": 5,
     "rollingOut": 0
    },
    "totals": {
-    "inDevelopment": 4,
+    "inDevelopment": 5,
     "rollingOut": 0
    },
-   "roadmapTotal": 4
+   "roadmapTotal": 5
   },
   {
    "id": "sharepoint",
@@ -1704,6 +1719,33 @@
     }
    ],
    "roadmap": [
+    {
+     "id": 569208,
+     "title": "HTML pages",
+     "description": "Create HTML with Copilot in SharePoint or upload your own HTML from another source. Once stored in the pages library, you can render HTML as a page in SharePoint, make additional edits, and share with your audience. HTML gives you new ways to present your content beautifully alongside our existing ASPX pages.",
+     "status": "In development",
+     "products": [
+      "SharePoint",
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "October CY2026",
+     "modified": "2026-08-11T22:53:53",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=569208"
+    },
+    {
+     "id": 568790,
+     "title": "Review PDFs using the Copilot context menu on OneDrive iOS",
+     "description": "Microsoft 365 Copilot makes PDF reviews faster and easier on mobile. Select text in any PDF in OneDrive iOS and tap Ask Copilot to explain, summarize, translate, or ask a custom question about the selection — the same in-context Copilot experience already generally available on desktop, now on OneDrive iOS.",
+     "status": "In development",
+     "products": [
+      "OneDrive",
+      "SharePoint",
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "October CY2026",
+     "modified": "2026-08-10T22:43:02",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=568790"
+    },
     {
      "id": 567669,
      "title": "Enterprise store plugins in Copilot in SharePoint",
@@ -1924,14 +1966,14 @@
    ],
    "blogs": [],
    "counts": {
-    "inDevelopment": 14,
+    "inDevelopment": 16,
     "rollingOut": 3
    },
    "totals": {
-    "inDevelopment": 14,
+    "inDevelopment": 16,
     "rollingOut": 3
    },
-   "roadmapTotal": 17
+   "roadmapTotal": 19
   },
   {
    "id": "planner",
@@ -1954,6 +1996,19 @@
     }
    ],
    "roadmap": [
+    {
+     "id": 516577,
+     "title": "Planner capabilities in Copilot chat (M365 Copilot)",
+     "description": "We will support creating Planner tasks and plans querying Planner information in M365 Copilot chat, allowing users to manage their tasks and plans between Copilot and Planner seamlessly.",
+     "status": "In development",
+     "products": [
+      "Planner",
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "September CY2026",
+     "modified": "2026-08-06T22:57:59",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=516577"
+    },
     {
      "id": 567886,
      "title": "AI-generated Status Reports in Planner Agent",
@@ -2017,19 +2072,6 @@
      "availability": "June CY2026",
      "modified": "2026-05-27T23:15:50",
      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=561204"
-    },
-    {
-     "id": 516577,
-     "title": "Planner capabilities in Copilot chat (M365 Copilot)",
-     "description": "You’ll soon be able to create Planner tasks and view task details directly in Microsoft 365 Copilot chat. This integration makes it easy to manage and update your tasks seamlessly across Copilot and Planner without switching apps.",
-     "status": "In development",
-     "products": [
-      "Planner",
-      "Microsoft Copilot (Microsoft 365)"
-     ],
-     "availability": "August CY2026",
-     "modified": "2026-04-29T23:15:48",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=516577"
     }
    ],
    "blogs": [],
@@ -2110,6 +2152,19 @@
     }
    ],
    "roadmap": [
+    {
+     "id": 500872,
+     "title": "Export Copilot metrics in the Copilot Dashboard",
+     "description": "This enables users to export row-level Copilot metrics from the Copilot Dashboard for reporting and deeper analysis.",
+     "status": "In development",
+     "products": [
+      "Microsoft Viva",
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "September CY2026",
+     "modified": "2026-08-06T22:57:59",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=500872"
+    },
     {
      "id": 567320,
      "title": "Viva Glint - Copilot admin configuration assistance",
@@ -2195,19 +2250,6 @@
      "availability": "September CY2026",
      "modified": "2026-07-14T22:41:38",
      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=560595"
-    },
-    {
-     "id": 500872,
-     "title": "Export Copilot metrics in the Copilot Dashboard",
-     "description": "This enables users to export row-level Copilot metrics from the Copilot Dashboard for reporting and deeper analysis.",
-     "status": "In development",
-     "products": [
-      "Microsoft Viva",
-      "Microsoft Copilot (Microsoft 365)"
-     ],
-     "availability": "August CY2026",
-     "modified": "2026-07-13T23:07:14",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=500872"
     },
     {
      "id": 557681,
@@ -2545,217 +2587,246 @@
    ],
    "roadmap": [
     {
-     "id": 566322,
-     "title": "Multimodal capture in Copilot Notebooks (Windows)",
-     "description": "Capture on Windows helps you bring conversations and ideas from meetings, brainstorming sessions, and everyday work into Copilot Notebooks. Capture audio, images, and notes in one experience, then let Copilot turn them into structured notes with key insights, decisions, and action items, in a Copilot Notebook of your choice",
+     "id": 569213,
+     "title": "Add Agents and Skills from the Plus menu",
+     "description": "Users will be able to insert Agents and Skills in prompts for specialized tasks. They can add them from the Agents and Skills tab after selecting 'Add work content' from the plus (+) menu. Users can also access Agents and Skills by typing / and @ in their prompt.",
+     "status": "In development",
+     "products": [
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "September CY2026",
+     "modified": "2026-08-11T22:53:53",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=569213"
+    },
+    {
+     "id": 569211,
+     "title": "JPG and PNG references in Copilot Notebooks",
+     "description": "Copilot Notebooks now supports JPG and PNG files as knowledge sources, allowing users to bring images directly into their projects alongside traditional documents. Copilot can use the content within these images, including text, charts, diagrams, and other visuals, as grounding context to help generate more relevant presentations, reports, and briefs.",
      "status": "In development",
      "products": [
       "OneNote",
       "Microsoft Copilot (Microsoft 365)"
      ],
-     "availability": "August CY2026",
-     "modified": "2026-07-31T21:54:12",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=566322"
+     "availability": "October CY2026",
+     "modified": "2026-08-11T22:53:53",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=569211"
     },
     {
-     "id": 503772,
-     "title": "[Copilot Extensibility] Users in DoD will be able to use custom engine agents",
-     "description": "Users in DoD will be able to use custom engine agents.",
+     "id": 569210,
+     "title": "CSV and TSV references in Copilot Notebooks",
+     "description": "Copilot Notebooks now supports CSV and TSV files as knowledge sources, allowing users to bring structured lists and tables directly into their projects alongside traditional documents. This additional context helps Copilot generate more relevant presentations, reports, and briefs.",
      "status": "In development",
      "products": [
+      "OneNote",
       "Microsoft Copilot (Microsoft 365)"
      ],
-     "availability": "August CY2025",
-     "modified": "2026-07-31T21:54:12",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=503772"
+     "availability": "October CY2026",
+     "modified": "2026-08-11T22:53:53",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=569210"
     },
     {
-     "id": 503771,
-     "title": "[Copilot Extensibility] Users in GCC-H will be able to use custom engine agents",
-     "description": "Users in GCC-H will be able to use custom engine agents.",
+     "id": 569208,
+     "title": "HTML pages",
+     "description": "Create HTML with Copilot in SharePoint or upload your own HTML from another source. Once stored in the pages library, you can render HTML as a page in SharePoint, make additional edits, and share with your audience. HTML gives you new ways to present your content beautifully alongside our existing ASPX pages.",
      "status": "In development",
      "products": [
+      "SharePoint",
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "October CY2026",
+     "modified": "2026-08-11T22:53:53",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=569208"
+    },
+    {
+     "id": 562351,
+     "title": "Get actionable suggestions from Copilot in your Copilot Page",
+     "description": "Request feedback from Copilot on your Page by selecting \"Suggested edits\" in the Copilot Shortcuts menu. Copilot will analyze the content on your page and provide actionable suggestions about what you can change to improve clarity and quality of your written content. You can then apply suggestions directly to the page.",
+     "status": "In development",
+     "products": [
+      "Microsoft 365 app",
       "Microsoft Copilot (Microsoft 365)"
      ],
      "availability": "August CY2026",
-     "modified": "2026-07-31T21:54:12",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=503771"
+     "modified": "2026-08-11T22:53:53",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=562351"
     },
     {
-     "id": 501111,
-     "title": "[Copilot Extensibility] Users in GCC-M will able to use custom engine agents",
-     "description": "Users in GCC-M will be able to use custom engine agents.",
+     "id": 568790,
+     "title": "Review PDFs using the Copilot context menu on OneDrive iOS",
+     "description": "Microsoft 365 Copilot makes PDF reviews faster and easier on mobile. Select text in any PDF in OneDrive iOS and tap Ask Copilot to explain, summarize, translate, or ask a custom question about the selection — the same in-context Copilot experience already generally available on desktop, now on OneDrive iOS.",
      "status": "In development",
      "products": [
+      "OneDrive",
+      "SharePoint",
       "Microsoft Copilot (Microsoft 365)"
      ],
-     "availability": "August CY2026",
-     "modified": "2026-07-31T21:54:12",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=501111"
+     "availability": "October CY2026",
+     "modified": "2026-08-10T22:43:02",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=568790"
     },
     {
-     "id": 558933,
-     "title": "AI-generated meeting archive for knowledge retention",
-     "description": "Admins can enable a tenant-wide policy that allows Copilot (and Facilitator) to retain key insights from meetings beyond transcript retention periods. This enables Copilot to continue answering questions about past meetings even after transcripts expire. Admins can also configure how long this AI-generated meeting archive is stored.",
+     "id": 569017,
+     "title": "Intelligent call recaps in Queues app",
+     "description": "Spend less time catching up on call recordings to resolve customer issues faster. For recorded call queue calls, the Queues app now supports intelligent call recaps for recorded calls that includes AI-generated summary notes, key discussion points, and follow-up actions. Navigate to the call record in the Queues app and select the Recap tab to access.",
      "status": "In development",
      "products": [
       "Microsoft Teams",
       "Microsoft Copilot (Microsoft 365)"
      ],
      "availability": "September CY2026",
-     "modified": "2026-07-30T23:01:43",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=558933"
+     "modified": "2026-08-10T22:43:02",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=569017"
     },
     {
-     "id": 566864,
-     "title": "Ask Copilot about an image",
-     "description": "Ask Copilot about an image in Edge enables users to instantly analyze images from the web by sending them directly to Copilot from the Edge context menu, making it easy to ask questions, gain insights, and understand visual content without leaving their browsing experience. Admins can control availability to this feature using the EdgeEntraCopilotPageContext and Microsoft365CopilotChatIconEnabled policies.",
+     "id": 560339,
+     "title": "Proactive push notifications for the Microsoft 365 Copilot mobile app",
+     "description": "The Microsoft 365 Copilot mobile app will proactively send push notifications for common productivity workflows like 'Your Day at a Glance' and 'Items waiting for you', which send users to the respective Copilot response when opened. This feature taps into your Copilot Memory and will be available for users with Microsoft 365 Copilot licenses and can also be accessed once opening the Microsoft 365 Copilot app.",
      "status": "In development",
      "products": [
-      "Microsoft Edge",
+      "Microsoft 365 app",
       "Microsoft Copilot (Microsoft 365)"
      ],
      "availability": "September CY2026",
-     "modified": "2026-07-29T23:07:26",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=566864"
+     "modified": "2026-08-10T22:43:02",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=560339"
     },
     {
-     "id": 560700,
-     "title": "AI-powered notes for in-person meetings with Facilitator in Teams Rooms on Android",
-     "description": "In addition to capturing real-time notes and meeting outcomes during scheduled or hybrid meetings, the Facilitator agent assists you with notes, decisions and actions for in-person meetings in Teams Rooms on Android. Simply invite Facilitator with one tap of the room console. Meeting notes appear on the front of room display or touch board, are available via meeting recap when shared, and deleted if no one selected. Rest assured no data remains in the room. Available with Teams Rooms Pro.",
+     "id": 568933,
+     "title": "Use Copilot Chat after a call in Queues app",
+     "description": "After a recorded call is completed, use Copilot in the Queues app to quickly catch up on key details, uncover insights, and resolve customer issues faster without having to manually search through a transcript or listen back to a recording. Navigate to the unified call history in the Queues app, select the recorded call record, and launch the Copilot Chat sidecar from within the Recap tab. You can then ask Copilot to generate a summary or answer questions about specific details related to the call.",
      "status": "In development",
      "products": [
       "Microsoft Teams",
       "Microsoft Copilot (Microsoft 365)"
      ],
      "availability": "September CY2026",
-     "modified": "2026-07-29T23:07:26",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=560700"
+     "modified": "2026-08-07T21:45:15",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=568933"
     },
     {
-     "id": 567886,
-     "title": "AI-generated Status Reports in Planner Agent",
-     "description": "AI-powered Status Report in Planner Agent turns your plan data into a polished, stakeholder-ready update in minutes. Just ask Planner Agent for a status report and it pulls your task data and transforms it into a clear narrative covering overall status, progress, risks, and what's next. You can easily customize the report to your needs by specifying the audience, tone, length, and sections you want.",
+     "id": 554934,
+     "title": "Copilot Chat in Outlook expands to reason over inbox, calendar, and enterprise data",
+     "description": "Copilot Chat in Outlook expanding to support reasoning over a user's entire inbox, calendar and other enterprise data for Microsoft 365 Copilot Chat users (without a Microsoft 365 Copilot license) .",
+     "status": "In development",
+     "products": [
+      "Outlook",
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "September CY2026",
+     "modified": "2026-08-07T21:45:15",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=554934"
+    },
+    {
+     "id": 516577,
+     "title": "Planner capabilities in Copilot chat (M365 Copilot)",
+     "description": "We will support creating Planner tasks and plans querying Planner information in M365 Copilot chat, allowing users to manage their tasks and plans between Copilot and Planner seamlessly.",
      "status": "In development",
      "products": [
       "Planner",
       "Microsoft Copilot (Microsoft 365)"
      ],
      "availability": "September CY2026",
-     "modified": "2026-07-28T22:43:45",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=567886"
+     "modified": "2026-08-06T22:57:59",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=516577"
     },
     {
-     "id": 567008,
-     "title": "New Rich Answer Cards",
-     "description": "Surface new model-driven, dynamically placed Answer Cards across top 7 segments: weather, sports, finance, images, video, places and news for Entra & MSA users across all surfaces.",
+     "id": 500872,
+     "title": "Export Copilot metrics in the Copilot Dashboard",
+     "description": "This enables users to export row-level Copilot metrics from the Copilot Dashboard for reporting and deeper analysis.",
      "status": "In development",
      "products": [
-      "Microsoft Copilot (Microsoft 365)"
-     ],
-     "availability": "August CY2026",
-     "modified": "2026-07-28T22:43:45",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=567008"
-    },
-    {
-     "id": 515145,
-     "title": "Workforce Insights Agent",
-     "description": "Workforce Insights (WFI) Agent in Microsoft 365 Copilot is an agent designed to help leaders, managers, and their delegates quickly understand their organization by turning complex workforce data into clear, actionable insights. With WFI Agent, leaders can quickly explore their organization’s structure, team composition, skills inventories, and flexible work patterns to move from insight to action in a single, unified experience directly in Copilot or Teams.",
-     "status": "In development",
-     "products": [
+      "Microsoft Viva",
       "Microsoft Copilot (Microsoft 365)"
      ],
      "availability": "September CY2026",
-     "modified": "2026-07-28T22:43:45",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=515145"
+     "modified": "2026-08-06T22:57:59",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=500872"
     },
     {
-     "id": 564608,
-     "title": "Support for MCP Agents with Interactive UI Widgets in Government Clouds",
-     "description": "Feature description: Model Context Protocol (MCP) based agents in Microsoft 365 Copilot Chat will now be able to surface rich, interactive UI widgets directly within chat. This enhancement enables developers to deliver more engaging and structured agent interactions. Users will experience these widgets when interacting with agents that implement them, and admins will continue to manage these agents through the Microsoft 365 Admin Center.",
+     "id": 562996,
+     "title": "Copilot memory in Researcher",
+     "description": "Copilot memory within Researcher brings forward relevant context from your past interactions—helping ground insights, personalize outputs, and reduce repetitive setup as you explore complex topics.",
+     "status": "In development",
+     "products": [
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "November CY2026",
+     "modified": "2026-08-04T22:45:42",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=562996"
+    },
+    {
+     "id": 559989,
+     "title": "Copilot now provides concise summaries with Outlook search results",
+     "description": "Get answers to queries quickly with Copilot's concise AI summaries at the top of Outlook search results. Users can dig deeper by opening Copilot chat directly from the Copilot summary card.",
+     "status": "In development",
+     "products": [
+      "Outlook",
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "July CY2026",
+     "modified": "2026-08-04T22:45:42",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=559989"
+    },
+    {
+     "id": 558538,
+     "title": "Critique in Researcher",
+     "description": "Responses are generated by GPT and Claude working together, with GPT drafting an initial response and Claude reviewing for increased response accuracy, completeness, and citation integrity.",
+     "status": "In development",
+     "products": [
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "December CY2026",
+     "modified": "2026-08-04T22:45:42",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=558538"
+    },
+    {
+     "id": 553213,
+     "title": "Researcher Council",
+     "description": "Council in Researcher runs multiple leading AI models from different providers in parallel in one place, so you can quickly compare outputs and see consensus vs. conflict) to make high-stakes decisions with greater confidence—without switching tools.",
+     "status": "In development",
+     "products": [
+      "Microsoft Copilot (Microsoft 365)"
+     ],
+     "availability": "December CY2026",
+     "modified": "2026-08-04T22:45:42",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=553213"
+    },
+    {
+     "id": 522616,
+     "title": "Ask Copilot about highlighted response content",
+     "description": "Highlight a sentence, paragraph, or table from the response and ask Copilot to work only on that selection. Get focused explanations, concise summaries, quick translations, or next steps for the exact passage you’re reviewing—no more over broad answers. Your selection is previewed in the prompt so you can edit before you send. It’s a faster, more controlled way to get help right where you’re working.",
      "status": "In development",
      "products": [
       "Microsoft Copilot (Microsoft 365)"
      ],
      "availability": "August CY2026",
-     "modified": "2026-07-28T22:43:45",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=564608"
+     "modified": "2026-08-04T22:45:42",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=522616"
     },
     {
-     "id": 558341,
-     "title": "Facilitator detects and answers questions",
-     "description": "Facilitator now automatically detects open questions raised during a Teams meeting and offers to help answer them using web search. When a participant asks a question (e.g., “What is an LLM?”) and no one answers, Facilitator posts a prompt offering to find an answer. Participants can select “Yes” to have the agent retrieve and share the information.",
-     "status": "In development",
+     "id": 567458,
+     "title": "Multilingual recap available with translation button",
+     "description": "After meeting recap is automatically generated in the translation language chosen during the meeting, users can continue to change the language of the meeting recap after its generated.",
+     "status": "Rolling out",
      "products": [
       "Microsoft Teams",
       "Microsoft Copilot (Microsoft 365)"
      ],
-     "availability": "September CY2026",
-     "modified": "2026-07-28T22:43:45",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=558341"
+     "availability": "August CY2026",
+     "modified": "2026-08-12T22:47:48",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=567458"
     },
     {
-     "id": 558286,
-     "title": "Intelligent meeting recap available without saving transcript",
-     "description": "Intelligent recap can now be generated without retaining a transcript after the meeting. Meeting organizers can choose this setting from the meeting options before the meeting, or organizers and eligible participants can enable it during the meeting. After the meeting, the AI Summary will be available, but other elements of the recap may not be available (Chapters, Topics, Mentions, Audio recap).",
-     "status": "In development",
+     "id": 562662,
+     "title": "New Copilot Notebooks design in the Microsoft 365 Copilot App",
+     "description": "The new Copilot Notebooks design in the Microsoft 365 Copilot app now lets users organize related chats, output creations, and references into a persistent AI workspace. Copilot uses the Notebook's accumulated context to ground responses, so work continues across sessions instead of starting over each time. While this is the quicker, light-weight Notebooks experience, you can still find the fuller, workspace-forward experience in OneNote.",
+     "status": "Rolling out",
      "products": [
-      "Microsoft Teams",
-      "Microsoft Copilot (Microsoft 365)"
-     ],
-     "availability": "October CY2026",
-     "modified": "2026-07-28T22:43:45",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=558286"
-    },
-    {
-     "id": 497844,
-     "title": "Makers can build DA's with Flexible layouts and rich UX components",
-     "description": "Flexible layouts and rich UX components will enable makers to build highly expressive agents, ultimately driving increased user engagement and virality.",
-     "status": "In development",
-     "products": [
-      "Microsoft Copilot (Microsoft 365)"
-     ],
-     "availability": "May CY2027",
-     "modified": "2026-07-28T22:43:45",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=497844"
-    },
-    {
-     "id": 498640,
-     "title": "Capture voice notes in the Microsoft 365 Copilot mobile app",
-     "description": "With a Microsoft 365 Copilot license, transform offline discussions into structured, actionable, and searchable content with voice notes in Copilot.",
-     "status": "In development",
-     "products": [
-      "Microsoft 365",
-      "Microsoft Copilot (Microsoft 365)"
+      "Microsoft 365 app"
      ],
      "availability": "August CY2026",
-     "modified": "2026-07-23T23:27:16",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=498640"
-    },
-    {
-     "id": 542181,
-     "title": "Edit with Copilot in Excel (Web, Win32, Mac) - GCC",
-     "description": "Edit with Copilot lets you build and edit workbooks side by side with Copilot. When you're updating budgets, creating financial models, or analyzing data, Copilot uses Excel's most powerful tools like tables, charts, PivotTables, and formulas to help you get the job done.",
-     "status": "In development",
-     "products": [
-      "Excel",
-      "Microsoft Copilot (Microsoft 365)"
-     ],
-     "availability": "September CY2026",
-     "modified": "2026-07-23T23:27:16",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=542181"
-    },
-    {
-     "id": 502533,
-     "title": "[Copilot Extensibility]​​[Search UX] Rich entity representation for connectors in Search results",
-     "description": "Rich entity representation for connectors in Search results.",
-     "status": "In development",
-     "products": [
-      "Microsoft Copilot (Microsoft 365)"
-     ],
-     "availability": "September CY2026",
-     "modified": "2026-07-23T23:27:16",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=502533"
+     "modified": "2026-08-06T22:57:59",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=562662"
     },
     {
      "id": 567302,
@@ -2797,18 +2868,6 @@
      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=562354"
     },
     {
-     "id": 564910,
-     "title": "Outlook Emails in Copilot Notebooks",
-     "description": "Outlook Emails as References in Copilot Notebooks bring email content into the notebook experience, enabling users to ground Copilot in the conversations, decisions, and context that drive their work. By adding emails as knowledge sources, users can connect context from their emails directly to their projects, enriching notebooks beyond files alone and improving downstream outputs like presentations and briefs. Available in Copilot Notebooks across Microsoft 365.",
-     "status": "Rolling out",
-     "products": [
-      "Microsoft Copilot (Microsoft 365)"
-     ],
-     "availability": "July CY2026",
-     "modified": "2026-07-28T22:43:45",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=564910"
-    },
-    {
      "id": 565905,
      "title": "People Skills- removal and deletion admin control",
      "description": "A new admin control in the People Skills settings lets administrators permanently remove their organization's People Skills data from the tenant. With this new control, organizations can delete their entire skills library along with all users confirmed, inferred, and imported skills data—giving them full control to offboard from People Skills in support of data governance and compliance needs. Once deletion is initiated, skills will no longer appear on user profile cards or be used across Microsoft 365 skills-based experiences such as Copilot and Viva. The control is admin-only with no automatic changes.",
@@ -2833,64 +2892,53 @@
      "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=496596"
     },
     {
-     "id": 561488,
-     "title": "Simplified design for the Microsoft 365 Copilot app",
-     "description": "A refreshed design for the Microsoft 365 Copilot web and desktop app simplifies the user experience to drive engagement with Copilot. This includes updates to the chat home screen, chat response layout, and navigation pane.",
+     "id": 560540,
+     "title": "Now smarter with visuals: Copilot Chat leverages embedded images for richer, more accurate answers.",
+     "description": "Copilot has been enhanced to interpret and ground responses using images embedded in files such as Word documents (.docx), PowerPoint presentations (.pptx), and PDFs. This capability allows Copilot to extract insights from visual elements like charts, diagrams, and screenshots, ensuring that answers are not only text-based but also informed by graphical context. By combining textual and visual understanding, Copilot delivers more comprehensive and contextually accurate responses for complex queries",
      "status": "Rolling out",
      "products": [
+      "Microsoft 365",
       "Microsoft Copilot (Microsoft 365)"
      ],
      "availability": "June CY2026",
-     "modified": "2026-06-29T23:02:39",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=561488"
-    },
-    {
-     "id": 561037,
-     "title": "Vision in Microsoft 365 Copilot can analyze content shared on desktop screen and through mobile camera",
-     "description": "Vision in Microsoft 365 Copilot helps you make faster, more informed decisions by understanding context from what you share on screen or camera. Copilot can analyze visual inputs from shared desktop screens and provide detailed insights about the content. You can also use vision on mobile during a real-time voice session to share your device camera, front or back, and ask questions about what is in front of you. Copilot analyzes the live camera feed or desktop screen in real time and provides spoken, context-aware answers grounded in work and web data.",
-     "status": "Rolling out",
-     "products": [
-      "Microsoft Copilot (Microsoft 365)"
-     ],
-     "availability": "June CY2026",
-     "modified": "2026-06-26T22:01:51",
-     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=561037"
+     "modified": "2026-06-22T23:00:47",
+     "link": "https://www.microsoft.com/en-us/microsoft-365/roadmap?id=560540"
     }
    ],
    "blogs": [
     {
-     "title": "What’s New in Microsoft 365 Copilot | July 2026",
-     "link": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/what-s-new-in-microsoft-365-copilot-july-2026/ba-p/4538332",
-     "date": "2026-07-31T15:30:00.000Z",
-     "description": "Welcome to the July 2026 edition of What's New in Microsoft 365 Copilot! Every month, we highlight new features and enhancements to keep Microsoft 365 customers up to date with Copilot features that help your users be more productive and efficient in the apps ",
+     "title": "Built for business: How Microsoft 365 Copilot keeps you in the flow of legal work",
+     "link": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/built-for-business-how-microsoft-365-copilot-keeps-you-in-the/ba-p/4546016",
+     "date": "2026-08-12T16:00:00.000Z",
+     "description": "The tools that run a business rarely live in one place. For a small business owner, that means stepping out of the document you're writing to search for an attorney, digging through a folder for the LLC paperwork you half-remember filing, or pausing a client d",
+     "source": "Microsoft 365 Copilot Blog"
+    },
+    {
+     "title": "Turn meetings into momentum with Microsoft 365 Copilot",
+     "link": "https://techcommunity.microsoft.com/t5/microsoft-teams-blog/turn-meetings-into-momentum-with-microsoft-365-copilot/ba-p/4545675",
+     "date": "2026-08-11T15:59:45.000Z",
+     "description": "Most people don't need more meetings—they need meetings that lead to action. At their best, meetings drive decisions and keep work moving forward. But poorly managed meetings can actually slow progress. In fact, our Work Trend Index report found that inefficie",
+     "source": "Microsoft Teams Blog"
+    },
+    {
+     "title": "Update: Domain Exclusion for Microsoft 365 Copilot",
+     "link": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/update-domain-exclusion-for-microsoft-365-copilot/ba-p/4543648",
+     "date": "2026-08-07T18:54:00.000Z",
+     "description": "We want to inform the community that the Domain Exclusion for Microsoft 365 Copilot feature described in this post, More control over web grounding with Domain Exclusion for Microsoft 365 Copilot , has been rolled back at this time. We understand the importanc",
      "source": "Microsoft 365 Copilot Blog"
     },
     {
      "title": "More control over web grounding with Domain Exclusion for Microsoft 365 Copilot",
      "link": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/more-control-over-web-grounding-with-domain-exclusion-for/ba-p/4540151",
-     "date": "2026-07-28T15:50:14.000Z",
-     "description": "We are excited to announce Domain Exclusion for Microsoft 365 Copilot, a new web search control that gives organizations more choice over which external web sources can be used to ground Copilot responses. As customers bring Microsoft 365 Copilot and Copilot C",
+     "date": "2026-08-04T16:15:19.000Z",
+     "description": "**UPDATE** Please see new announcement here: Update: Domain Exclusion for Microsoft 365 Copilot | Microsoft Community Hub We are excited to announce Domain Exclusion for Microsoft 365 Copilot, a new web search control that gives organizations more choice over ",
      "source": "Microsoft 365 Copilot Blog"
     },
     {
-     "title": "Available today: Anthropic Claude Opus 5 in Microsoft 365 Copilot",
-     "link": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/available-today-anthropic-claude-opus-5-in-microsoft-365-copilot/ba-p/4540524",
-     "date": "2026-07-24T21:11:08.000Z",
-     "description": "Today we’re expanding model choice in Microsoft 365 Copilot with the addition of Anthropic’s latest model—Claude Opus 5. Claude Opus 5 is the newest model in Anthropic’s Opus family. Designed to be used every day for complex, multi-step work. It improves on Op",
-     "source": "Microsoft 365 Copilot Blog"
-    },
-    {
-     "title": "1 million documents to 300+agents: Building an enterprise-scale Microsoft 365 Copilot connector",
-     "link": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/1-million-documents-to-300-agents-building-an-enterprise-scale/ba-p/4540155",
-     "date": "2026-07-23T18:57:12.000Z",
-     "description": "1 million documents. 100,000+ monthly users. 300+ Copilot Studio agents. Here's what we learned building the Microsoft 365 Copilot connector behind them. Most enterprise knowledge lives in portals and repositories that people trust but rarely visit in the flow",
-     "source": "Microsoft 365 Copilot Blog"
-    },
-    {
-     "title": "What’s New in Microsoft 365 Copilot | June 2026",
-     "link": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/what-s-new-in-microsoft-365-copilot-june-2026/ba-p/4529572",
-     "date": "2026-07-14T17:07:56.000Z",
-     "description": "Welcome to the June 2026 edition of What's New in Microsoft 365 Copilot! Every month, we highlight new features and enhancements to keep Microsoft 365 customers up to date with Copilot features that help your users be more productive and efficient in the apps ",
+     "title": "What’s New in Microsoft 365 Copilot | July 2026",
+     "link": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/what-s-new-in-microsoft-365-copilot-july-2026/ba-p/4538332",
+     "date": "2026-07-31T15:30:00.000Z",
+     "description": "Welcome to the July 2026 edition of What's New in Microsoft 365 Copilot! Every month, we highlight new features and enhancements to keep Microsoft 365 customers up to date with Copilot features that help your users be more productive and efficient in the apps ",
      "source": "Microsoft 365 Copilot Blog"
     }
    ],
@@ -2899,10 +2947,10 @@
     "rollingOut": 8
    },
    "totals": {
-    "inDevelopment": 202,
-    "rollingOut": 50
+    "inDevelopment": 203,
+    "rollingOut": 47
    },
-   "roadmapTotal": 252
+   "roadmapTotal": 250
   }
  ]
 }

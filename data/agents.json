@@ -207,15 +207,16 @@
     "Mobile meeting participants can see live notes being generated. Only meeting participants who are organizers or presenters and are using Teams for web or desktop can turn Facilitator on or off during a meeting."
    ],
    "scenarios": [
+    "@Facilitator, create a BRD based on this meeting for the executive review",
     "@Facilitator, here's the agenda: introductions (5 minutes), product discussion (25 minutes).⁠",
     "@Facilitator, add 'Strategy review' to the agenda for 15 minutes.⁠"
    ],
    "highlights": [
+    "Word document creation in meeting or post meeting, for example \"@Facilitator, create a BRD based on this meeting for the executive review\"",
     "Licensed users can interact with the agent by mentioning it in the chat, for example \"@Facilitator add these topics to the agenda…\"",
     "Unlicensed users can see Facilitator's notes in meetings",
     "Facilitator only supports the languages listed at Supported languages for Microsoft Copilot",
     "Frequently asked questions about Facilitator in Microsoft Teams",
-    "Ask Facilitator to create a loop or word document based on the conversation",
     "Ask Facilitator to help manage your tasks by @mentioning Facilitator to create, update, or query for tasks related to that meeting"
    ],
    "limitations": [
@@ -1850,5 +1851,5 @@
    "limitations": []
   }
  ],
- "enriched": "2026-08-04T18:00:05.801Z"
+ "enriched": "2026-08-15T00:03:37.755Z"
 }
