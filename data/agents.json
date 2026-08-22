@@ -98,20 +98,20 @@
     {
      "label": "Learn article",
      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/researcher-agent",
-     "summary": "Researcher is an intelligent AI assistant in Microsoft 365 Copilot that gathers enterprise and web data to deliver comprehensive, source-backed answers."
+     "summary": "Researcher is an intelligent AI assistant in Microsoft Copilot that gathers enterprise and web data to deliver comprehensive, source-backed answers."
     },
     {
      "label": "Get started with Researcher",
      "url": "https://support.microsoft.com/en-us/Microsoft-365-Copilot/get-started-with-researcher-in-microsoft-365-copilot",
-     "summary": "Researcher is built into Microsoft 365 Copilot to help you gather, analyze, and summarize information from the web, your work documents, or both. It delivers an easy-to-read report."
+     "summary": "Researcher is built into Microsoft Copilot to help you gather, analyze, and summarize information from the web, your work documents, or both. It delivers an easy-to-read report."
     }
    ],
    "icon": "search",
    "accent": "blue",
    "overview": [
-    "Researcher is built into Microsoft 365 Copilot to help you gather, analyze, and summarize information from the web, your work documents, or both. It delivers an easy-to-read report.",
-    "Researcher is an intelligent AI assistant in Microsoft 365 Copilot that gathers enterprise and web data to deliver comprehensive, source-backed answers.",
-    "The Researcher agent is your intelligent assistant in Microsoft 365 Copilot—built to tackle complex, multistep research and deliver a structured, source-cited report. Think of it as a supercharged research partner that helps you gather, analyze, and summarize information from the web and, at work, from files, emails, meetings, and chats you have access to. Researcher makes it easier to get thorough answers and make decisions faster.",
+    "Researcher is built into Microsoft Copilot to help you gather, analyze, and summarize information from the web, your work documents, or both. It delivers an easy-to-read report.",
+    "Researcher is an intelligent AI assistant in Microsoft Copilot that gathers enterprise and web data to deliver comprehensive, source-backed answers.",
+    "The Researcher agent is your intelligent assistant in Microsoft Copilot—built to tackle complex, multistep research and deliver a structured, source-cited report. Think of it as a supercharged research partner that helps you gather, analyze, and summarize information from the web and, at work, from files, emails, meetings, and chats you have access to. Researcher makes it easier to get thorough answers and make decisions faster.",
     "Researcher is designed for deeper reasoning of your tasks. It excels at tackling complex, layered tasks that require thoughtful analysis. By taking longer processing time, Researcher delivers more comprehensive output, making it ideal for detailed research projects."
    ],
    "scenarios": [
@@ -122,7 +122,7 @@
     "Clarify (Optional): Researcher might ask follow-up questions to better understand what you're looking for. You can answer the questions or just say \"Go ahead.\"",
     "Saves you hours : It pulls from your work content and the web and composes a structured, reasoned response",
     "Builds trust : It shows sources and organizes findings so you can verify and share with confidence",
-    "Fits how you work : It's right inside Microsoft 365 Copilot. At work, it respects the same permissions, policies, and compliance you already rely on",
+    "Fits how you work : It's right inside Microsoft Copilot. At work, it respects the same permissions, policies, and compliance you already rely on",
     "Visuals, charts, and graphs to make data easier to understand"
    ],
    "limitations": []
@@ -152,13 +152,13 @@
     {
      "label": "Get started with Analyst",
      "url": "https://support.microsoft.com/en-us/Microsoft-365-Copilot/get-started-with-analyst-in-microsoft-365-copilot",
-     "summary": "The Microsoft 365 Copilot Analyst agent is an AI-powered assistant for data analysis. The Analyst agent is like having a skilled data analyst on hand to help you make sense of data from multiple sources without requiring"
+     "summary": "The Microsoft Copilot Analyst agent is an AI-powered assistant for data analysis. The Analyst agent is like having a skilled data analyst on hand to help you make sense of data from multiple sources without requiring adv"
     }
    ],
    "icon": "chart",
    "accent": "teal",
    "overview": [
-    "The Microsoft 365 Copilot Analyst agent is an AI-powered assistant for data analysis. The Analyst agent is like having a skilled data analyst on hand to help you make sense of data from multiple sources without requiring advanced expertise."
+    "The Microsoft Copilot Analyst agent is an AI-powered assistant for data analysis. The Analyst agent is like having a skilled data analyst on hand to help you make sense of data from multiple sources without requiring advanced expertise."
    ],
    "scenarios": [
     "Save time: You don't have to look through thousands of rows of data or multiple files like Excel spreadsheets, CSV files, databases, or others and then try to consolidate that data for analysis. Analyst does it for you!"
@@ -266,9 +266,9 @@
    "scenarios": [],
    "highlights": [
     "Interpreter settings will persist across future meetings",
-    "An eligible Microsoft 365 base license. For the list of eligible base licenses, see Understand licensing requirements for Microsoft 365 Copilot",
-    "A Microsoft 365 Copilot license. 20 hours of interpretation is included per user per month with a Microsoft 365 Copilot license. Access beyond the hours included is subject to available capacity",
-    "For information on how to acquire Microsoft 365 Copilot licenses, see Where can I get Microsoft Copilot?",
+    "An eligible Microsoft 365 base license. For the list of eligible base licenses, see Understand licensing requirements for Microsoft Copilot",
+    "A Microsoft Copilot license. 20 hours of interpretation is included per user per month with a Microsoft Copilot license. Access beyond the hours included is subject to available capacity",
+    "For information on how to acquire Microsoft Copilot licenses, see Where can I get Microsoft Copilot?",
     "Speech Recognition (ST)- Converts spoken language into English text",
     "Machine translation (MT)- Translates English text into the selected languages"
    ],
@@ -340,8 +340,8 @@
    "accent": "teal",
    "overview": [
     "Built with Microsoft 365 Copilot, this role-based AI solution brings ERP-connected data and workflows directly into the flow of work",
-    "Finance Agent accelerates time-to-impact for finance professionals by surfacing insights that support strategic decision-making and reduce the time that's spent on manual, repetitive work. Finance Agent empowers finance professionals to stay in the flow of work by seamlessly connecting productivity tools such as Excel with existing financial systems to support critical business processes and generate insights and actions in real time.",
-    "The Finance Agent delivers a set of purpose-built AI capabilities designed for Finance teams. It accelerates financial operations by delivering accurate, analysis-ready data, insights, and automates key steps in core financial processes. The agent surfaces capabilities in familiar surfaces for Finance Professionals: Excel, Outlook, and Microsoft 365 Copilot. (Available capabilities may vary and depend on the particular surface.",
+    "Finance Agent accelerates time-to-impact for finance professionals by surfacing insights that support strategic decision-making and reduce the time spent on manual, repetitive work. Finance Agent empowers finance professionals to stay in the flow of work by seamlessly connecting productivity tools such as Excel with existing financial systems to support critical business processes and generate insights and actions in real time.",
+    "The Finance Agent delivers a set of purpose-built AI capabilities designed for finance teams. It accelerates financial operations by delivering accurate, analysis-ready data and insights, and automates key steps in core financial processes. The agent surfaces capabilities in familiar surfaces for finance professionals: Excel, Outlook, and Microsoft Copilot. Available capabilities might vary and depend on the particular surface.",
     "Finance agent-created content (for example, email summarization, suggested email responses, and analysis summaries) is currently provided only in United States–based English (En-US). Additional languages and regions will be supported in future releases."
    ],
    "scenarios": [
@@ -374,21 +374,21 @@
     {
      "label": "Support article",
      "url": "https://support.microsoft.com/en-us/topic/get-started-with-word-excel-and-powerpoint-agents-in-microsoft-365-copilot-76691f5e-bb19-4029-a34d-33a00e0a0c4f",
-     "summary": "Learn about getting started and creating files with Word, Excel, and PowerPoint agents in Microsoft 365 Copilot."
+     "summary": "Learn about getting started and creating files with Word, Excel, and PowerPoint agents in Microsoft Copilot."
     },
     {
      "label": "Learn article",
      "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/wordexcelppt-agents",
-     "summary": "Create files with Word, Excel, and PowerPoint Agents in Microsoft 365 Copilot."
+     "summary": "Create files with Word, Excel, and PowerPoint Agents in Microsoft Copilot."
     }
    ],
    "icon": "doc",
    "accent": "blue",
    "overview": [
-    "The Word, Excel, and PowerPoint Agents in Microsoft 365 Copilot are AI-powered tools that help you create files simply by describing what you need. Whether you're working on a work project or personal task, these agents help you generate drafts, organize information, and build files. Use them whenever you want to quickly create new documents, spreadsheets, and presentations from Copilot Chat.",
+    "The Word, Excel, and PowerPoint Agents in Microsoft Copilot are AI-powered tools that help you create files simply by describing what you need. Whether you're working on a work project or personal task, these agents help you generate drafts, organize information, and build files. Use them whenever you want to quickly create new documents, spreadsheets, and presentations from Copilot Chat.",
     "Create files easily : Generate Word, Excel, or PowerPoint files from a simple prompt.",
     "Privacy and control : Your data is securely processed. Reasoning models do not retain content beyond your request, customer data is never used to train the models, and Copilot respects sensitivity labels along with your organization's enterprise access policies.",
-    "You can access the agents in the Microsoft 365 Copilot app, including the desktop and web apps. Look for the Word Agent, Excel Agent, or PowerPoint Agent under the Agents or Tools menu."
+    "You can access the agents in the Microsoft Copilot app, including the desktop and web apps. Look for the Word Agent, Excel Agent, or PowerPoint Agent under the Agents or Tools menu."
    ],
    "scenarios": [
     "Run a full analysis on this sales data set. I want to understand some important insights to help me make decisions about my business. Make it visual",
@@ -429,21 +429,21 @@
     {
      "label": "Support article",
      "url": "https://support.microsoft.com/en-us/topic/get-started-with-word-excel-and-powerpoint-agents-in-microsoft-365-copilot-76691f5e-bb19-4029-a34d-33a00e0a0c4f",
-     "summary": "Learn about getting started and creating files with Word, Excel, and PowerPoint agents in Microsoft 365 Copilot."
+     "summary": "Learn about getting started and creating files with Word, Excel, and PowerPoint agents in Microsoft Copilot."
     },
     {
      "label": "Learn article",
      "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/wordexcelppt-agents",
-     "summary": "Create files with Word, Excel, and PowerPoint Agents in Microsoft 365 Copilot."
+     "summary": "Create files with Word, Excel, and PowerPoint Agents in Microsoft Copilot."
     }
    ],
    "icon": "grid",
    "accent": "teal",
    "overview": [
-    "The Word, Excel, and PowerPoint Agents in Microsoft 365 Copilot are AI-powered tools that help you create files simply by describing what you need. Whether you're working on a work project or personal task, these agents help you generate drafts, organize information, and build files. Use them whenever you want to quickly create new documents, spreadsheets, and presentations from Copilot Chat.",
+    "The Word, Excel, and PowerPoint Agents in Microsoft Copilot are AI-powered tools that help you create files simply by describing what you need. Whether you're working on a work project or personal task, these agents help you generate drafts, organize information, and build files. Use them whenever you want to quickly create new documents, spreadsheets, and presentations from Copilot Chat.",
     "Create files easily : Generate Word, Excel, or PowerPoint files from a simple prompt.",
     "Privacy and control : Your data is securely processed. Reasoning models do not retain content beyond your request, customer data is never used to train the models, and Copilot respects sensitivity labels along with your organization's enterprise access policies.",
-    "You can access the agents in the Microsoft 365 Copilot app, including the desktop and web apps. Look for the Word Agent, Excel Agent, or PowerPoint Agent under the Agents or Tools menu."
+    "You can access the agents in the Microsoft Copilot app, including the desktop and web apps. Look for the Word Agent, Excel Agent, or PowerPoint Agent under the Agents or Tools menu."
    ],
    "scenarios": [
     "Run a full analysis on this sales data set. I want to understand some important insights to help me make decisions about my business. Make it visual",
@@ -484,21 +484,21 @@
     {
      "label": "Support article",
      "url": "https://support.microsoft.com/en-us/topic/get-started-with-word-excel-and-powerpoint-agents-in-microsoft-365-copilot-76691f5e-bb19-4029-a34d-33a00e0a0c4f",
-     "summary": "Learn about getting started and creating files with Word, Excel, and PowerPoint agents in Microsoft 365 Copilot."
+     "summary": "Learn about getting started and creating files with Word, Excel, and PowerPoint agents in Microsoft Copilot."
     },
     {
      "label": "Learn article",
      "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/wordexcelppt-agents",
-     "summary": "Create files with Word, Excel, and PowerPoint Agents in Microsoft 365 Copilot."
+     "summary": "Create files with Word, Excel, and PowerPoint Agents in Microsoft Copilot."
     }
    ],
    "icon": "slides",
    "accent": "pink",
    "overview": [
-    "The Word, Excel, and PowerPoint Agents in Microsoft 365 Copilot are AI-powered tools that help you create files simply by describing what you need. Whether you're working on a work project or personal task, these agents help you generate drafts, organize information, and build files. Use them whenever you want to quickly create new documents, spreadsheets, and presentations from Copilot Chat.",
+    "The Word, Excel, and PowerPoint Agents in Microsoft Copilot are AI-powered tools that help you create files simply by describing what you need. Whether you're working on a work project or personal task, these agents help you generate drafts, organize information, and build files. Use them whenever you want to quickly create new documents, spreadsheets, and presentations from Copilot Chat.",
     "Create files easily : Generate Word, Excel, or PowerPoint files from a simple prompt.",
     "Privacy and control : Your data is securely processed. Reasoning models do not retain content beyond your request, customer data is never used to train the models, and Copilot respects sensitivity labels along with your organization's enterprise access policies.",
-    "You can access the agents in the Microsoft 365 Copilot app, including the desktop and web apps. Look for the Word Agent, Excel Agent, or PowerPoint Agent under the Agents or Tools menu."
+    "You can access the agents in the Microsoft Copilot app, including the desktop and web apps. Look for the Word Agent, Excel Agent, or PowerPoint Agent under the Agents or Tools menu."
    ],
    "scenarios": [
     "Run a full analysis on this sales data set. I want to understand some important insights to help me make decisions about my business. Make it visual",
@@ -536,13 +536,13 @@
     {
      "label": "Support article",
      "url": "https://support.microsoft.com/en-us/topic/what-is-planner-agent-in-copilot-afdd030e-3f76-47ea-9178-29e57730fd5b",
-     "summary": "Planner Agent in Microsoft 365 Copilot is a specialized agent for intelligent work and task management."
+     "summary": "Planner Agent in Microsoft Copilot is a specialized agent for intelligent work and task management."
     }
    ],
    "icon": "checklist",
    "accent": "purple",
    "overview": [
-    "Planner Agent in Microsoft 365 Copilot is a specialized agent for intelligent work and task management.",
+    "Planner Agent in Microsoft Copilot is a specialized agent for intelligent work and task management.",
     "Planner Agent is designed to help you stay focused and productive by managing work directly from Copilot chat."
    ],
    "scenarios": [],
@@ -590,7 +590,7 @@
     "Help me create a employee satisfaction survey"
    ],
    "highlights": [
-    "Surveys Agent will appear under Agents in the left pane of the Microsoft 365 Copilot app",
+    "Surveys Agent will appear under Agents in the left pane of the Microsoft Copilot app",
     "Your name and picture are in the bottom left corner of the screen"
    ],
    "limitations": []
@@ -636,14 +636,14 @@
     {
      "label": "Learn article",
      "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/copilot-for-microsoft-365-admin?view=o365-worldwide",
-     "summary": "Learn how to use Microsoft 365 Admin agent in Microsoft 365 Copilot and in Microsoft 365 admin center to automate tasks, navigate features, and gain actionable insights with natural language queries."
+     "summary": "Learn how to use Microsoft 365 Admin agent in Microsoft Copilot and in Microsoft 365 admin center to automate tasks, navigate features, and gain actionable insights with natural language queries."
     }
    ],
    "icon": "shield",
    "accent": "blue",
    "overview": [
-    "The Microsoft 365 Admin agent is an assistive, agentic experience that helps IT administrators operate Microsoft 365, Microsoft 365 Copilot, and agents at AI scale. Built on the Agent 365 Platform SDK and connected to multiple Model Context Protocol (MCP) servers, the Microsoft 365 Admin agent shifts administrative work from manual configuration to intent-driven, observable, and governed operations.",
-    "The Microsoft 365 Admin agent helps admins perform tasks across different Microsoft 365 services via a single unified surface in Microsoft 365 Copilot Chat, using natural language interactions, contextual guidance, and proactive suggestions to discover, configure, troubleshoot, and manage Microsoft 365 services.",
+    "The Microsoft 365 Admin agent is an assistive, agentic experience that helps IT administrators operate Microsoft 365, Microsoft Copilot, and agents at AI scale. Built on the Agent 365 Platform SDK and connected to multiple Model Context Protocol (MCP) servers, the Microsoft 365 Admin agent shifts administrative work from manual configuration to intent-driven, observable, and governed operations.",
+    "The Microsoft 365 Admin agent helps admins perform tasks across different Microsoft 365 services via a single unified surface in Microsoft Copilot Chat, using natural language interactions, contextual guidance, and proactive suggestions to discover, configure, troubleshoot, and manage Microsoft 365 services.",
     "All Microsoft 365 admins can use the Microsoft 365 Admin agent. No action is required to use the Microsoft 365 Admin agent. The agent is pre-installed in Microosft 365 Copilot Chat for all Microsoft 365 administrators.",
     "Because the agent honors your existing Microsoft Entra role assignments, the actions you can perform reflect the permissions associated with your admin role. If a capability appears unavailable, verify that your role grants the required permission for that workload."
    ],
@@ -652,8 +652,8 @@
     "This article lists only generally available capabilities for Microsoft 365 Admin agent. New scenarios appear in this article as they become available"
    ],
    "highlights": [
-    "Applies to: ✅ Microsoft 365 Copilot, ✅ Microsoft 365 admin center",
-    "Admins don't need an additional Microsoft 365 Copilot or Agent 365 license to use the Microsoft 365 Admin agent",
+    "Applies to: ✅ Microsoft Copilot, ✅ Microsoft 365 admin center",
+    "Admins don't need an additional Microsoft Copilot or Agent 365 license to use the Microsoft 365 Admin agent",
     "Locate Microsoft 365 Admin in the registry",
     "Agent management in Microsoft 365 admin center",
     "Existing role-based access control (RBAC) assignments in Microsoft Entra ID govern the actions admins can take through the agent",
@@ -894,18 +894,18 @@
     {
      "label": "Support article",
      "url": "https://support.microsoft.com/en-us/topic/get-started-with-workflows-in-microsoft-365-copilot-frontier-8c6aba25-db31-443d-8319-bc79747b280a?preview=true",
-     "summary": "Learn how you can automate tasks with Workflows--building, testing, monitoring, and managing your flows with Microsoft 365 Copilot."
+     "summary": "Learn how you can automate tasks with Workflows--building, testing, monitoring, and managing your flows with Microsoft Copilot."
     },
     {
      "label": "Get started with Workflows",
      "url": "https://support.microsoft.com/en-us/Microsoft-365-Copilot/get-started-with-workflows-in-microsoft-365-copilot",
-     "summary": "Learn how you can automate tasks with Workflows--building, testing, monitoring, and managing your flows with Microsoft 365 Copilot."
+     "summary": "Learn how you can automate tasks with Workflows--building, testing, monitoring, and managing your flows with Microsoft Copilot."
     }
    ],
    "icon": "flow",
    "accent": "purple",
    "overview": [
-    "Workflows is an agent in Microsoft 365 Copilot that helps you automate work across Microsoft 365 using natural language. Instead of manually configuring steps or connectors, you simply describe what you want and Workflows generates a working workflow using supported Microsoft 365 services.",
+    "Workflows is an agent in Microsoft Copilot that helps you automate work across Microsoft 365 using natural language. Instead of manually configuring steps or connectors, you simply describe what you want and Workflows generates a working workflow using supported Microsoft 365 services.",
     "Workflows agent identifies and connects to services based on the names you include in your prompt.",
     "Workflows agent uses your Microsoft 365 account to connect to these services. If it can't find a match, it may ask you to confirm or provide the Teams channel or SharePoint site.",
     "Once your workflow is created, you can test, monitor, and manage it directly in the Workflow or Activity tab and the Workflows home page."
@@ -979,7 +979,7 @@
    ],
    "limitations": [
     "If the column isn't provided, Workforce Insights uses the default logic based on direct reports",
-    "Delegates also require a paid Microsoft 365 Copilot license",
+    "Delegates also require a paid Microsoft Copilot license",
     "If a prompt references data the user doesn't have access to, the response might be limited or unavailable"
    ]
   },
@@ -1008,8 +1008,8 @@
    "overview": [
     "You need to be part of the Frontier program to get early access to Legal Agent for Word. Frontier connects you directly with Microsoft's latest AI innovations. Frontier previews are subject to the existing preview terms of your customer agreements. As these features are still in development, their availability and capabilities may change over time.",
     "If the Legal Agent isn't available in Copilot for Word, ensure that the admin account is also enrolled in Frontier (Copilot -> Settings -> Frontier).",
-    "Legal Agent is available in Microsoft 365 Copilot for Word desktop. Legal professionals can use the agent to summarize, understand, redline and review legal documents.",
-    "The legal agent currently works on desktop versions of Word for M365 Copilot Frontier customers."
+    "Legal Agent is available in Microsoft Copilot for Word desktop. Legal professionals can use the agent to summarize, understand, redline and review legal documents.",
+    "The legal agent currently works on desktop versions of Word for Microsoft Copilot Frontier customers."
    ],
    "scenarios": [],
    "highlights": [
@@ -1108,7 +1108,7 @@
    "overview": [
     "This article shows how to configure and deploy the Frontline Agent.",
     "As frontline teams face increasing demands and rapid change, the ability to access the right information at the right moment is more critical than ever. For...",
-    "Frontline Agent is an AI-powered assistant in Microsoft 365 Copilot and Microsoft Teams designed to support frontline workers and managers in their day-to-day operations. It helps frontline teams stay informed, get answers from standard operating procedures, complete voice-driven site walkthroughs, and also helps managers gather information from their teams.",
+    "Frontline Agent is an AI-powered assistant in Microsoft Copilot and Microsoft Teams designed to support frontline workers and managers in their day-to-day operations. It helps frontline teams stay informed, get answers from standard operating procedures, complete voice-driven site walkthroughs, and also helps managers gather information from their teams.",
     "Frontline Agent works alongside Teams chats, channels, and existing Microsoft 365 services such as SharePoint, enabling organizations to scale frontline communication and operations without introducing new tools or workflows."
    ],
    "scenarios": [],
@@ -1164,7 +1164,7 @@
     "Be a member of the channel where the agent was created"
    ],
    "limitations": [
-    "People without a Microsoft 365 Copilot subscription: Channel members without a Microsoft 365 Copilot subscription can't interact with a channel's Channel Agent",
+    "People without a Microsoft Copilot subscription: Channel members without a Microsoft Copilot subscription can't interact with a channel's Channel Agent",
     "People who aren't channel members: Channel Agent can be added to other conversations in Teams, such as group chats and meetings",
     "People who aren't members of the agent's channel can't ask questions in these other conversations, but they can see the interactions of others with the agent"
    ]
@@ -1851,5 +1851,5 @@
    "limitations": []
   }
  ],
- "enriched": "2026-08-15T00:03:37.755Z"
+ "enriched": "2026-08-22T05:36:33.611Z"
 }
