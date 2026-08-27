@@ -53,6 +53,54 @@ const SUPPLEMENTAL = {
   ],
 };
 
+/**
+ * Authoritative corrections applied after scraping.
+ *
+ * Microsoft's public articles sometimes lag a licensing or availability change.
+ * Because this pipeline re-reads those articles every week, editing
+ * data/agents.json by hand would silently regress on the next refresh — so
+ * corrections live here and are re-applied on every run.
+ *
+ *   license   replaces the licensing shown on the detail page
+ *   suppress  regexes; any scraped overview / highlight / scenario line that
+ *             matches is dropped
+ *   notes     statements guaranteed to appear in the agent's notes
+ *
+ * Each rule records why it exists so it can be retired once the upstream
+ * article catches up.
+ */
+const CORRECTION_RULES = {
+  // 2026-08-27 — Word, Excel and PowerPoint Agents now require a Microsoft 365
+  // Copilot license. Microsoft's own support and Learn pages still describe them
+  // as usable "with or without a Microsoft Copilot license" (and mention
+  // Personal/Family plans), so the scraped copy must be corrected until those
+  // pages are updated.
+  'office-agents-license': {
+    license: 'Microsoft 365 Copilot license',
+    suppress: [
+      /without a\s+\S*\s*copilot license/i,
+      /with or without a\s+\S*\s*copilot license/i,
+      // "With a Copilot license, ..." was written as the counterpart to a
+      // "Without a Copilot license, ..." line. With the license now mandatory
+      // the contrast is gone, and the surviving half implies tiers that no
+      // longer exist.
+      /\bwith a\s+\S*\s*copilot license\b/i,
+      /\bunlicensed copilot users\b/i,
+      /for personal accounts/i,
+      /microsoft 365 (personal|family|premium)/i,
+    ],
+    notes: ['Requires a Microsoft 365 Copilot license.'],
+  },
+};
+
+const CORRECTIONS = {
+  'word-agent': 'office-agents-license',
+  'excel-agent': 'office-agents-license',
+  'powerpoint-agent': 'office-agents-license',
+};
+
+const correctionFor = (id) => CORRECTION_RULES[CORRECTIONS[id]] || null;
+
 /* ----------------------------------------------------------------- helpers */
 
 const decodeEntities = (s) =>
@@ -485,6 +533,7 @@ async function main() {
 
   // Enrich each agent.
   let enriched = 0;
+  const corrected = [];
   // Distinctive name tokens across the catalog, used to spot prose that covers
   // a sibling agent rather than this one.
   const allNameTerms = data.agents.map((a) => ({ id: a.id, terms: agentTerms(a) }));
@@ -542,12 +591,49 @@ async function main() {
       return summary ? { ...l, summary } : l;
     });
 
+    // Apply authoritative corrections last, so nothing scraped above can
+    // reinstate a claim we know to be out of date.
+    const fix = correctionFor(agent.id);
+    if (fix) {
+      let dropped = 0;
+      const keep = (t) => {
+        const bad = (fix.suppress || []).some((re) => re.test(t));
+        if (bad) dropped++;
+        return !bad;
+      };
+      agent.overview = agent.overview.filter(keep);
+      agent.highlights = agent.highlights.filter(keep);
+      agent.scenarios = agent.scenarios.filter(keep);
+      agent.limitations = (agent.limitations || []).filter(keep);
+
+      // Resource summaries are scraped too, so correct them the same way.
+      agent.links = agent.links.map((l) => {
+        if (l.summary && (fix.suppress || []).some((re) => re.test(l.summary))) {
+          dropped++;
+          const { summary, ...rest } = l;
+          return rest;
+        }
+        return l;
+      });
+
+      if (fix.license) agent.license = fix.license;
+      for (const n of fix.notes || []) {
+        if (!agent.notes.includes(n)) agent.notes.unshift(n);
+      }
+      corrected.push(`${agent.name} (${dropped} stale line${dropped === 1 ? '' : 's'} removed)`);
+    }
+
     if (agent.overview.length || agent.highlights.length) enriched++;
   }
 
   data.enriched = new Date().toISOString();
   fs.writeFileSync(AGENTS, JSON.stringify(data, null, 1));
   console.log(`Enriched ${enriched}/${data.agents.length} agents with article detail.`);
+
+  if (corrected.length) {
+    console.log(`Applied licensing corrections to ${corrected.length} agent(s):`);
+    corrected.forEach((c) => console.log(`  ${c}`));
+  }
 
   const thin = data.agents.filter((a) => !a.overview.length).map((a) => a.name);
   if (thin.length) console.log('No extra detail found for:', thin.join(', '));

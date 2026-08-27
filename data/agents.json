@@ -360,6 +360,7 @@
    "license": "Microsoft 365 Copilot license",
    "description": "Word Agent creates and refines long‑form documents from a prompt — handling structure, research, and formatting so you can focus on ideas.",
    "notes": [
+    "Requires a Microsoft 365 Copilot license.",
     "Requires Anthropic to be enabled for the tenant."
    ],
    "surfaces": [
@@ -391,10 +392,7 @@
     "You can access the agents in the Microsoft Copilot app, including the desktop and web apps. Look for the Word Agent, Excel Agent, or PowerPoint Agent under the Agents or Tools menu."
    ],
    "scenarios": [
-    "Run a full analysis on this sales data set. I want to understand some important insights to help me make decisions about my business. Make it visual",
-    "Work with data : Use connected content to produce richer results. With a Copilot license, automatically pull in information from your files, emails, chats, meetings and more while always respecting your company's access policies",
-    "Without a Copilot license, pull in information from the web and reference specific files while respecting your company's policies",
-    "For personal accounts, use your own files, notes, or personal data stored in OneDrive"
+    "Run a full analysis on this sales data set. I want to understand some important insights to help me make decisions about my business. Make it visual"
    ],
    "highlights": [
     "Office Agent creates polished PowerPoint presentations and ready-to-use Word documents from chat in Copilot, and coming soon to Excel",
@@ -415,6 +413,7 @@
    "license": "Microsoft 365 Copilot license",
    "description": "Excel Agent builds and analyzes spreadsheets using natural language — generating formulas, charts, summaries, and performing multi‑step data tasks with iterative reasoning.",
    "notes": [
+    "Requires a Microsoft 365 Copilot license.",
     "Requires Anthropic to be enabled for the tenant."
    ],
    "surfaces": [
@@ -446,10 +445,7 @@
     "You can access the agents in the Microsoft Copilot app, including the desktop and web apps. Look for the Word Agent, Excel Agent, or PowerPoint Agent under the Agents or Tools menu."
    ],
    "scenarios": [
-    "Run a full analysis on this sales data set. I want to understand some important insights to help me make decisions about my business. Make it visual",
-    "Work with data : Use connected content to produce richer results. With a Copilot license, automatically pull in information from your files, emails, chats, meetings and more while always respecting your company's access policies",
-    "Without a Copilot license, pull in information from the web and reference specific files while respecting your company's policies",
-    "For personal accounts, use your own files, notes, or personal data stored in OneDrive"
+    "Run a full analysis on this sales data set. I want to understand some important insights to help me make decisions about my business. Make it visual"
    ],
    "highlights": [
     "Office Agent creates polished PowerPoint presentations and ready-to-use Word documents from chat in Copilot, and coming soon to Excel",
@@ -470,6 +466,7 @@
    "license": "Microsoft 365 Copilot license",
    "description": "PowerPoint Agent turns prompts into complete presentations — generating slides, layouts, visuals, and helping refine content.",
    "notes": [
+    "Requires a Microsoft 365 Copilot license.",
     "Requires Anthropic to be enabled for the tenant."
    ],
    "surfaces": [
@@ -501,10 +498,7 @@
     "You can access the agents in the Microsoft Copilot app, including the desktop and web apps. Look for the Word Agent, Excel Agent, or PowerPoint Agent under the Agents or Tools menu."
    ],
    "scenarios": [
-    "Run a full analysis on this sales data set. I want to understand some important insights to help me make decisions about my business. Make it visual",
-    "Work with data : Use connected content to produce richer results. With a Copilot license, automatically pull in information from your files, emails, chats, meetings and more while always respecting your company's access policies",
-    "Without a Copilot license, pull in information from the web and reference specific files while respecting your company's policies",
-    "For personal accounts, use your own files, notes, or personal data stored in OneDrive"
+    "Run a full analysis on this sales data set. I want to understand some important insights to help me make decisions about my business. Make it visual"
    ],
    "highlights": [
     "Office Agent creates polished PowerPoint presentations and ready-to-use Word documents from chat in Copilot, and coming soon to Excel",
@@ -1851,5 +1845,5 @@
    "limitations": []
   }
  ],
- "enriched": "2026-08-22T05:36:33.611Z"
+ "enriched": "2026-08-27T17:08:32.400Z"
 }
