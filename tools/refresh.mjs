@@ -49,6 +49,31 @@ function git(...args) {
 
 const readJson = (p) => { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch { return null; } };
 
+const GH_ACCOUNT = 'mfg-365';
+
+// This machine has several gh accounts logged in, and whichever one happens to
+// be active supplies the git credential. Any account other than mfg-365 gets a
+// 403 pushing to this repo, so pin it for the push and restore it afterwards.
+function withGitHubAccount(fn) {
+  let previous = null;
+  try {
+    const active = run('gh', ['auth', 'status', '--active']);
+    const m = active.match(/account\s+(\S+)/);
+    if (m && m[1] !== GH_ACCOUNT) previous = m[1];
+    if (m && m[1] !== GH_ACCOUNT) run('gh', ['auth', 'switch', '--user', GH_ACCOUNT]);
+  } catch (e) {
+    log(`Could not pin the ${GH_ACCOUNT} GitHub account: ${(e.stderr || e.message || '').trim()}`);
+  }
+  try {
+    return fn();
+  } finally {
+    if (previous) {
+      try { run('gh', ['auth', 'switch', '--user', previous]); }
+      catch { log(`Note: could not switch the active GitHub account back to ${previous}.`); }
+    }
+  }
+}
+
 const SEISMIC_PY = String.raw`C:\Users\cowi\AppData\Local\seismic-mcp\.venv\Scripts\python.exe`;
 
 /**
@@ -256,16 +281,19 @@ async function main() {
 
   git('add', '-A');
   git('commit', '-m', `Weekly content refresh ${started.toISOString().slice(0, 10)}\n\n${summary}`);
-  const push = git('push', 'origin', 'main');
-  log(`\nPushed. ${push || 'ok'}`);
 
-  // Ask GitHub Pages to rebuild so the change goes live promptly.
-  try {
-    run('gh', ['api', '-X', 'POST', 'repos/mfg-365/ms-agents-site/pages/builds']);
-    log('GitHub Pages rebuild queued.');
-  } catch (e) {
-    log(`Could not queue a Pages build: ${(e.stderr || e.message || '').trim()}`);
-  }
+  withGitHubAccount(() => {
+    const push = git('push', 'origin', 'main');
+    log(`\nPushed. ${push || 'ok'}`);
+
+    // Ask GitHub Pages to rebuild so the change goes live promptly.
+    try {
+      run('gh', ['api', '-X', 'POST', 'repos/mfg-365/ms-agents-site/pages/builds']);
+      log('GitHub Pages rebuild queued.');
+    } catch (e) {
+      log(`Could not queue a Pages build: ${(e.stderr || e.message || '').trim()}`);
+    }
+  });
 
   return { changed: true, changes, deck, started };
 }
