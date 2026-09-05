@@ -402,7 +402,9 @@
     "Clarify your intent : Begins by understanding your prompt and specific needs—file length, visual theme, key focus areas, target audience, and more",
     "Conduct deep research : Does web-based research to gather and reason over relevant information using deep reasoning capabilities—showing its chain of thought and providing a live preview of slides"
    ],
-   "limitations": []
+   "limitations": [
+    "Word, Excel, and PowerPoint Agents are only available to Microsoft 365 users with a Microsoft 365 Copilot license"
+   ]
   },
   {
    "id": "excel-agent",
@@ -455,7 +457,9 @@
     "Clarify your intent : Begins by understanding your prompt and specific needs—file length, visual theme, key focus areas, target audience, and more",
     "Conduct deep research : Does web-based research to gather and reason over relevant information using deep reasoning capabilities—showing its chain of thought and providing a live preview of slides"
    ],
-   "limitations": []
+   "limitations": [
+    "Word, Excel, and PowerPoint Agents are only available to Microsoft 365 users with a Microsoft 365 Copilot license"
+   ]
   },
   {
    "id": "powerpoint-agent",
@@ -508,7 +512,9 @@
     "Clarify your intent : Begins by understanding your prompt and specific needs—file length, visual theme, key focus areas, target audience, and more",
     "Conduct deep research : Does web-based research to gather and reason over relevant information using deep reasoning capabilities—showing its chain of thought and providing a live preview of slides"
    ],
-   "limitations": []
+   "limitations": [
+    "Word, Excel, and PowerPoint Agents are only available to Microsoft 365 users with a Microsoft 365 Copilot license"
+   ]
   },
   {
    "id": "planner-agent",
@@ -1845,5 +1851,5 @@
    "limitations": []
   }
  ],
- "enriched": "2026-08-29T04:05:40.346Z"
+ "enriched": "2026-09-05T00:03:46.645Z"
 }
