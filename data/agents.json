@@ -111,7 +111,7 @@
    "overview": [
     "Researcher is built into Microsoft Copilot to help you gather, analyze, and summarize information from the web, your work documents, or both. It delivers an easy-to-read report.",
     "Researcher is an intelligent AI assistant in Microsoft Copilot that gathers enterprise and web data to deliver comprehensive, source-backed answers.",
-    "The Researcher agent is your intelligent assistant in Microsoft Copilot—built to tackle complex, multistep research and deliver a structured, source-cited report. Think of it as a supercharged research partner that helps you gather, analyze, and summarize information from the web and, at work, from files, emails, meetings, and chats you have access to. Researcher makes it easier to get thorough answers and make decisions faster.",
+    "The Researcher agent is your intelligent assistant in Microsoft Copilot, built to tackle complex, multistep research and deliver a structured, source-cited report. Think of it as a supercharged research partner that helps you gather, analyze, and summarize information from the web and, at work, from files, emails, meetings, and chats you have access to. Researcher makes it easier to get thorough answers and make decisions faster.",
     "Researcher is designed for deeper reasoning of your tasks. It excels at tackling complex, layered tasks that require thoughtful analysis. By taking longer processing time, Researcher delivers more comprehensive output, making it ideal for detailed research projects."
    ],
    "scenarios": [
@@ -920,7 +920,7 @@
     "Trigger actions on a schedule, or in response to events"
    ],
    "limitations": [
-    "Delete workflows permanently—deleting a workflow removes it entirely and can't be undone"
+    "Delete workflows permanently. Deleting a workflow removes it entirely and can't be undone"
    ]
   },
   {
@@ -1100,25 +1100,30 @@
     {
      "label": "Learn article",
      "url": "https://learn.microsoft.com/en-us/microsoft-365/frontline/setupfrontlineagent?view=o365-worldwide",
-     "summary": "This article shows how to configure and deploy the Frontline Agent."
+     "summary": "Learn how you can use Microsoft 365 and Teams to empower the frontline workers in your organization."
     }
    ],
    "icon": "helmet",
    "accent": "amber",
    "overview": [
-    "This article shows how to configure and deploy the Frontline Agent.",
     "As frontline teams face increasing demands and rapid change, the ability to access the right information at the right moment is more critical than ever. For...",
-    "Frontline Agent is an AI-powered assistant in Microsoft Copilot and Microsoft Teams designed to support frontline workers and managers in their day-to-day operations. It helps frontline teams stay informed, get answers from standard operating procedures, complete voice-driven site walkthroughs, and also helps managers gather information from their teams.",
-    "Frontline Agent works alongside Teams chats, channels, and existing Microsoft 365 services such as SharePoint, enabling organizations to scale frontline communication and operations without introducing new tools or workflows."
+    "Streamline team and one-on-one communication across your entire organization with Microsoft 365 for frontline workers capabilities. To ensure every worker feels connected to your organization, you can enrich and expand corporate communications with Viva Connections and targeted announcements. Empower your workforce to seamlessly communicate with Teams chats, notifications, walkie talkie, and AI-powered translation and Copilot chat-enabling real-time, inclusive communication across locations and languages.",
+    "Microsoft 365 includes apps like Lists, Planner, and Approvals to streamline operations and digitize paper-based processes. Enhance efficiency with automation and AI-powered workflows using Power Automate, Power Apps, and Microsoft Power BI from the Power Platform. Reduce repetitive tasks so frontline workers can focus on what matters most. Copilot and SharePoint agents provide instant answers and automate routine processes in the flow of work. Workforce management is simplified with Shifts in Teams, which integrates with major WFM systems and supports open shifts, swap requests, and compliance tracking across locations.",
+    "Frontline Agent is rolling out in Microsoft Copilot and currently available in Microsoft Teams just like any other teammate. Frontline Agent helps frontline workers and managers stay aligned, informed, and productive. Built on Microsoft 365, Frontline Agent operates within your existing security, compliance, and device management framework. Learn more about setting up Frontline Agent in your organization ."
    ],
-   "scenarios": [],
+   "scenarios": [
+    "You can implement many helpful scenarios for frontline workers quickly, using out-of-the-box capabilities. For a list of scenarios we recommend and provide guidance for, see Choose your scenarios",
+    "The following principles are based on information from the Frontline Solutions Success Kit . Find more adoption resources on the frontline worker section of the Microsoft Adoption site",
+    "Identify motivations, goals, assumptions, and potential blockers",
+    "Identify any other in-progress initiatives that might be related, to understand any potential overlaps, conflicts, or potential for alignment"
+   ],
    "highlights": [
-    "Store associates can quickly pull up product details, pricing policies, inventory lookup steps, and return procedures to keep lines moving",
-    "Department leads can plan priorities for floor recovery, promos, and price changes before shift start",
-    "Store managers can generate daily recap reports covering sales trends, staffing notes, shrink issues, and unresolved operational tasks",
-    "Nurses can quickly reference care protocols, equipment instructions, or facility policies",
-    "Care teams can catch up on shift handovers, critical updates, and open tasks before rounds",
-    "Administrators can generate summaries of unit activity to support staffing or patient flow decisions"
+    "Applies to: Microsoft Teams, Microsoft 365 for frontline workers",
+    "Simplify frontline work with an AI agent",
+    "Overview of device management for frontline workers",
+    "Frontline worker device management overview in Microsoft Intune",
+    "Assess your existing frontline environment and processes",
+    "Identify core stakeholders - business, IT, and frontline"
    ],
    "limitations": []
   },
@@ -1204,7 +1209,7 @@
    ],
    "scenarios": [],
    "highlights": [
-    "Set the Community agent preview toggle to On",
+    "Turn on the Community agent preview toggle",
     "Every 15–20 minutes, the agent scans its assigned community for up to three unanswered questions",
     "It skips questions with a Best or Verified answer, or are older than 14 days",
     "If confidence is low or review is enabled, admins or experts must approve the response before posting",
@@ -1736,7 +1741,7 @@
     "This is a production-ready preview feature",
     "Production-ready previews are subject to supplemental terms of use",
     "Optional but recommended: Create the organization's agent user",
-    "Activate the Power Automate flows that the agent requires. (These flows enable the agent to complete some actions on behalf of team members.)",
+    "Activate the Microsoft Power Automate flows that the agent requires. (These flows enable the agent to complete some actions on behalf of team members.)",
     "Publish the agent from Microsoft Copilot Studio to users in the organization",
     "Power Automate Free – This license is required so that the agent can view and enable the set of Power Automate flows that it requires"
    ],
@@ -1767,7 +1772,7 @@
    "icon": "receipt",
    "accent": "pink",
    "overview": [
-    "The Expense Agent brings together capabilities from Microsoft Dynamics 365 Project Operations, finance and operations apps, Microsoft Copilot Studio, Power Automate, and Dataverse to automate expense processing workflows by using AI. This feature helps save time and reduce manual effort by enabling your system to process receipts and generate expense lines and expense reports for users. It uses Microsoft Power Platform connectors for integration with Outlook, Microsoft Teams, user calendars, and the finance and operations apps environment via Dataverse virtual entities.",
+    "The Expense Agent brings together capabilities from Microsoft Dynamics 365 Project Operations, finance and operations apps, Microsoft Copilot Studio, Microsoft Power Automate, and Microsoft Dataverse to automate expense processing workflows by using AI. This feature helps save time and reduce manual effort by enabling your system to process receipts and generate expense lines and expense reports for users. It uses Microsoft Power Platform connectors for integration with Outlook, Microsoft Teams, user calendars, and the finance and operations apps environment via Dataverse virtual entities.",
     "Additionally, the agent integrates with Microsoft Teams, enabling the use of adaptive cards for expense report review and submission.",
     "The Expense Agent is available as part of the Copilot for finance and operations apps package. When you install this package in your environment, you automatically get all required assets, including the agent, environment variables, and Power Automate flows.",
     "After you install the Copilot for finance and operations apps package, activate the Expense Agent from within your Dataverse and finance and operations environment."
@@ -1851,5 +1856,5 @@
    "limitations": []
   }
  ],
- "enriched": "2026-09-05T00:03:46.645Z"
+ "enriched": "2026-09-19T00:13:56.085Z"
 }
