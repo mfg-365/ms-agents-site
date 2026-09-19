@@ -20,6 +20,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'data', 'apps.json');
 const CACHE = path.join(__dirname, 'out', 'article-cache.json');
+const BLOG_CACHE = path.join(__dirname, 'out', 'blog-cache.json');
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ms-agents-site/1.0';
 
 const ROADMAP_API = 'https://www.microsoft.com/releasecommunications/api/v1/m365';
@@ -303,22 +304,48 @@ function parseItems(xml) {
 }
 
 async function getBlogs() {
+  // A feed that answers HTTP 200 with zero items is an upstream hiccup, not
+  // news that Microsoft deleted its blog. Remember the last good result per
+  // feed and reuse it rather than silently dropping posts off the site.
+  let lastGood = {};
+  try { lastGood = JSON.parse(fs.readFileSync(BLOG_CACHE, 'utf8')); } catch { lastGood = {}; }
+
   const out = [];
   for (const f of FEEDS) {
+    let items = null;
     try {
       const r = await fetch(f.url, { headers: { 'User-Agent': UA, Accept: 'application/rss+xml, application/xml' } });
-      if (!r.ok) { console.warn(`  feed ${f.source} -> HTTP ${r.status}`); continue; }
-      const items = parseItems(await r.text())
-        .filter((it) => it.title && it.link)
-        // Blog articles only — Tech Community discussions use /m-p/, /td-p/ etc.
-        .filter((it) => !/techcommunity\.microsoft\.com/i.test(it.link)
-          || (/\/ba-p\//i.test(it.link) && !/\/(m-p|td-p|idi-p|qa-p)\//i.test(it.link)))
-        .filter((it) => /copilot/i.test(it.title + ' ' + it.description))
-        .map((it) => ({ ...it, source: f.source }));
-      out.push(...items);
-      console.log(`  feed ${f.source}: ${items.length} Copilot posts`);
+      if (!r.ok) { console.warn(`  feed ${f.source} -> HTTP ${r.status}`); }
+      else {
+        items = parseItems(await r.text())
+          .filter((it) => it.title && it.link)
+          // Blog articles only — Tech Community discussions use /m-p/, /td-p/ etc.
+          .filter((it) => !/techcommunity\.microsoft\.com/i.test(it.link)
+            || (/\/ba-p\//i.test(it.link) && !/\/(m-p|td-p|idi-p|qa-p)\//i.test(it.link)))
+          .filter((it) => /copilot/i.test(it.title + ' ' + it.description))
+          .map((it) => ({ ...it, source: f.source }));
+      }
     } catch (e) { console.warn(`  feed ${f.source} failed: ${e.message}`); }
+
+    const cached = lastGood[f.source] || [];
+    if (items && items.length) {
+      lastGood[f.source] = items;
+      console.log(`  feed ${f.source}: ${items.length} Copilot posts`);
+    } else if (cached.length) {
+      items = cached;
+      console.warn(`  feed ${f.source}: returned nothing — reusing ${cached.length} cached post(s)`);
+    } else {
+      items = [];
+      console.warn(`  feed ${f.source}: returned nothing and no cache available`);
+    }
+    out.push(...items);
   }
+
+  try {
+    fs.mkdirSync(path.dirname(BLOG_CACHE), { recursive: true });
+    fs.writeFileSync(BLOG_CACHE, JSON.stringify(lastGood, null, 1));
+  } catch (e) { console.warn(`  could not write the blog cache: ${e.message}`); }
+
   // De-dup by normalized title.
   const seen = new Set();
   return out.filter((it) => {

@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-19T00:14:01.256Z",
+ "generated": "2026-09-19T00:18:31.505Z",
  "sources": {
   "roadmap": "https://www.microsoft.com/en-us/microsoft-365/roadmap?searchterms=Copilot",
   "feeds": [
@@ -27,7 +27,7 @@
   "inDevelopment": 224,
   "rollingOut": 62,
   "allActiveCopilot": 345,
-  "blogPosts": 25
+  "blogPosts": 29
  },
  "apps": [
   {
@@ -2876,11 +2876,39 @@
    ],
    "blogs": [
     {
+     "title": "Built for business: How Microsoft 365 Copilot keeps you in the flow of legal work",
+     "link": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/built-for-business-how-microsoft-365-copilot-keeps-you-in-the/ba-p/4546016",
+     "date": "2026-08-12T16:00:00.000Z",
+     "description": "The tools that run a business rarely live in one place. For a small business owner, that means stepping out of the document you're writing to search for an attorney, digging through a folder for the LLC paperwork you half-remember filing, or pausing a client d",
+     "source": "Microsoft 365 Copilot Blog"
+    },
+    {
      "title": "Turn meetings into momentum with Microsoft 365 Copilot",
      "link": "https://techcommunity.microsoft.com/t5/microsoft-teams-blog/turn-meetings-into-momentum-with-microsoft-365-copilot/ba-p/4545675",
      "date": "2026-08-11T15:59:45.000Z",
      "description": "Most people don't need more meetings—they need meetings that lead to action. At their best, meetings drive decisions and keep work moving forward. But poorly managed meetings can actually slow progress. In fact, our Work Trend Index report found that inefficie",
      "source": "Microsoft Teams Blog"
+    },
+    {
+     "title": "Update: Domain Exclusion for Microsoft 365 Copilot",
+     "link": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/update-domain-exclusion-for-microsoft-365-copilot/ba-p/4543648",
+     "date": "2026-08-07T18:54:00.000Z",
+     "description": "We want to inform the community that the Domain Exclusion for Microsoft 365 Copilot feature described in this post, More control over web grounding with Domain Exclusion for Microsoft 365 Copilot , has been rolled back at this time. We understand the importanc",
+     "source": "Microsoft 365 Copilot Blog"
+    },
+    {
+     "title": "More control over web grounding with Domain Exclusion for Microsoft 365 Copilot",
+     "link": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/more-control-over-web-grounding-with-domain-exclusion-for/ba-p/4540151",
+     "date": "2026-08-04T16:15:19.000Z",
+     "description": "**UPDATE** Please see new announcement here: Update: Domain Exclusion for Microsoft 365 Copilot | Microsoft Community Hub We are excited to announce Domain Exclusion for Microsoft 365 Copilot, a new web search control that gives organizations more choice over ",
+     "source": "Microsoft 365 Copilot Blog"
+    },
+    {
+     "title": "What’s New in Microsoft 365 Copilot | July 2026",
+     "link": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/what-s-new-in-microsoft-365-copilot-july-2026/ba-p/4538332",
+     "date": "2026-07-31T15:30:00.000Z",
+     "description": "Welcome to the July 2026 edition of What's New in Microsoft 365 Copilot! Every month, we highlight new features and enhancements to keep Microsoft 365 customers up to date with Copilot features that help your users be more productive and efficient in the apps ",
+     "source": "Microsoft 365 Copilot Blog"
     }
    ],
    "counts": {
