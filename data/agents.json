@@ -242,7 +242,7 @@
     {
      "label": "Learn article",
      "url": "https://learn.microsoft.com/en-us/microsoftteams/interpreter-agent-teams?wt.mc_id=agentshub_Learn_webpage_cnl",
-     "summary": "Learn how to manage Interpreter agent in Microsoft Teams to provide translation during meetings."
+     "summary": "Learn how to manage Interpreter agent in Microsoft Teams to provide translation during meetings and calls."
     },
     {
      "label": "Support article",
@@ -916,8 +916,8 @@
     "Find and add Workflows Agent (Frontier) . You should see Workflows in the left navigation pane under Agents",
     "To use Workflows, your DLP policy in Power Platform admin center must include the following: Connectors: SharePoint, Approvals, Teams, Planner, M365Copilot and Outlook. More information: Data policies",
     "Turn workflows on or off using the ellipses ( ). Turning off a workflow pauses its automation",
-    "Automate tasks in apps like Outlook, SharePoint, Teams, and Planner",
-    "Trigger actions on a schedule, or in response to events"
+    "Microsoft 365 Copilot now enables you to build apps and workflows",
+    "Automate tasks in apps like Outlook, SharePoint, Teams, and Planner"
    ],
    "limitations": [
     "Delete workflows permanently. Deleting a workflow removes it entirely and can't be undone"
@@ -1513,7 +1513,8 @@
    "overview": [
     "Sales Opportunity Agent (previously known as Opportunity Research Agent) in Dynamics 365 Sales is an AI-powered assistant designed to help sales professionals manage their deals more effectively. By consolidating CRM updates, email threads, meeting intelligence, and real-time web research, the agent provides actionable insights in one place. It helps you prioritize opportunities, identify risks, and take the right action at the right time. This approach results in faster deal closures and improved sales performance.",
     "Managing deals effectively requires timely insights and a clear understanding of where each opportunity stands. The Sales Opportunity Agent simplifies this process by bringing together data from multiple sources and surfacing what matters most.",
-    "Sales Opportunity Agent is built with responsible AI principles in mind. The agent meets quality standards and is designed to be used as a productivity tool. For more information about the agent's responsible AI practices, see FAQs about Sales Opportunity Agent ."
+    "The Sales Opportunity Agent uses the capacity assigned to your tenant to process records. You can set up either prepaid capacity or pay-as-you-go capacity for the agent.",
+    "Processing scope and scale: When you first activate Sales Opportunity Agent, it performs an initial run that processes all open opportunities that match your configuration to generate baseline insights. After the initial run, capacity consumption scales with the number of opportunities in scope and how often insights are refreshed (based on your configured refresh schedule and opportunity changes). To manage usage, narrow the opportunity scope and adjust refresh frequency in the agent configuration settings ."
    ],
    "scenarios": [],
    "highlights": [
@@ -1856,5 +1857,5 @@
    "limitations": []
   }
  ],
- "enriched": "2026-09-19T00:18:26.217Z"
+ "enriched": "2026-09-26T19:05:46.529Z"
 }
